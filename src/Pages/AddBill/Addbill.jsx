@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Card from "../../components/Card/Card"
 import "./add-bill.css"
+import Breadcumbs from "../../components/Breadcumbs/Breadcumbs";
 const Addbill = () => {
     useEffect(() => {
         console.log("mounted")
@@ -40,6 +41,7 @@ const Addbill = () => {
     })
     return (
     <div className='add-bill'>
+        <Breadcumbs pageName={"إضافة عملية تخليص جمركي"}/>
         <Card>
         <div className="card-block" dir="rtl">
             <h4 className="sub-title">أدخل تفاصيل تخليص جمركي</h4>

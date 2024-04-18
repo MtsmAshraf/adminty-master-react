@@ -16,7 +16,7 @@ library.add(fas)
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout/>}>
-        <Route index element={<Home />} />
+        <Route index element={<Addbill />} />
         <Route path='/invoice-list' element={<InvoiceList />}/>
         <Route path='/invoice' element={<Invoice />}/>
         <Route path='/add-bill' element={<Addbill />}/>

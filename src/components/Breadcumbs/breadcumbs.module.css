@@ -1,0 +1,16 @@
+.breadcumbs{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.breadcumbs div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.breadcumbs div a{
+    color: var(--main-color);
+}
