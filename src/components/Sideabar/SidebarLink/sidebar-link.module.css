@@ -1,0 +1,15 @@
+.sidebarLink{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    direction: rtl;
+    border-radius: var(--main-border-radius);
+    cursor: pointer;    
+    color: var(--side-text-color);
+    transition: var(--main-transition);
+}
+.sidebarLink:hover{
+    background-color: #4c5c77;
+    color: #fff;
+}

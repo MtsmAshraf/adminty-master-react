@@ -1,0 +1,9 @@
+.header{
+    background-color: var(--card-bg);
+    box-shadow: var(--header-shadow);
+    padding: 20px;
+    z-index: 3;
+    position: sticky;
+    top: 0;
+    left: 0;
+}

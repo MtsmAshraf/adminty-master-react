@@ -1,0 +1,21 @@
+.sidebar{
+    background-color: var(--sidebar-bg);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 1;
+    padding: 100px 20px 20px;
+    color: var(--side-text-color);
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media (max-width: 992px) {
+    .sidebar{
+        transform: translateX(-100%);
+    }
+}
