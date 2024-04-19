@@ -1,0 +1,93 @@
+.invoice{
+    padding: 20px 50px 50px;
+}
+.invoice > div:first-child{
+    margin-bottom: 30px;
+}
+@media (max-width: 992px) {
+    .invoice{
+        padding: 20px;
+
+    }
+}
+
+/* ################################################################ */
+ .details{
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 4px;
+    display: grid;
+    direction: rtl;
+    grid-template-columns: repeat(3,1fr);
+    font-family: "Almarai", sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+}
+ .details .pair{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: red; */
+    border-bottom: 1px solid #ccc;
+}
+ .details .pair h5{
+    padding: 10px;
+    background-color: #01aaad;
+    width: 35%;
+    color: white;
+    height: 100%;
+    text-wrap: nowrap;
+    text-align: center;
+}
+ .details .pair span{
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+}
+iframe{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+@media (max-width: 1300px) {
+     .details{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 767px) {
+     .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+     .details .pair{
+        flex-direction: column;
+    }
+     .details .pair h5,
+     .details .pair span{
+        font-size: 14px;
+        width: 100%;
+    }
+}
+ iframe{
+    min-height: 1200px;
+    max-width: 100%;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a.goBack{
+    display: block;
+    width: fit-content;
+    margin: 20px auto 30px;
+    background-color: #01a9ac;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+@media (max-width: 767px) {
+     iframe{
+        min-height: 400px;
+        width: 100%;
+    }
+}

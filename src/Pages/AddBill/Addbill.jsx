@@ -3,6 +3,10 @@ import Card from "../../components/Card/Card"
 import "./add-bill.css"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs";
 const Addbill = () => {
+    let redirectFunction = (e) => {
+        e.preventDefault();
+        window.location.replace('/invoice-list');
+    }
     useEffect(() => {
         console.log("mounted")
         let imgView = document.getElementById("img-view");
@@ -556,7 +560,7 @@ const Addbill = () => {
                     </div>
                 </div>
                 <div className="btn-pair">
-                        <input type="submit" value="حفظ"  />
+                        <input type="submit" value="حفظ"  onClick={(e) => {redirectFunction(e)}}/>
                         <input type="reset" value="إلغاء" />
                 </div>
             </form>

@@ -4,4 +4,5 @@
     padding: 20px;
     border-radius: var(--main-border-radius);
     color: var(--text-color);
+    position: relative;
 }

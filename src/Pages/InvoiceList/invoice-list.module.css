@@ -1,0 +1,164 @@
+.invoiceList .content{
+    display: flex;
+    gap: 30px;
+}
+.invoiceList .content .left{
+    width: 75%;
+}
+.invoiceList .content .summary{
+    flex: 1;
+}
+.invoiceList .content .tickets{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 20px;
+}
+.ticket{
+    position: relative;
+    border-top: 4px solid var(--main-color);
+    border-radius: var(--main-border-radius);
+}
+.ticket .ticketContent{
+    padding-top: 40px;
+}
+.ticket h4{
+    font-size: 14px; 
+    position: absolute; 
+    top: -4px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-radius: 0px 0px var(--main-border-radius) var(--main-border-radius); 
+    font-weight: bold;
+    background-image: var(--primary-gradient);
+    color: white;
+    padding: 4px 12px;
+}
+.ticket .ticketContent .ticketList{
+    place-content: center; 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px;
+    font-size: 14px;
+}
+.ticket .ticketContent .ticketList li{
+    display: flex; 
+    align-items: center; 
+    /* gap: 5px;  */
+    margin-bottom: 5px; 
+    background-color: ; 
+    border: 1px solid #ccc ; 
+    /* padding: 5px 10px; */
+    border-radius: var(--main-border-radius);
+    font-size: 14px;
+    width: calc((100% - 10px) / 2);
+}
+.ticket .ticketContent .ticketList li:has(.currency){
+    position: relative;
+    padding-left: 50px;
+}
+.ticket .ticketContent .ticketList li:has(.currency) span:not(.currency){
+    /* font-size: 18px; */
+}
+.ticket .ticketContent .ticketList li.important{
+    width: 100%;
+}
+.ticket .ticketContent .ticketList li h5{
+    font-weight: normal;
+    background-color: var(--main-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 0px var(--main-border-radius) var(--main-border-radius) 0px;
+    text-wrap: nowrap;
+}
+.ticket .ticketContent .ticketList li span{
+    font-size: 14px;
+    font-weight: bold; 
+    letter-spacing: 1px;
+    /* padding: 5px 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.ticket .ticketContent .ticketList li span.paidStatus{
+    padding: 2px 10px;
+    border-radius: var(--main-border-radius) 0px 0px var(--main-border-radius);
+    color: #fff;
+    height: 100%;
+}
+.ticket .progress{
+    background-color: #ccc; 
+    width: 90%; 
+    margin: 40px auto 20px; 
+    position: relative; 
+    border-radius: 20px; 
+    height: 10px;
+    overflow: visible;
+}
+.ticket .progress .progressPercentage{
+    position: absolute; 
+    bottom: calc(100% + 8px); 
+    left: 60%; 
+    transform: translateX(-50%); 
+    background-color: #01aaad; 
+    padding: 2px 5px; 
+    color: white; 
+    border-radius: 4px;
+    font-size: 12px;
+}
+.ticket .progress .progressPercentage span{
+    position: absolute; 
+    top: 98%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border: 8px solid #01aaad; 
+    border-color: #01aaad transparent transparent transparent;
+}
+.ticket .progress .progressBar{
+    background-color: #01aaad; 
+    height: 100%; 
+    width: 60%; 
+    border-radius: inherit;
+}
+.ticket .currency{
+    font-size: 12px !important; 
+    position: absolute; 
+    top: 50%; 
+    left: 10px; 
+    transform: translateY(-50%);
+    color: #888;
+}
+.ticket .ticketFooter{
+    margin-top: 10px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.ticket .ticketFooter .eyeIcon{
+    /* position: absolute; */
+    background-image: var(--primary-gradient);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: var(--main-border-radius);
+    font-size: 14px;
+}
+.ticket .ticketFooter .due{
+    /* width: fit-content; */
+    font-size: 12px;
+}
+.ticket .ticketFooter .due strong{
+    padding: 3px 5px;
+    border-radius: var(--main-border-radius);
+    background-image: var(--primary-gradient);
+    color: #fff;
+}

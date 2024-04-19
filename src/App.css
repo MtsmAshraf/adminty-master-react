@@ -17,7 +17,7 @@
   --primary-gradient: linear-gradient(to right, #01a9ac, #01dbdf);
   --header-shadow: 0 0 11px rgba(0,0,0,0.13);
   --card-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-  --main-border-radius: 4px;
+  --main-border-radius: 6px;
   --side-text-color: #c3c3c3;
   --main-transition: all 0.2s 0s linear;
 }
@@ -51,7 +51,7 @@ select:focus-visible{
 main{
   background-color: var(--bg-color);
   margin-left: 200px;
-  height: calc(100vh - 55px);
+  height: calc(100vh);
   overflow-y: scroll;
   padding: 20px 30px;
   z-index: 2;
