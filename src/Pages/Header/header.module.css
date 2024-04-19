@@ -68,6 +68,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    position: relative;
 }
 .header .right .icons span{
     cursor: pointer;
@@ -75,11 +76,10 @@
     color: #777;
     font-size: 18px;
 }
-.header .right .icons span div{
+.header .right .icons span span{
     position: absolute;
     top: 0;
     right: 0;
-    background-image: var(--danger-gradient);
     width: 15px;
     height: 15px;
     display: flex;
@@ -91,6 +91,12 @@
     color: #fff;
     transform: translate(50%,-50%);
     font-weight: bold;
+}
+.header .right .icons span:first-of-type span{
+    background-image: var(--danger-gradient);
+}
+.header .right .icons span:nth-of-type(2) span{
+    background-image: var(--success-gradient);
 }
 .header .right .personalInfo{
     display: flex;
@@ -107,4 +113,59 @@
 .header .right .personalInfo svg{
     color: #777;
     font-size: 14px;
+}
+.header .right .notifications{
+    color: #000;
+    width: 350px;
+    background-color: var(--bg-color);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 20px);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--header-shadow);
+    display: none;
+}
+.header .right .notifications.shown{
+    display: block;
+}
+.header .right .notifications .arrow{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    border: 10px solid red;
+    border-color: transparent transparent var(--main-color) transparent;
+}
+.header .right .notifications h4{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+}
+.header .right .notifications ul{
+    border-radius: 0px 0px var(--main-border-radius) var(--main-border-radius);
+    overflow: hidden;
+}
+.header .right .notifications ul li{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+.header .right .notifications ul li > *{
+}
+.header .right .notifications .img{
+    width: 40px;
+    overflow: hidden;
+    border-radius: var(--main-border-radius);
+    padding-top: 5px;
+}
+.header .right .notifications ul li .text p{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.header .right .notifications ul li .text h6{
+    color: #777;
 }

@@ -2,7 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styles from "./header.module.css"
 import { faAngleDown, faBell, faComment, faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons"
 import userPic from "../../assets/imgs/user.png"
+import { useState } from "react"
 const Header = () => {
+  let [showNotifications, setShowNotifications] = useState(false)
+  let toggleNotifications = () => {
+    setShowNotifications(!showNotifications)
+  }
   return (
     <div className={styles.header}>
       <div className={styles.search}>
@@ -14,12 +19,58 @@ const Header = () => {
       <div className={styles.right}>
         <div className={styles.icons}>
           <span>
-            <FontAwesomeIcon icon={faBell} />
-            <div>5</div>
+            <FontAwesomeIcon icon={faBell} onClick={() => {toggleNotifications()}}/>
+            <span onClick={() => {toggleNotifications()}}>5</span>
+            <div className={showNotifications ? styles.notifications + " " + styles.shown : styles.notifications}>
+              <div className={styles.arrow}></div>
+              <h4>Notifications</h4>
+              <ul>
+                <li>
+                  <div className={styles.img}>
+                    <img src={userPic} alt="" />
+                  </div>
+                  <div className={styles.text}>
+                    <h5>John Doe</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                    <h6>30 minutes ago</h6>
+                  </div>
+                </li>
+                <li>
+                  <div className={styles.img}>
+                    <img src={userPic} alt="" />
+                  </div>
+                  <div className={styles.text}>
+                    <h5>John Doe</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                    <h6>30 minutes ago</h6>
+                  </div>
+                </li>
+                <li>
+                  <div className={styles.img}>
+                    <img src={userPic} alt="" />
+                  </div>
+                  <div className={styles.text}>
+                    <h5>John Doe</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                    <h6>30 minutes ago</h6>
+                  </div>
+                </li>
+                <li>
+                  <div className={styles.img}>
+                    <img src={userPic} alt="" />
+                  </div>
+                  <div className={styles.text}>
+                    <h5>John Doe</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                    <h6>30 minutes ago</h6>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </span>
           <span>
             <FontAwesomeIcon icon={faComment} />
-            <div>15</div>
+            <span>15</span>
           </span>
         </div>
         <div className={styles.personalInfo}>
