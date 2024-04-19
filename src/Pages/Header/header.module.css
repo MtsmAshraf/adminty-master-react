@@ -7,9 +7,104 @@
     top: 0;
     left: 0;
     margin-left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 @media (max-width: 992px) {
     .header{
         margin-left: 0px;
     }
+}
+.header .search {
+    width: fit-content;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: var(--main-transition);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.header .search:hover{
+    border-radius: 20px;
+    width: 170px;
+}
+.header .search input{
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 100%;
+}
+.header .search:hover input{
+    padding: 5px 30px 5px 10px;
+    background-color: #ddd;
+}
+.header .search span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    transition: var(--main-transition);
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
+    color: #333;
+}
+.header .search:hover span{
+    right: 10px;
+    transition-delay: 0s;
+    left: auto;
+    transform: translate(0%, -50%);
+}
+.header .right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.header .right .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header .right .icons span{
+    cursor: pointer;
+    position: relative;
+    color: #777;
+    font-size: 18px;
+}
+.header .right .icons span div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: var(--danger-gradient);
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 12px;
+    color: #fff;
+    transform: translate(50%,-50%);
+    font-weight: bold;
+}
+.header .right .personalInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+}
+.header .right .personalInfo .img{
+    width: 30px;
+    overflow: hidden;
+    border-radius: var(--main-border-radius);
+}
+.header .right .personalInfo svg{
+    color: #777;
+    font-size: 14px;
 }
