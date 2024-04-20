@@ -7,6 +7,8 @@ import { faEye } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const InvoiceList = () => {
     let [paidStatus, setPaidStatus] = useState("full")
+    let [paidStatusSal, setPaidStatusSal] = useState("partially")
+    let [delivered, setDelivered] = useState(true)
   return (
     <div className={styles.invoiceList}>
         <Breadcumbs pageName={"التيكتات"} />
@@ -86,7 +88,7 @@ const InvoiceList = () => {
                                                 <span>5000</span>
                                                 <span className={styles.currency}>SAR</span>
                                             </li>
-                                            {/* <li>
+                                            <li>
                                                 <h5>
                                                     حالة السداد: 
                                                 </h5>
@@ -95,7 +97,7 @@ const InvoiceList = () => {
                                                     {paidStatus === "partially" && "مدفوع جزئي"}
                                                     {paidStatus === "unpaid" && "غير مدفوع"}
                                                 </span>
-                                            </li> */}
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -136,7 +138,46 @@ const InvoiceList = () => {
                                                 <h5>
                                                     عدد الفواتير: 
                                                 </h5>
-                                                <span>6</span>
+                                                <span>10</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.ticketFooter}>
+                                
+                            </div>
+                        </Card>
+                    </div>
+                    <div className={styles.ticket}>
+                        <Card>
+                            <h4 class="label label-primary p-t-5 p-b-10">نقل</h4>
+                            <div className={styles.ticketContent} dir="rtl">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <ul className={styles.ticketList}>
+                                            <li className={styles.important}>
+                                                <h5>
+                                                    اسم المستلم: 
+                                                </h5>
+                                                <span>اسم المستلم</span>
+                                            </li>
+                                            <li>
+                                                <h5>
+                                                    المبلغ: 
+                                                </h5>
+                                                <span>5000</span>
+                                                <span className={styles.currency}>SAR</span>
+                                            </li>
+                                            <li>
+                                                <h5>
+                                                    الحالة: 
+                                                </h5>
+                                                <span className={styles.paidStatus} style={{backgroundImage: delivered  ? "var(--success-gradient)" : "var(--danger-gradient)"}}>
+                                                    {
+                                                        delivered ? "تم الاستلام" : "لم يستلم"
+                                                    }
+                                                </span>
                                             </li>
                                         </ul>
                                     </div>
@@ -159,10 +200,10 @@ const InvoiceList = () => {
                                                 <h5>
                                                     حالة السداد: 
                                                 </h5>
-                                                <span className={styles.paidStatus} style={{backgroundImage: paidStatus === "full" ? "var(--success-gradient)" : paidStatus === "partially" ? "var(--primary-gradient)" :"var(--danger-gradient)"}}>
-                                                    {paidStatus === "full" && "مدفوع"}
-                                                    {paidStatus === "partially" && "مدفوع جزئي"}
-                                                    {paidStatus === "unpaid" && "غير مدفوع"}
+                                                <span className={styles.paidStatus} style={{backgroundImage: paidStatusSal === "full" ? "var(--success-gradient)" : paidStatusSal === "partially" ? "var(--primary-gradient)" :"var(--danger-gradient)"}}>
+                                                    {paidStatusSal === "full" && "مدفوع"}
+                                                    {paidStatusSal === "partially" && "مدفوع جزئي"}
+                                                    {paidStatusSal === "unpaid" && "غير مدفوع"}
                                                 </span>
                                             </li>
                                             <li>
