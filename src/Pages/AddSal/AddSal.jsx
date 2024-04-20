@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import Card from "../../components/Card/Card"
-import "./add-custom.css"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs";
-const AddCustom = () => {
+const AddSal = () => {
     let redirectFunction = (e) => {
         e.preventDefault();
         window.location.replace('/invoice-list');
@@ -45,13 +44,13 @@ const AddCustom = () => {
     })
     return (
     <div className='add-custom'>
-        <Breadcumbs pageName={"إضافة بيان جمركي"}/>
+        <Breadcumbs pageName={"إضافة سداد سال"}/>
         <Card>
         <div className="card-block" dir="rtl">
-            <h4 className="sub-title">أدخل تفاصيل تخليص جمركي</h4>
+            <h4 className="sub-title">أدخل تفاصيل سداد سال</h4>
             <form className="row">
                 <div className="form-group row col-sm-6 col-md-4">
-                    <label className="col-sm-12 col-form-label">رقم البيان</label>
+                    <label className="col-sm-12 col-form-label">رقم سداد سال</label>
                     <div className="col-sm-12">
                         <input type="number" min="0" className="form-control" placeholder="" />
                     </div>
@@ -69,7 +68,7 @@ const AddCustom = () => {
                     </div>
                 </div>
                 <div className="form-group row col-sm-6 col-md-4">
-                    <label className="col-sm-12 col-form-label">الرقم الموحد</label>
+                    <label className="col-sm-12 col-form-label">عدد الطرود</label>
                     <div className="col-sm-12">
                         <input type="number" min="0" className="form-control" placeholder="" />
                     </div>
@@ -102,4 +101,4 @@ const AddCustom = () => {
   )
 }
 
-export default AddCustom
+export default AddSal

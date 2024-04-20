@@ -13,6 +13,7 @@ const Sidebar = () => {
         <SidebarLink icon={faFileLines} linkText={"الصفحة الداخلية"} to={"/invoice"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إدخال البيانات"} to={"/add-bill"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة بيان جمركي"} to={"/add-custom"}/>
+        <SidebarLink icon={faPlusCircle} linkText={"إضافة سال"} to={"/add-sal"}/>
       </ul>
     </div>
   )
