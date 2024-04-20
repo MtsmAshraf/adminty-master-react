@@ -104,6 +104,44 @@
     justify-content: space-between;
     gap: 10px;
     cursor: pointer;
+    position: relative;
+}
+.header .right .personalInfo .personalOptions{
+    color: #000;
+    width: 200px;
+    background-color: var(--card-bg);
+    position: absolute;
+    right: 30px;
+    top: calc(100% + 20px);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--header-shadow);
+    display: none;
+}
+.header .right .personalInfo.shown .personalOptions{
+    display: block;
+}
+.header .right .personalInfo .personalOptions .arrow{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    border: 10px solid;
+    border-color: transparent transparent var(--main-color) transparent;
+}
+.header .right .personalInfo .personalOptions ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header .right .personalInfo .personalOptions ul li a{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #777;
+    transition: var(--main-transition);
+}
+.header .right .personalInfo .personalOptions ul li a:hover{
+    background-color: #eee;
 }
 .header .right .personalInfo .img{
     width: 30px;
@@ -117,7 +155,7 @@
 .header .right .notifications{
     color: #000;
     width: 350px;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg);
     position: absolute;
     right: 0;
     top: calc(100% + 20px);
@@ -133,7 +171,7 @@
     right: 0;
     top: 0;
     transform: translateY(-100%);
-    border: 10px solid red;
+    border: 10px solid;
     border-color: transparent transparent var(--main-color) transparent;
 }
 .header .right .notifications h4{

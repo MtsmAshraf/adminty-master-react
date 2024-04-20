@@ -1,12 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styles from "./header.module.css"
-import { faAngleDown, faBell, faComment, faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDown, faBell, faComment, faEnvelope, faGear, faLock, faMagnifyingGlass, faRightFromBracket, faUser, faXmark } from "@fortawesome/free-solid-svg-icons"
 import userPic from "../../assets/imgs/user.png"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 const Header = () => {
   let [showNotifications, setShowNotifications] = useState(false)
+  let [showPersonalOptions, setShowPersonalOptions] = useState(false)
   let toggleNotifications = () => {
     setShowNotifications(!showNotifications)
+    setShowPersonalOptions(false)
+  }
+  let togglepersonalOptions = () => {
+    setShowPersonalOptions(!showPersonalOptions)
+    setShowNotifications(false)
   }
   return (
     <div className={styles.header}>
@@ -73,7 +80,42 @@ const Header = () => {
             <span>15</span>
           </span>
         </div>
-        <div className={styles.personalInfo}>
+        <div className={showPersonalOptions ? styles.personalInfo + " " + styles.shown : styles.personalInfo} onClick={() => {togglepersonalOptions()}}>
+          <div className={styles.personalOptions}>
+          <div className={styles.arrow}></div>
+            <ul>
+              <li>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faGear} />
+                  <span>Settings</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faUser} />
+                  <span>Profile</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                <FontAwesomeIcon icon={faEnvelope} />
+                  <span>Messages</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faLock} />
+                  <span>Lock Screen</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faRightFromBracket} />
+                  <span>Logout</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div className={styles.img}>
             <img src={userPic} alt="" />
           </div>
