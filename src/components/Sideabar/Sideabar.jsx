@@ -14,6 +14,7 @@ const Sidebar = () => {
         <SidebarLink icon={faPlusCircle} linkText={"إدخال البيانات"} to={"/add-bill"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة بيان جمركي"} to={"/add-custom"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة سال"} to={"/add-sal"}/>
+        <SidebarLink icon={faPlusCircle} linkText={"إضافة نقل"} to={"/add-trans"}/>
       </ul>
     </div>
   )

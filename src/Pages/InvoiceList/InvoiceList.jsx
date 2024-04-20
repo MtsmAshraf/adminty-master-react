@@ -84,7 +84,7 @@ const InvoiceList = () => {
                                                     المبلغ الإجمالي: 
                                                 </h5>
                                                 <span>5000</span>
-                                                <span className={styles.currency}>SAR </span>
+                                                <span className={styles.currency}>SAR</span>
                                             </li>
                                             {/* <li>
                                                 <h5>
@@ -130,7 +130,7 @@ const InvoiceList = () => {
                                                     المبلغ الإجمالي: 
                                                 </h5>
                                                 <span>5000</span>
-                                                <span className={styles.currency}>SAR </span>
+                                                <span className={styles.currency}>SAR</span>
                                             </li>
                                             <li>
                                                 <h5>
@@ -157,13 +157,6 @@ const InvoiceList = () => {
                                         <ul className={styles.ticketList}>
                                             <li>
                                                 <h5>
-                                                    المبلغ الإجمالي: 
-                                                </h5>
-                                                <span>5000</span>
-                                                <span className={styles.currency}>SAR </span>
-                                            </li>
-                                            <li>
-                                                <h5>
                                                     حالة السداد: 
                                                 </h5>
                                                 <span className={styles.paidStatus} style={{backgroundImage: paidStatus === "full" ? "var(--success-gradient)" : paidStatus === "partially" ? "var(--primary-gradient)" :"var(--danger-gradient)"}}>
@@ -171,6 +164,19 @@ const InvoiceList = () => {
                                                     {paidStatus === "partially" && "مدفوع جزئي"}
                                                     {paidStatus === "unpaid" && "غير مدفوع"}
                                                 </span>
+                                            </li>
+                                            <li>
+                                                <h5>
+                                                    المبلغ الإجمالي: 
+                                                </h5>
+                                                <span>5000</span>
+                                                <span className={styles.currency}>SAR</span>
+                                            </li>
+                                            <li>
+                                                <h5>
+                                                    عدد فواتير سال: 
+                                                </h5>
+                                                <span>10</span>
                                             </li>
                                         </ul>
                                     </div>
