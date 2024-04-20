@@ -11,6 +11,7 @@ import { faSackXmark, fas } from '@fortawesome/free-solid-svg-icons'
 import InvoiceList from './Pages/InvoiceList/InvoiceList.jsx';
 import Invoice from './Pages/Invoice/Invoice.jsx';
 import Addbill from './Pages/AddBill/Addbill.jsx';
+import AddCustom from './Pages/AddCustom/AddCustom.jsx';
 
 library.add(fas)
 const router = createBrowserRouter(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
         <Route path='/invoice-list' element={<InvoiceList />}/>
         <Route path='/invoice' element={<Invoice />}/>
         <Route path='/add-bill' element={<Addbill />}/>
+        <Route path='/add-custom' element={<AddCustom />}/>
 
     </Route>
   )
