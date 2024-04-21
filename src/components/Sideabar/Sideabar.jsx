@@ -16,6 +16,7 @@ const Sidebar = () => {
         <SidebarLink icon={faPlusCircle} linkText={"إضافة سال"} to={"/add-sal"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة نقل"} to={"/add-trans"}/>
         <SidebarLink icon={faPlusCircle} linkText={"تفاصيل الفاتورة"} to={"/bill-details"}/>
+        <SidebarLink icon={faPlusCircle} linkText={"فاتورة شراء"} to={"/add-new-bill"}/>
       </ul>
     </div>
   )

@@ -1,0 +1,70 @@
+.add-buying-bill form{
+    /* background-color: red; */
+}
+.add-buying-bill .buying-bill-number{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.add-buying-bill .table-wrapper{
+    overflow-x: scroll;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.add-buying-bill .table-wrapper::-webkit-scrollbar{
+    height: 10px;
+    background-color: #eee;
+    border-radius: var(--main-border-radius);
+}
+.add-buying-bill .table-wrapper::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: var(--main-border-radius);
+}
+.add-buying-bill table{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+.add-buying-bill table *{
+    text-align: center;
+}
+.add-buying-bill table th{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 6px 10px;
+}
+.add-buying-bill table td:nth-child(1) input{
+    width: 200px;
+}
+.add-buying-bill table td:nth-child(2) input,
+.add-buying-bill table td:last-child input{
+    width: 80px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.add-buying-bill table td select{
+    padding: 6px 10px;
+
+}
+.add-buying-bill table th:first-child{
+    border-radius: 0px var(--main-border-radius) 0px 0px;
+}
+.add-buying-bill table th:last-child{
+    border-radius: var(--main-border-radius) 0px 0px 0px;
+}
+.add-buying-bill table .total td{
+    padding: 6px 10px;
+}
+.add-buying-bill table .total td.text{
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: var(--main-border-radius);
+}
+.add-buying-bill table .total td:last-child{
+    border-radius: var(--main-border-radius);
+    border: 1px solid #ccc;
+    background-color: var(--card-bg);
+}
