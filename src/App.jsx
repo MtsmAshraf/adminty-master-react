@@ -14,6 +14,7 @@ import Addbill from './Pages/AddBill/Addbill.jsx';
 import AddCustom from './Pages/AddCustom/AddCustom.jsx';
 import AddSal from './Pages/AddSal/AddSal.jsx';
 import AddTrans from './Pages/AddTrans/AddTrans.jsx';
+import BillDetails from './Pages/BillDetails/BillDetails.jsx';
 
 library.add(fas)
 const router = createBrowserRouter(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
         <Route path='/add-custom' element={<AddCustom />}/>
         <Route path='/add-sal' element={<AddSal />}/>
         <Route path='/add-trans' element={<AddTrans />}/>
+        <Route path='/bill-details' element={<BillDetails />}/>
 
     </Route>
   )

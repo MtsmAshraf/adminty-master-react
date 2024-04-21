@@ -15,13 +15,16 @@ const Header = () => {
     setShowPersonalOptions(!showPersonalOptions)
     setShowNotifications(false)
   }
+  let searchFocus = () => {
+    document.getElementById("search").focus()
+  }
   return (
     <div className={styles.header}>
       <div className={styles.search}>
-        <span className={styles.openSearch}>
+        <span className={styles.openSearch} onClick={() => {searchFocus()}}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </span>
-        <input type="search" name="" id="" />
+        <input type="search" name="" id="search" />
       </div>
       <div className={styles.right}>
         <div className={styles.icons}>

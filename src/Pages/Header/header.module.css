@@ -27,7 +27,7 @@
     padding-left: 2px;
     padding-right: 2px;
 }
-.header .search:hover{
+.header .search:has(input:focus){
     border-radius: 20px;
     width: 170px;
 }
@@ -36,7 +36,7 @@
     border-radius: 20px;
     width: 100%;
 }
-.header .search:hover input{
+.header .search input:focus{
     padding: 5px 30px 5px 10px;
     background-color: #ddd;
 }
@@ -48,10 +48,9 @@
     font-size: 14px;
     transition: var(--main-transition);
     transition-duration: 0.4s;
-    transition-delay: 0.1s;
     color: #333;
 }
-.header .search:hover span{
+.header .search:has(input:focus) span{
     right: 10px;
     transition-delay: 0s;
     left: auto;

@@ -145,7 +145,13 @@ const InvoiceList = () => {
                                 </div>
                             </div>
                             <div className={styles.ticketFooter}>
-                                
+                                {/* <p className={styles.due}>
+                                    <span> Due : </span>
+                                    <strong class="label label-primary">23 hours</strong>
+                                </p> */}
+                                <Link className={styles.eyeIcon} to="/bill-details">
+                                    <FontAwesomeIcon icon={faEye} />
+                                </Link>
                             </div>
                         </Card>
                     </div>

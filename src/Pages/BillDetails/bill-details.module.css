@@ -1,0 +1,74 @@
+.billDetails .additionalBills{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.billDetails .additionalBills > *{
+    /* width: calc((100% - 20px) / 2); */
+    min-height: 200px;
+}
+.billDetails .additionalBills > div:first-child{
+    flex: 1;
+}
+.billDetails .additionalBills > div:last-child{
+    width: 300px;
+}
+.billDetails .additionalBills > div:last-child .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.billDetails .additionalBills > div:last-child .header span{
+    color: #fff;
+    background-color: var(--main-color);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--header-shadow);
+}
+.billDetails .additionalBills > div:last-child .header svg{
+    transition: var(--main-transition);
+}
+.billDetails .additionalBills > div:last-child .header span:hover svg{
+    transform: rotate(90deg);
+}
+.billDetails .additionalBills > div:last-child h3{
+    /* text-align: right; */
+}
+.billDetails .additionalBills ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    padding: 5px 20px;
+    direction: rtl;
+}
+.billDetails .additionalBills ul li:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+.billDetails .additionalBills ul li:hover,
+.billDetails .additionalBills ul li[status="active"]{
+    background-color: #eee;
+}
+.billDetails .additionalBills ul li span{
+    color: #eee;
+    background-color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.billDetails .additionalBills ul li .text{
+    font-size: 14px;
+}
+.billDetails .additionalBills ul li .text p{
+}
