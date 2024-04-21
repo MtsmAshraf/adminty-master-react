@@ -1,3 +1,7 @@
+.billDetails{
+    padding-bottom: 100px;
+}
+
 .billDetails .additionalBills{
     display: flex;
     justify-content: space-between;
@@ -70,5 +74,14 @@
 .billDetails .additionalBills ul li .text{
     font-size: 14px;
 }
-.billDetails .additionalBills ul li .text p{
+.billDetails .goBack{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 5px 10px;
+    display: block;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    width: fit-content;
+    border-radius: var(--main-border-radius);
 }
