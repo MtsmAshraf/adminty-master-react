@@ -236,6 +236,7 @@
     position: relative;
     text-align: center;
     padding-top: 45px;
+    box-shadow: var(--header-shadow);
 }
 .left .chatWrapper .chat .chatHeader .img{
     position: absolute;
@@ -268,6 +269,15 @@
 }
 .left .chatWrapper .chat .chatBody{
     padding: 20px;   
+    height: 400px;
+    overflow-y: scroll;
+}
+.left .chatWrapper .chat .chatBody::-webkit-scrollbar{
+    width: 10px;
+    background-color: #ddd;
+}
+.left .chatWrapper .chat .chatBody::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
 }
 .left .chatWrapper .chat .chatBody .message{
     margin-bottom: 10px;
@@ -299,4 +309,47 @@
 .left .chatWrapper .chat .chatBody .message span{
     color: #777;
     font-size: 14px;
+}
+@media (max-width: 768px) {
+    .left .chatWrapper .chat .chatBody .message p{
+        font-size: 14px;
+        max-width: 80%;
+    }
+}
+.left .chatWrapper .chat .chatForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 10px;
+    box-shadow: var(--header-shadow);
+    border-top: 1px solid var(--main-color);
+    /* background-color: red; */
+    direction: rtl;
+}
+.left .chatWrapper .chat .chatForm .inputWrapper{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.left .chatWrapper .chat .chatForm .inputWrapper textarea{
+    width: 100%;
+    resize: none;
+    text-align: right;
+    height: 40px;
+    max-height: 200px;
+    direction: rtl;
+    place-content: center;
+}
+.left .chatWrapper .chat .chatForm button{
+    border: none;
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 5px 8px;
+    border-radius: var(--main-border-radius);
+    font-size: 20px;   
+    cursor: pointer;
+}
+.left .chatWrapper .chat .chatForm button svg{
+    transform: rotateY(180deg);
 }

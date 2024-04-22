@@ -3,7 +3,7 @@ import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 import Card from "../../components/Card/Card"
 import styles from "./invoice-list.module.css"
 import { useEffect, useState } from "react"
-import { faEye } from "@fortawesome/free-solid-svg-icons"
+import { faEye, faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import profileImg from "../../assets/imgs/male-user.jpg"
 const InvoiceList = () => {
@@ -298,10 +298,34 @@ const InvoiceList = () => {
                                     مرحبًا! كيف كان يومك؟ أتمنى أن تكون قد قضيت يومًا رائعًا. هل حدث شيء مميز اليوم؟ أو ربما كان يومًا هادئًا؟ سأكون هنا إذا كنت بحاجة إلى الحديث أو مشاركة أي شيء. فلا تتردد في التواصل!                                </p>
                                 <span>10:43 PM</span>
                             </div>
+                            <div className={styles.message} message-src="client">
+                                <p>
+                                    مرحبا! كيف حالك؟ 
+                                </p>
+                                <span>10:43 PM</span>
+                            </div>
+                            <div className={styles.message} message-src="client">
+                                <p>
+                                    "مرحبا! كيف حالك اليوم؟ هل مرت يوم جيد؟ أتمنى أن تكون بخير وسعيد اليوم. هل لديك أي خطط مثيرة لهذا اليوم؟ أنا فقط أحاول الاسترخاء قليلاً والاستمتاع ببعض الوقت الهادئ. يمكن أن نتحدث عن أي شيء، فلا تتردد في مشاركتي ما تريد!"
+                                </p>
+                                <span>10:43 PM</span>
+                            </div>
+                            <div className={styles.message} message-src="user">
+                                <p>
+                                    مرحبًا! كيف كان يومك؟ أتمنى أن تكون قد قضيت يومًا رائعًا. هل حدث شيء مميز اليوم؟ أو ربما كان يومًا هادئًا؟ سأكون هنا إذا كنت بحاجة إلى الحديث أو مشاركة أي شيء. فلا تتردد في التواصل!                                </p>
+                                <span>10:43 PM</span>
+                            </div>
                         </div>
-                        {/* <div className={styles.chatForm}>
-                        chatForm
-                        </div> */}
+                        <div className={styles.chatForm}>
+                            <div className={styles.inputWrapper}>
+                                <textarea name="" id="" placeholder="أكتب رسالتك هنا..." ></textarea>
+                            </div>
+                            <div className={styles.btnWrapper}>
+                                <button type="button" className={styles.btn}>
+                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.trackingWrapper}>
