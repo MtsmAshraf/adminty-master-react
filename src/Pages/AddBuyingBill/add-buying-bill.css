@@ -1,5 +1,6 @@
-.add-buying-bill form{
-    /* background-color: red; */
+
+.add-buying-bill{
+    padding-bottom: 100px;
 }
 .add-buying-bill .buying-bill-number{
     margin-right: auto;
