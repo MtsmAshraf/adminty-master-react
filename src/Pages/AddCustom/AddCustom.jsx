@@ -75,9 +75,24 @@ const AddCustom = () => {
                     </div>
                 </div>
                 <div className="form-group row col-sm-6 col-md-4">
-                    <label className="col-sm-12 col-form-label">جالة السداد</label>
+                    <label className="col-sm-12 col-form-label">حالة السداد</label>
                     <div className="col-sm-12">
-                        <input type="text" className="form-control" placeholder="" />
+                        
+                        <div className="selector-element">
+                            <div className="input-div">
+                                <label htmlFor="payment-status-1">مدفوع</label>
+                                <input type="radio" name="payment-status" id="payment-status-1" hidden />
+                            </div>
+                            <div className="input-div">
+                                <label htmlFor="payment-status-2">مدفوع جزئي</label>
+                                <input type="radio" name="payment-status" id="payment-status-2" hidden />
+                            </div>
+                            <div className="input-div">
+                                <label htmlFor="payment-status-3">غير مدفوع</label>
+                                <input type="radio" name="payment-status" id="payment-status-3" hidden />
+                            </div>
+                        </div>
+                        {/* <input type="text" className="form-control" placeholder="" /> */}
                     </div>
                 </div>
                 <div className="form-group row text-center" id="drag-area">
