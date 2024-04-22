@@ -7,6 +7,39 @@
 }
 .invoiceList .content .left{
     width: 75%;
+    position: relative;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+.invoiceList .content .left .leftHeader{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    z-index: 2;
+    background-color: var(--card-bg);
+}
+.invoiceList .content .left .leftHeader ul{
+    border: 2px solid var(--main-color);
+    border-radius: var(--main-border-radius);
+    display: flex;
+    overflow: hidden;
+}
+.invoiceList .content .left .leftHeader ul li{
+    transition: var(--main-transition);
+    cursor: pointer;
+    padding: 5px 20px;
+}
+.invoiceList .content .left .leftHeader ul li[status="active"]{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.invoiceList .content .left .leftHeader ul li:not(:last-child){
+    border-right: 2px solid var(--main-color);
+}
+.invoiceList .content .left .leftHeader ul li:hover{
+    background-color: var(--main-color);
+    color: #fff;
 }
 .invoiceList .content .summary{
     flex: 1;
@@ -16,10 +49,24 @@
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     gap: 20px;
 }
+.invoiceList .content .tracking > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
 .ticket{
     position: relative;
     border-top: 4px solid var(--main-color);
     border-radius: var(--main-border-radius);
+}
+.ticket:nth-child(1) > div,
+.ticket:nth-child(2) > div{
+    height: 270px;
+}
+.ticket:nth-child(3) > div,
+.ticket:nth-child(4) > div{
+    height: 180px;
 }
 .ticket .ticketContent{
     padding-top: 40px;
