@@ -61,3 +61,7 @@ main{
         margin-left: 0px;
     }
 }
+a.active{
+  background-color: #4c5c77;
+  color: #fff;
+}

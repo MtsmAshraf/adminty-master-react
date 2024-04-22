@@ -2,7 +2,6 @@ import { faFileInvoice, faFileLines, faHouse, faPlusCircle } from '@fortawesome/
 import SidebarLink from './SidebarLink/SidebarLink';
 import styles from './sidebar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
