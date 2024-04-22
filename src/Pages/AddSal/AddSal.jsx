@@ -78,16 +78,16 @@ const AddSal = () => {
                     <div className="col-sm-12">
                         <div className="selector-element">
                             <div className="input-div">
-                                <label htmlFor="payment-status-1">مدفوع</label>
-                                <input type="radio" name="payment-status" id="payment-status-1" hidden />
+                                <label htmlFor="sal-status-1">مدفوع</label>
+                                <input type="radio" name="sal-status" id="sal-status-1" hidden />
                             </div>
                             <div className="input-div">
-                                <label htmlFor="payment-status-2">مدفوع جزئي</label>
-                                <input type="radio" name="payment-status" id="payment-status-2" hidden />
+                                <label htmlFor="sal-status-2">مدفوع جزئي</label>
+                                <input type="radio" name="sal-status" id="sal-status-2" hidden />
                             </div>
                             <div className="input-div">
-                                <label htmlFor="payment-status-3">غير مدفوع</label>
-                                <input type="radio" name="payment-status" id="payment-status-3" hidden />
+                                <label htmlFor="sal-status-3">غير مدفوع</label>
+                                <input type="radio" name="sal-status" id="sal-status-3" hidden />
                             </div>
                         </div>
                         {/* <input type="text" className="form-control" placeholder="" /> */}
