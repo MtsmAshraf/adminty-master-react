@@ -289,6 +289,7 @@
     text-align: right;
     max-width: 60%;
     width: fit-content;
+    font-size: 14px;
     line-height: 1.4;
 }
 .left .chatWrapper .chat .chatBody .message[message-src="user"]{
@@ -334,12 +335,12 @@
 }
 .left .chatWrapper .chat .chatForm .inputWrapper textarea{
     width: 100%;
-    resize: none;
+    resize: vertical;
     text-align: right;
-    height: 40px;
+    height: 33px;
     max-height: 200px;
     direction: rtl;
-    place-content: center;
+    /* place-content: center; */
 }
 .left .chatWrapper .chat .chatForm button{
     border: none;
