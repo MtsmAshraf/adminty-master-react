@@ -30,6 +30,11 @@
     cursor: pointer;
     padding: 5px 20px;
 }
+#left .trackingWrapper{
+    display: none;
+    padding: 20px ;
+    background-color: red;
+}
 .invoiceList .content .left .leftHeader ul li[status="active"]{
     background-color: var(--main-color);
     color: #fff;
@@ -116,12 +121,13 @@
 }
 .ticket .ticketContent .ticketList li h5{
     font-weight: normal;
-    background-color: var(--main-color);
+    background-color: #eee;
+    width: 80px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--text-color);
     padding: 10px 10px;
     border-radius: 0px var(--main-border-radius) var(--main-border-radius) 0px;
     text-wrap: nowrap;
