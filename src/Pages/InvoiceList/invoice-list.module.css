@@ -11,7 +11,7 @@
     padding-top: 30px;
     margin-top: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .invoiceList .content{
         flex-direction: column-reverse;
     }
@@ -59,6 +59,17 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     gap: 20px;
+}
+@media (max-width: 992px) {
+    .invoiceList .content .tickets{
+        grid-template-columns: repeat(1, minmax(150px, 0.75fr));
+        justify-content: center;
+    }
+}
+@media (max-width: 767px) {
+    .invoiceList .content .tickets{
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+    }
 }
 .invoiceList .content .tracking > div{
     display: flex;
