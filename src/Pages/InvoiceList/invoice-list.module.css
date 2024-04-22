@@ -8,8 +8,16 @@
 .invoiceList .content .left{
     width: 75%;
     position: relative;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .invoiceList .content{
+        flex-direction: column-reverse;
+    }
+    .invoiceList .content .left{
+        width: 100%;
+    }
 }
 .invoiceList .content .left .leftHeader{
     position: absolute;
@@ -30,10 +38,8 @@
     cursor: pointer;
     padding: 5px 20px;
 }
-#left .trackingWrapper{
+.left > .trackingWrapper{
     display: none;
-    padding: 20px ;
-    background-color: red;
 }
 .invoiceList .content .left .leftHeader ul li[status="active"]{
     background-color: var(--main-color);
@@ -217,4 +223,80 @@
     border-radius: var(--main-border-radius);
     background-image: var(--primary-gradient);
     color: #fff;
+}
+.left .chatWrapper .chat{
+    background-color: var(--card-bg);
+    border-radius: var(--main-border-radius);
+}
+.left .chatWrapper .chat .chatHeader{
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: var(--main-border-radius) var(--main-border-radius) 0px 0px;
+    position: relative;
+    text-align: center;
+    padding-top: 45px;
+}
+.left .chatWrapper .chat .chatHeader .img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    padding: 4px;
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left .chatWrapper .chat .chatHeader .img img{
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.left .chatWrapper .chat .chatHeader .img span{
+    position: absolute;
+    width: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 0);
+    background-color: #ffff00;
+    background-color: #ccc;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 40%);
+}
+.left .chatWrapper .chat .chatBody{
+    padding: 20px;   
+}
+.left .chatWrapper .chat .chatBody .message{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.left .chatWrapper .chat .chatBody .message p{
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    text-align: right;
+    max-width: 60%;
+    width: fit-content;
+    line-height: 1.4;
+}
+.left .chatWrapper .chat .chatBody .message[message-src="user"]{
+    text-align: right;
+}
+.left .chatWrapper .chat .chatBody .message[message-src="client"] p{
+    background-color: #ddd;
+    border-radius: 0px var(--main-border-radius) var(--main-border-radius) calc(var(--main-border-radius) + 10px);
+}
+.left .chatWrapper .chat .chatBody .message[message-src="user"] p{
+    background-color: #ddd;
+    border-radius: var(--main-border-radius) 0px calc(var(--main-border-radius) + 10px) var(--main-border-radius);
+    background-color: var(--main-color);
+    color: #fff;
+    margin-left: auto;
+    margin-right: 0px;
+}
+.left .chatWrapper .chat .chatBody .message span{
+    color: #777;
+    font-size: 14px;
 }

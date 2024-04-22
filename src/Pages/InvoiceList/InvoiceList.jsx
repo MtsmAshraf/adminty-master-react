@@ -5,6 +5,7 @@ import styles from "./invoice-list.module.css"
 import { useEffect, useState } from "react"
 import { faEye } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import profileImg from "../../assets/imgs/male-user.jpg"
 const InvoiceList = () => {
     let [paidStatus, setPaidStatus] = useState("full")
     let [paidStatusSal, setPaidStatusSal] = useState("partially")
@@ -19,7 +20,6 @@ const InvoiceList = () => {
                     li.setAttribute("status", "")
                 })
                 leftToggledParts.forEach((part) => {
-                    console.log(index, part)
                     part.style.display = "none"
                 })
                 leftToggledParts[index].style.display = "block"
@@ -37,6 +37,9 @@ const InvoiceList = () => {
                     <ul>
                         <li status="active">
                             التكتات
+                        </li>
+                        <li>
+                            الشات
                         </li>
                         <li>
                             التتبع
@@ -264,6 +267,41 @@ const InvoiceList = () => {
                                 </div>
                             </Card>
                         </div>
+                    </div>
+                </div>
+                <div className={styles.chatWrapper}>
+                    <div className={styles.chat}>
+                        <div className={styles.chatHeader}>
+                            <div className={styles.img}>
+                                <img src={profileImg} alt="profile image" />
+                                <span></span>
+                            </div>
+                            <h5 className={styles.userName}>
+                                اسم المستخدم
+                            </h5>
+                        </div>
+                        <div className={styles.chatBody}>
+                            <div className={styles.message} message-src="client">
+                                <p>
+                                    مرحبا! كيف حالك؟ 
+                                </p>
+                                <span>10:43 PM</span>
+                            </div>
+                            <div className={styles.message} message-src="client">
+                                <p>
+                                    "مرحبا! كيف حالك اليوم؟ هل مرت يوم جيد؟ أتمنى أن تكون بخير وسعيد اليوم. هل لديك أي خطط مثيرة لهذا اليوم؟ أنا فقط أحاول الاسترخاء قليلاً والاستمتاع ببعض الوقت الهادئ. يمكن أن نتحدث عن أي شيء، فلا تتردد في مشاركتي ما تريد!"
+                                </p>
+                                <span>10:43 PM</span>
+                            </div>
+                            <div className={styles.message} message-src="user">
+                                <p>
+                                    مرحبًا! كيف كان يومك؟ أتمنى أن تكون قد قضيت يومًا رائعًا. هل حدث شيء مميز اليوم؟ أو ربما كان يومًا هادئًا؟ سأكون هنا إذا كنت بحاجة إلى الحديث أو مشاركة أي شيء. فلا تتردد في التواصل!                                </p>
+                                <span>10:43 PM</span>
+                            </div>
+                        </div>
+                        {/* <div className={styles.chatForm}>
+                        chatForm
+                        </div> */}
                     </div>
                 </div>
                 <div className={styles.trackingWrapper}>
