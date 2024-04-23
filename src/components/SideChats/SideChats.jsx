@@ -4,6 +4,47 @@ import userPic from "../../assets/imgs/user.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 const SideChats = () => {
+    let formHandler = () => {
+        let chatBody = document.querySelector("#chat-body")
+        let messageValue = document.querySelector("#message").value;
+        if(document.querySelector("#message").value !== ""){
+
+            let messageP = document.createElement("p")
+            let message = document.createElement("div")
+            messageP.innerHTML = messageValue
+            message.appendChild(messageP)
+            let messageSpan = document.createElement("span")
+            messageSpan.innerHTML = "10:31 PM"
+            message.setAttribute("message-src", "user")
+            message.appendChild(messageSpan)
+            message.style.cssText = `
+                margin-bottom: 10px;
+                text-align: right;
+                width: 100%;
+            `
+            messageP.style.cssText = `
+                padding: 10px 20px;
+                margin-bottom: 5px;
+                text-align: right;
+                max-width: 95%;
+                width: fit-content;
+                line-height: 1.4;
+                background-color: #ddd;
+                border-radius: var(--main-border-radius) 0px calc(var(--main-border-radius) + 10px) var(--main-border-radius);
+                background-color: var(--main-color);
+                color: #fff;
+                margin-left: auto;
+                font-size: 14px;
+                margin-right: 0px;
+            `
+            messageSpan.style.cssText = `
+                color: #777;
+                font-size: 14px;
+            `
+            chatBody.appendChild(message)
+            document.querySelector("#message").value = ""
+        }
+    }
   return (
     <div className={styles.sideChats}>
         <ul>
@@ -37,7 +78,7 @@ const SideChats = () => {
             <div className={styles.chatHeader}>
                 <h4>اسم المستخدم</h4>
             </div>
-            <div className={styles.chatBody}>
+            <div className={styles.chatBody} id="chat-body">
                 <div className={styles.message} message-src="client">
                     <p>
                         مرحبا! كيف حالك؟ 
@@ -78,7 +119,7 @@ const SideChats = () => {
                     <textarea name="" id="message" placeholder="أكتب رسالتك هنا..." ></textarea>
                 </div>
                 <div className={styles.btnWrapper}>
-                    <button type="button" className={styles.btn} >
+                    <button type="button" className={styles.btn} onClick={formHandler}>
                         <FontAwesomeIcon icon={faPaperPlane} />
                     </button>
                 </div>

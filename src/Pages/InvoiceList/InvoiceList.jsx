@@ -13,39 +13,43 @@ const InvoiceList = () => {
     let formHandler = () => {
         let chatBody = document.querySelector("#chat-body")
         let messageValue = document.querySelector("#message").value;
-        let messageP = document.createElement("p")
-        let message = document.createElement("div")
-        messageP.innerHTML = messageValue
-        message.appendChild(messageP)
-        let messageSpan = document.createElement("span")
-        messageSpan.innerHTML = "10:31 PM"
-        message.setAttribute("message-src", "user")
-        message.appendChild(messageSpan)
-        message.style.cssText = `
-            margin-bottom: 10px;
-            text-align: right;
-            width: 100%;
-        `
-        messageP.style.cssText = `
-            padding: 10px 20px;
-            margin-bottom: 5px;
-            text-align: right;
-            max-width: 60%;
-            width: fit-content;
-            line-height: 1.4;
-            background-color: #ddd;
-            border-radius: var(--main-border-radius) 0px calc(var(--main-border-radius) + 10px) var(--main-border-radius);
-            background-color: var(--main-color);
-            color: #fff;
-            margin-left: auto;
-            margin-right: 0px;
-        `
-        messageSpan.style.cssText = `
-            color: #777;
-            font-size: 14px;
-        `
-        chatBody.appendChild(message)
-        console.log(message)
+        if(document.querySelector("#message").value !== ""){
+                
+            let messageP = document.createElement("p")
+            let message = document.createElement("div")
+            messageP.innerHTML = messageValue
+            message.appendChild(messageP)
+            let messageSpan = document.createElement("span")
+            messageSpan.innerHTML = "10:31 PM"
+            message.setAttribute("message-src", "user")
+            message.appendChild(messageSpan)
+            message.style.cssText = `
+                margin-bottom: 10px;
+                text-align: right;
+                width: 100%;
+            `
+            messageP.style.cssText = `
+                padding: 10px 20px;
+                margin-bottom: 5px;
+                text-align: right;
+                max-width: 60%;
+                width: fit-content;
+                line-height: 1.4;
+                background-color: #ddd;
+                border-radius: var(--main-border-radius) 0px calc(var(--main-border-radius) + 10px) var(--main-border-radius);
+                background-color: var(--main-color);
+                color: #fff;
+                margin-left: auto;
+                margin-right: 0px;
+            `
+            messageSpan.style.cssText = `
+                color: #777;
+                font-size: 14px;
+            `
+            chatBody.appendChild(message)
+            document.querySelector("#message").value = ""
+
+        }
     }
 
     useEffect(() => {
