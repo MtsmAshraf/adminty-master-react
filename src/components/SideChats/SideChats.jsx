@@ -3,12 +3,16 @@ import profilePic from "../../assets/imgs/male-user.jpg"
 import userPic from "../../assets/imgs/user.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 const SideChats = () => {
+    const shown = useSelector((state) => state.sideChat.shown);
+
+    let showChats = false
     let formHandler = () => {
         let chatBody = document.querySelector("#chat-body")
         let messageValue = document.querySelector("#message").value;
         if(document.querySelector("#message").value !== ""){
-
             let messageP = document.createElement("p")
             let message = document.createElement("div")
             messageP.innerHTML = messageValue
@@ -45,10 +49,39 @@ const SideChats = () => {
             document.querySelector("#message").value = ""
         }
     }
+    useEffect(() => {
+        console.log("showChats", showChats)
+        let sideChatsLis = document.querySelectorAll("#side-chat ul li")
+        let chat = document.querySelector("#chat")
+        sideChatsLis.forEach((li) => {
+            li.onclick = () => {
+                if(showChats && li.getAttribute("status") == "active") {
+                    console.log("true")
+                    chat.style.cssText = `
+                        right: 0px;
+                        transform: translateX(100%)
+                    `
+                    showChats = false
+                    li.setAttribute("status", "")
+                }else if(!showChats){
+                    console.log("false")
+                    chat.style.cssText = `
+                        right: 70px;
+                        transform: translateX(0%)
+                    `
+                    showChats = true
+                }
+                sideChatsLis.forEach((li) => {
+                    li.setAttribute("status", "")
+                })
+                li.setAttribute("status", "active")
+            }
+        })
+    },[])
   return (
-    <div className={styles.sideChats}>
+    <div className={shown ? styles.sideChats + " " + styles.shown : styles.sideChats + " " + styles.hidden} id="side-chat">
         <ul>
-            <li>
+            <li status="active">
                 <div className={styles.img}>
                     <img src={profilePic} alt="profile picture" />
                 </div>
@@ -74,7 +107,7 @@ const SideChats = () => {
                 </div>
             </li>
         </ul>
-        <div className={styles.chat}>
+        <div className={styles.chat} id="chat">
             <div className={styles.chatHeader}>
                 <h4>اسم المستخدم</h4>
             </div>

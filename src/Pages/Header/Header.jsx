@@ -4,7 +4,13 @@ import { faAngleDown, faBell, faComment, faEnvelope, faGear, faLock, faMagnifyin
 import userPic from "../../assets/imgs/user.png"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { toggleSideChat } from "../../store/sideChatSlice";
+
 const Header = () => {
+  const shown = useSelector((state) => state.sideChat.shown);
+  const dispatch = useDispatch();
+
   let [showNotifications, setShowNotifications] = useState(false)
   let [showPersonalOptions, setShowPersonalOptions] = useState(false)
   let toggleNotifications = () => {
@@ -78,7 +84,7 @@ const Header = () => {
               </ul>
             </div>
           </span>
-          <span>
+          <span onClick={() => {dispatch(toggleSideChat())}}>
             <FontAwesomeIcon icon={faComment} />
             <span>15</span>
           </span>

@@ -4,6 +4,15 @@
     top: 74px;
     height: calc(100% - 74px);
     box-shadow: var(--header-shadow);
+    z-index: 5;
+    transform: translateX(100%);
+    transition: var(--main-transition);
+}
+.sideChats.shown{
+    transform: translateX(0%);
+}
+.sideChats.hidden .chat{
+    transform: translateX(100%) !important;
 }
 .sideChats ul{
     display: flex;
@@ -20,7 +29,18 @@
     position: relative;
 }
 .sideChats ul li{
+    border-radius: 50%;
+    border: 5px solid transparent;
     cursor: pointer;
+    transition: var(--main-transition);
+}
+.sideChats ul li[status="active"]{
+    border: 5px solid var(--main-color);
+}
+.sideChats ul li .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .sideChats ul li .img img{
     width: 50px;
@@ -28,15 +48,17 @@
     border-radius: 50%;
 }
 .sideChats .chat{
-    position: fixed;
-    right: 70px;
-    top: 74px;
+    position: fixed; 
+    right: 0px;
+    transform: translateX(100%);
+    top: 0px;
     width: 300px;
-    height: calc(100% - 74px);
+    height: calc(100%);
     z-index: 1;
     background-color: var(--bg-color);
     border-left: 1px solid var(--main-color);
     box-shadow: var(--header-shadow);
+    transition: var(--main-transition);
 }
 .sideChats .chat .chatHeader{
     background-color: var(--main-color);
