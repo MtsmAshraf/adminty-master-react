@@ -1,0 +1,130 @@
+.sideChats{
+    position: fixed;
+    right: 0;
+    top: 74px;
+    height: calc(100% - 74px);
+    box-shadow: var(--header-shadow);
+}
+.sideChats ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70px;
+    gap: 10px;
+    border-left: 1px solid var(--main-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--card-bg);
+    z-index: 2;
+    height: 100%;
+    position: relative;
+}
+.sideChats ul li{
+    cursor: pointer;
+}
+.sideChats ul li .img img{
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.sideChats .chat{
+    position: fixed;
+    right: 70px;
+    top: 74px;
+    width: 300px;
+    height: calc(100% - 74px);
+    z-index: 1;
+    background-color: var(--bg-color);
+    border-left: 1px solid var(--main-color);
+    box-shadow: var(--header-shadow);
+}
+.sideChats .chat .chatHeader{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.sideChats .chat .chatBody{
+    padding: 20px;   
+    height: calc(100% - 41px - 54px);
+    overflow-y: scroll;
+}
+.sideChats .chat .chatBody::-webkit-scrollbar{
+    width: 10px;
+    background-color: #ddd;
+}
+.sideChats .chat .chatBody::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+.sideChats .chat .chatBody .message{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.sideChats .chat .chatBody .message p{
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    text-align: right;
+    max-width: 95%;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.sideChats .chat .chatBody .message[message-src="user"]{
+    text-align: right;
+}
+.sideChats .chat .chatBody .message[message-src="client"] p{
+    background-color: #ddd;
+    border-radius: 0px var(--main-border-radius) var(--main-border-radius) calc(var(--main-border-radius) + 10px);
+}
+.sideChats .chat .chatBody .message[message-src="user"] p{
+    background-color: #ddd;
+    border-radius: var(--main-border-radius) 0px calc(var(--main-border-radius) + 10px) var(--main-border-radius);
+    background-color: var(--main-color);
+    color: #fff;
+    margin-left: auto;
+    margin-right: 0px;
+}
+.sideChats .chat .chatBody .message span{
+    color: #777;
+    font-size: 14px;
+}
+.sideChats .chat .chatForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 10px;
+    box-shadow: var(--header-shadow);
+    border-top: 1px solid var(--main-color);
+    /* background-color: red; */
+    direction: rtl;
+    background-color: var(--card-bg);
+}
+.sideChats .chat .chatForm .inputWrapper{
+    /* width: 90%; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.sideChats .chat .chatForm .inputWrapper textarea{
+    width: 100%;
+    resize: vertical;
+    text-align: right;
+    height: 33px;
+    max-height: 200px;
+    direction: rtl;
+    /* place-content: center; */
+}
+.sideChats .chat .chatForm button{
+    border: none;
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 5px 8px;
+    border-radius: var(--main-border-radius);
+    font-size: 20px;   
+    cursor: pointer;
+}
+.sideChats .chat .chatForm button svg{
+    transform: rotateY(180deg);
+}

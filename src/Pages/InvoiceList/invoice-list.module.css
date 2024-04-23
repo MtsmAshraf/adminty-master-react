@@ -38,7 +38,8 @@
     cursor: pointer;
     padding: 5px 20px;
 }
-.left > .trackingWrapper{
+.left > .trackingWrapper,
+.left > .chatWrapper{
     display: none;
 }
 .invoiceList .content .left .leftHeader ul li[status="active"]{
