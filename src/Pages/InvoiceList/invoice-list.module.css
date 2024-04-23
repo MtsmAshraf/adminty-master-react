@@ -212,11 +212,15 @@
     margin-top: 10px;
     /* margin-bottom: 20px; */
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 200px;
+    align-items: center;
+    /* gap: 200px; */
     padding-left: 10px;
     padding-right: 10px;
+}
+.ticket .ticketFooter:has(.due){
+    justify-content: space-between;
+
 }
 .ticket .ticketFooter .eyeIcon{
     /* position: absolute; */
@@ -365,4 +369,12 @@
 }
 .left .chatWrapper .chat .chatForm button svg{
     transform: rotateY(180deg);
+}
+@media (max-width: 767px) {
+    .ticket > div{
+        height: auto !important;
+    }
+    .ticket .ticketContent .ticketList li{
+        width: 100%;
+    }
 }
