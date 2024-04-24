@@ -158,7 +158,6 @@
     transition: all 0.2s 0s linear;
     position: relative;
     min-width: fit-content;
-    background-color: red;
 }
 .selector-element div::before{
     content: "✓";

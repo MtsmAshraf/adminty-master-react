@@ -1,0 +1,27 @@
+.add-goods .more-drivers{
+    display: none;
+}
+.add-goods .more-drivers > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.add-goods .more-drivers > div label{
+    color: var(--text-color);
+    font-size: 14px;
+    width: 100px;
+}
+.add-goods .selector-element:has(#driver-name-another:checked) .more-drivers{
+    display: flex;
+}
+@media (max-width: 768px) {
+    .add-goods .selector-element:has(#driver-name-another:checked) .more-drivers{
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .add-goods .more-drivers > div label{
+        width: 130px;
+    }
+}
