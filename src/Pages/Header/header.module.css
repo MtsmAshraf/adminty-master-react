@@ -214,3 +214,14 @@
 .header .right .notifications ul li .text h6{
     color: #777;
 }
+@media (max-width: 767px) {
+    .header .right .notifications{
+        width: 300px;
+        left: 0;
+        right: auto;
+        transform: translateX(-55%);
+    }   
+    .header .right .notifications .arrow{
+        right: 117px;
+    }
+}
