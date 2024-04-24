@@ -8,6 +8,7 @@
     z-index: 1;
     padding: 100px 20px 20px;
     color: var(--side-text-color);
+    transition: var(--main-transition);
 }
 .sidebar ul{
     display: flex;
@@ -18,4 +19,8 @@
     .sidebar{
         transform: translateX(-100%);
     }
+}
+.sidebar.shown{
+    transform: translateX(0%);
+    box-shadow: var(--header-shadow);
 }

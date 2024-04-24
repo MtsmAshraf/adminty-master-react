@@ -2,10 +2,13 @@ import { faBoxesStacked, faFileInvoice, faFileLines, faHouse, faPlusCircle } fro
 import SidebarLink from './SidebarLink/SidebarLink';
 import styles from './sidebar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
+  const shown = useSelector((state) => state.sideBar.shown);
+
   return (
-    <div className={styles.sidebar}>
+    <div className={shown ? styles.sidebar + " " + styles.shown : styles.sidebar}>
       <ul>
         <SidebarLink icon={faHouse} linkText={"الرئيسية"} to={"/"}/>
         <SidebarLink icon={faFileInvoice} linkText={"التكيتات"} to={"/invoice-list"}/>

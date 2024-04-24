@@ -1,3 +1,6 @@
+.add-goods{
+    padding-bottom: 100px;
+}
 .add-goods .more-drivers{
     display: none;
 }
@@ -24,4 +27,17 @@
     .add-goods .more-drivers > div label{
         width: 130px;
     }
+}
+.add-goods .goods-imgs h4{
+    margin-bottom: 10px;
+}
+.add-goods .goods-imgs .imgs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.add-goods .goods-imgs .img{
+    width: 100px;
+    overflow: hidden;
+    border-radius: var(--main-border-radius);
 }

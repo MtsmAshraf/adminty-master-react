@@ -1,14 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styles from "./header.module.css"
-import { faAngleDown, faBell, faComment, faEnvelope, faGear, faLock, faMagnifyingGlass, faRightFromBracket, faUser, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDown, faBars, faBell, faComment, faEnvelope, faGear, faLock, faMagnifyingGlass, faRightFromBracket, faUser, faXmark } from "@fortawesome/free-solid-svg-icons"
 import userPic from "../../assets/imgs/user.png"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { toggleSideChat } from "../../store/sideChatSlice";
+import { toggleSideBar } from "../../store/sideBarSlice"
 
 const Header = () => {
-  const shown = useSelector((state) => state.sideChat.shown);
+  const shown = useSelector((state) => state.sideBar.shown);
   const dispatch = useDispatch();
 
   let [showNotifications, setShowNotifications] = useState(false)
@@ -26,6 +27,9 @@ const Header = () => {
   }
   return (
     <div className={styles.header}>
+      <span className={styles.bars}>
+        <FontAwesomeIcon icon={faBars} onClick={() => {dispatch(toggleSideBar())}}/>
+      </span>
       <div className={styles.search}>
         <span className={styles.openSearch} onClick={() => {searchFocus()}}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />

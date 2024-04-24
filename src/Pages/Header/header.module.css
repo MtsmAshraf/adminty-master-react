@@ -16,6 +16,9 @@
         margin-left: 0px;
     }
 }
+.header .bars{
+    cursor: pointer;
+}
 .header .search {
     width: fit-content;
     position: relative;
@@ -150,6 +153,11 @@
 .header .right .personalInfo svg{
     color: #777;
     font-size: 14px;
+}
+@media (max-width: 768px) {
+    .header .right .personalInfo p{
+        display: none;
+    }
 }
 .header .right .notifications{
     color: #000;

@@ -1,30 +1,37 @@
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs";
+import pic from "../../assets/imgs/male-user.jpg"
 import "./add-goods.css"
 const AddGoods = () => {
     let redirectFunction = (e) => {
         e.preventDefault();
         window.location.replace('/invoice-list');
     }
+    let [areFiles, setAreFiles] = useState(false)
+    let files = []
     useEffect(() => {
-        console.log("mounted")
         let imgView = document.getElementById("img-view");
         let uploadBillInput = document.getElementById("upload-bill");
         let dragArea = document.getElementById("drag-area");
     
         let viewImg = () => {
-            console.log(uploadBillInput.files[0])
             if(uploadBillInput.files[0] && uploadBillInput.files[0].type !== "application/pdf"){
+                setAreFiles(true)
                 let imgLink = URL.createObjectURL(uploadBillInput.files[0]);
                 imgView.style.backgroundImage = `url(${imgLink})`;
                 imgView.textContent = ""
+                Object.keys(uploadBillInput.files).map((key) => {
+                    files.push(uploadBillInput.files[key])
+                })
             }else if(uploadBillInput.files[0] && uploadBillInput.files[0].type === "application/pdf"){
-                console.log(uploadBillInput.files[0])
+                setAreFiles(true)
                 imgView.style.backgroundImage = "";
-                imgView.textContent = uploadBillInput.files[0].name
+                imgView.textContent = uploadBillInput.file
+                Object.keys(uploadBillInput.files).map((key) => {
+                    files.push(uploadBillInput.files[key])
+                })
             }else if(uploadBillInput.files.length === 0 ){
-                console.log("aiosdjoaidh") 
                 imgView.style.backgroundImage = "";
                 imgView.innerHTML = `
                     <h5 style="color: #666;">اسحب الملفات هنا</h5>
@@ -108,16 +115,50 @@ const AddGoods = () => {
                     </div>
                 </div>
                 <div className="form-group row text-center" id="drag-area">
-                    <label className="col-sm-12 col-form-label" htmlFor="upload-bill">أضف المرفقات</label>
+                    {
+                        !areFiles && 
+                        <label className="col-sm-12 col-form-label" htmlFor="upload-bill">أضف المرفقات</label>
+                    }
                     <div className="col-sm-12">
-                        <label id="img-view" className="col-sm-12 col-form-label" htmlFor="upload-bill">
-                            <h5>اسحب الملفات هنا</h5>
-                            <span>أو</span>
-                            <h5>اضغط لرفع المرفقات</h5>
-                        </label>
-                        <input type="file" id="upload-bill" className="form-control" hidden/>
+                        {
+                            !areFiles && 
+                            <label id="img-view" className="col-sm-12 col-form-label" htmlFor="upload-bill">
+                                <h5>اسحب الملفات هنا</h5>
+                                <span>أو</span>
+                                <h5>اضغط لرفع المرفقات</h5>
+                            </label>    
+                        }
+                        {/* {
+                            areFiles && 
+                            <div className="goods-imgs">
+                            <h1>aoisfjoia</h1>
+                                {    
+                                    Object.keys(files).map((key) => {
+                                        return (
+                                            <h3>
+                                                {files[key].name}
+                                            </h3>
+                                        )
+                                    })
+                                }
+                            </div>
+                        } */}
+                        <input type="file" id="upload-bill" className="form-control" multiple hidden/>
                     </div>
                 </div>
+                {
+                    areFiles && 
+                    <div className="goods-imgs">
+                        <h4>صور الطرود</h4>
+                        <div className="imgs">
+                            <div className="img">
+                                {
+                                    files
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
                 <div className="btn-pair">
                         <input type="submit" value="حفظ"  onClick={(e) => {redirectFunction(e)}}/>
                         <input type="reset" value="إلغاء" />

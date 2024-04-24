@@ -16,7 +16,6 @@ const Breadcumbs = ({pageName}) => {
             </div>
         )
     })
-    console.log(crumbs)
   return (
     <div className={styles.breadcumbs}>
         <h3>{pageName}</h3>
