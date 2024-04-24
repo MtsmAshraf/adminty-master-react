@@ -53,9 +53,6 @@
     background-color: var(--main-color);
     color: #fff;
 }
-.invoiceList .content .summary{
-    flex: 1;
-}
 .invoiceList .content .tickets{
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -375,6 +372,73 @@
         height: auto !important;
     }
     .ticket .ticketContent .ticketList li{
+        width: 100%;
+    }
+}
+.invoiceList .content .summary{
+    width: 23%;
+}
+.invoiceList .content .summary > div{
+    padding: 0px 20px;
+}
+.invoiceList .summary .part{
+    direction: rtl;
+    max-width: 100%;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.invoiceList .summary .part:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+.invoiceList .summary .part h4{
+    margin-bottom: 10px;
+}
+.invoiceList .summary .part.quickActions .partContent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.invoiceList .summary .part .partPair{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: var(--main-border-radius);
+}
+.invoiceList .summary .part .partPair:not(:last-child){
+    margin-bottom: 10px;
+}
+.invoiceList .summary .part .partPair h5{
+    background-color: #eee;
+    padding: 5px 10px;
+}
+.invoiceList .summary .part .partPair span{
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 1400px) {
+    .invoiceList .content{
+        flex-direction: column-reverse;
+    }
+    .invoiceList .content > div{
+        width: 100% !important;
+    }
+    .invoiceList .content .summary > div{
+        direction: rtl;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px
+    }
+    .invoiceList .content .summary > div .part{
+        width: calc((100% - 20px) / 2);
+    }
+}
+@media (max-width: 768px) {
+    .invoiceList .content .summary > div{
+        flex-direction: column;
+    }
+    .invoiceList .content .summary > div .part{
         width: 100%;
     }
 }

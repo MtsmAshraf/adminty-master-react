@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { faEye, faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import profileImg from "../../assets/imgs/male-user.jpg"
+import MainBtn from "../../components/MainBtn/MainBtn"
 const InvoiceList = () => {
     let [paidStatus, setPaidStatus] = useState("full")
     let [paidStatusSal, setPaidStatusSal] = useState("partially")
@@ -380,7 +381,81 @@ const InvoiceList = () => {
             </div>
             <div className={styles.summary}>
                 <Card>
-                    Summary
+                    <div className={styles.part + " " + styles.quickActions}>
+                        <h4>إجراءات سريعة</h4>
+                        <div className={styles.partContent}>
+                            <MainBtn>
+                                إجراء سريع
+                            </MainBtn>
+                            <MainBtn>
+                                إجراء سريع
+                            </MainBtn>
+                            <MainBtn>
+                                إجراء سريع
+                            </MainBtn>
+                            <MainBtn>
+                                إجراء سريع
+                            </MainBtn>
+                            <MainBtn>
+                                إجراء سريع
+                            </MainBtn>
+                        </div>
+                    </div>
+                    <div className={styles.part}>
+                        <h4>الحالات</h4>
+                        <div className={styles.partContent}>
+                            <div className={styles.partPair}>
+                                <h5>حالة التخليص</h5>
+                                <span>حالة التخليص</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.part}>
+                        <h4>معلومات العميل</h4>
+                        <div className={styles.partContent}>
+                            <div className={styles.partPair}>
+                                <h5>اسم العميل</h5>
+                                <span>اسم العميل المصدر</span>
+                            </div>
+                            <div className={styles.partPair}>
+                                <h5>رقم السجل التجاري</h5>
+                                <span>897651321657</span>
+                            </div>
+                            <div className={styles.partPair}>
+                                <h5>الرقم الموحد</h5>
+                                <span>897651321657</span>
+                            </div>
+                            <div className={styles.partPair}>
+                                <h5>رقم التفويض</h5>
+                                <span>897651321657</span>
+                            </div>
+                            <div className={styles.partPair}>
+                                <h5>تاريخ انتهاء التفويض</h5>
+                                <span>31/12/2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.part}>
+                        <h4>معلومات العميل</h4>
+                        <div className={styles.partContent}>
+                            <div className={styles.partPair}>
+                                <h5>رقم البوليصة</h5>
+                                <span>798-8465498</span>
+                            </div>
+                            <div className={styles.partPair}>
+                                <h5>عدد الطرود</h5>
+                                <span>31</span>
+                            </div>
+                            <div className={styles.partPair}>
+                                <h5>المنفذ</h5>
+                                <span>اسم المنفذ</span>
+                            </div>
+                            <div className={styles.partPair}>
+                                <h5>رقم البيان الجمركي</h5>
+                                <span>897651321657</span>
+                            </div>
+                        </div>
+                    </div>
                 </Card>
             </div>
       </div>

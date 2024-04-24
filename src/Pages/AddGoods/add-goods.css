@@ -1,6 +1,12 @@
 .add-goods{
     padding-bottom: 100px;
 }
+.add-goods .bill-number{
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    border-radius: var(--main-border-radius);
+    width: 70%;
+}
 .add-goods .more-drivers{
     display: none;
 }

@@ -18,6 +18,12 @@
 }
 .header .bars{
     cursor: pointer;
+    display: none;
+}
+@media (max-width: 768px) {
+    .header .bars{
+        display: block;
+    }
 }
 .header .search {
     width: fit-content;

@@ -10,6 +10,7 @@ const AddGoods = () => {
     }
     let [areFiles, setAreFiles] = useState(false)
     let files = []
+    let goodsImgs
     useEffect(() => {
         let imgView = document.getElementById("img-view");
         let uploadBillInput = document.getElementById("upload-bill");
@@ -17,20 +18,16 @@ const AddGoods = () => {
     
         let viewImg = () => {
             if(uploadBillInput.files[0] && uploadBillInput.files[0].type !== "application/pdf"){
+                files = uploadBillInput.files;
                 setAreFiles(true)
                 let imgLink = URL.createObjectURL(uploadBillInput.files[0]);
                 imgView.style.backgroundImage = `url(${imgLink})`;
                 imgView.textContent = ""
-                Object.keys(uploadBillInput.files).map((key) => {
-                    files.push(uploadBillInput.files[key])
-                })
             }else if(uploadBillInput.files[0] && uploadBillInput.files[0].type === "application/pdf"){
                 setAreFiles(true)
+                files = uploadBillInput.files;
                 imgView.style.backgroundImage = "";
                 imgView.textContent = uploadBillInput.file
-                Object.keys(uploadBillInput.files).map((key) => {
-                    files.push(uploadBillInput.files[key])
-                })
             }else if(uploadBillInput.files.length === 0 ){
                 imgView.style.backgroundImage = "";
                 imgView.innerHTML = `
@@ -58,15 +55,9 @@ const AddGoods = () => {
             <h4 className="sub-title">أدخل تفاصيل البضاعة</h4>
             <form className="row">
                 <div className="form-group row col-sm-6 col-md-4">
-                    <label className="col-sm-12 col-form-label">رقم البوايصة</label>
-                    <div className="col-sm-12">
-                        <select name="" id="">
-                            <option value="">اختر رقم البوليصة</option>
-                            <option value="sar">235-53428896</option>
-                            <option value="dollar">235-53451196</option>
-                            <option value="euro">235-52468896</option>
-                            <option value="pound">235-53401096</option>
-                        </select>
+                    <label className="col-sm-12 col-form-label">رقم البوليصة</label>
+                    <div className="bill-number">
+                        235-53428896
                     </div>
                 </div>
                 <div className="form-group row col-sm-6 col-md-4">
@@ -121,7 +112,7 @@ const AddGoods = () => {
                     }
                     <div className="col-sm-12">
                         {
-                            !areFiles && 
+                            // !areFiles && 
                             <label id="img-view" className="col-sm-12 col-form-label" htmlFor="upload-bill">
                                 <h5>اسحب الملفات هنا</h5>
                                 <span>أو</span>
@@ -152,9 +143,18 @@ const AddGoods = () => {
                         <h4>صور الطرود</h4>
                         <div className="imgs">
                             <div className="img">
-                                {
-                                    files
-                                }
+                                <h1>
+                                    {
+                                        files
+                                        // Object.keys(files).map((key) => {
+                                        //     // let imgLink = URL.createObjectURL(files[parseInt(key)]);
+                                        //     console.log(files[parseInt(key)].name)
+                                        //     return(
+                                        //             <h2>{files[parseInt(key)].name}</h2>
+                                        //     )
+                                        // })
+                                    }
+                                </h1>
                             </div>
                         </div>
                     </div>

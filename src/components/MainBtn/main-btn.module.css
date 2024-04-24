@@ -1,0 +1,16 @@
+.mainBtn{
+    background-color: var(--main-color);
+    padding: 7px 20px;
+    color: #fff;
+    font-family: "Almarai", sans-serif;
+    border: none;
+    border-radius: var(--main-border-radius);
+    cursor: pointer;
+    box-shadow: var(--card-shadow);
+}
+.mainBtn:hover,
+.mainBtn:focus,
+.mainBtn:focus-visible{
+    outline: none;
+    box-shadow: var(--header-shadow);
+}
