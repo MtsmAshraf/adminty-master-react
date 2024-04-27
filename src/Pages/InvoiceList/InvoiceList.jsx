@@ -7,6 +7,8 @@ import { faEye, faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import profileImg from "../../assets/imgs/male-user.jpg"
 import MainBtn from "../../components/MainBtn/MainBtn"
+import PrintComponent from "../../components/PrintComponent/PrintComponent"
+
 const InvoiceList = () => {
     let [paidStatus, setPaidStatus] = useState("full")
     let [paidStatusSal, setPaidStatusSal] = useState("partially")
@@ -70,6 +72,7 @@ const InvoiceList = () => {
             }
         })
     })
+
 
   return (
     <div className={styles.invoiceList}>
@@ -453,6 +456,22 @@ const InvoiceList = () => {
                             <div className={styles.partPair}>
                                 <h5>رقم البيان الجمركي</h5>
                                 <span>897651321657</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.part + " " + styles.quickActions}>
+                        <h4>طباعة</h4>
+                        <div className={styles.partContent}>
+                            <div onClick={() => {console.log("Print")}}>
+                                {/* <MainBtn>
+                                    معلومات الشحنة
+                                </MainBtn> */}
+                                <PrintComponent />
+                            </div>
+                            <div onClick={() => {console.log("Print2")}}>
+                                <MainBtn>
+                                    المرفقات
+                                </MainBtn>
                             </div>
                         </div>
                     </div>

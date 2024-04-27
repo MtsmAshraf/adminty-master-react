@@ -25,6 +25,20 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 100%;
+    position: relative;
+}
+.add-buying-bill table .add-remove-btns{
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    bottom: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.add-buying-bill table .add-remove-btns > * > *{
+    width: 40px;
 }
 .add-buying-bill table *{
     text-align: center;
