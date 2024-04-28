@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import profileImg from "../../assets/imgs/male-user.jpg"
 import MainBtn from "../../components/MainBtn/MainBtn"
 import PrintComponent from "../../components/PrintComponent/PrintComponent"
+import PrintAssetsComponent from "../../components/PrintAssetsComponent/PrintAssetsComponent"
 
 const InvoiceList = () => {
     let [paidStatus, setPaidStatus] = useState("full")
@@ -469,9 +470,10 @@ const InvoiceList = () => {
                                 <PrintComponent />
                             </div>
                             <div onClick={() => {console.log("Print2")}}>
-                                <MainBtn>
+                                {/* <MainBtn>
                                     المرفقات
-                                </MainBtn>
+                                </MainBtn> */}
+                                <PrintAssetsComponent />
                             </div>
                         </div>
                     </div>

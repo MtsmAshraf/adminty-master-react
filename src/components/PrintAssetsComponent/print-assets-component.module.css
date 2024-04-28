@@ -1,0 +1,17 @@
+.printAssetsComponent button{
+    background-color: var(--main-color);
+    padding: 7px 10px;
+    color: #fff;
+    font-family: "Almarai", sans-serif;
+    border: none;
+    border-radius: var(--main-border-radius);
+    cursor: pointer;
+    box-shadow: var(--card-shadow);
+    width: 120px;
+}
+.printAssetsComponent button:hover,
+.printAssetsComponent button:focus,
+.printAssetsComponent button:focus-visible{
+    outline: none;
+    box-shadow: var(--header-shadow);
+}

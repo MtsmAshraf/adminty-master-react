@@ -2,16 +2,16 @@ import React, { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import ComponentToPrint from "../ComponentToPrint/ComponentToPrint";
 import MainBtn from "../MainBtn/MainBtn";
-import styles from "./print-component.module.css"
-export default function PrintComponent() {
+import styles from "./print-assets-component.module.css"
+export default function PrintAssetsComponent() {
   let componentRef = useRef();
 
   return (
     <>
-      <div className={styles.printComponent}>
+      <div className={styles.printAssetsComponent}>
         {/* button to trigger printing of target component */}
         <ReactToPrint
-          trigger={() => <button>معلومات الشحنة</button>}
+          trigger={() => <button>المرفقات</button>}
           content={() => componentRef}
         />
 
