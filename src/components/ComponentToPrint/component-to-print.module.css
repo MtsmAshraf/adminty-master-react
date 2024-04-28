@@ -1,0 +1,39 @@
+.componentToPrint{
+    padding: 20px;
+    width: 100vw;
+}
+.componentToPrint .container{
+    width: 100%;
+    margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.componentToPrint table{
+    direction: rtl;
+}
+.componentToPrint table *{
+    text-align: center;
+}
+.componentToPrint table td{
+    border: 1px solid #666;
+    font-size: 14px;
+    margin: 0;
+}
+.componentToPrint table thead{
+    border: 1px solid #000;
+    background-color: #ccc;
+}
+.componentToPrint table th{
+    padding: 8px 4px;
+}
+.componentToPrint table tr{
+    width: 100% !important;
+}
+.componentToPrint table .headRow td{
+    background-color: #eee;
+    padding: 10px 4px;
+
+}

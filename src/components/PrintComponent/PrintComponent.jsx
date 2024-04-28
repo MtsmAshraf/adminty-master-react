@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import ReactToPrint from "react-to-print";
-import ComponentToPrint from "../ComponentToPrint/ComponentToPrint";
 import MainBtn from "../MainBtn/MainBtn";
 import styles from "./print-component.module.css"
+import ComponentToPrint from "../ComponentToPrint/ComponentToPrint";
 export default function PrintComponent() {
   let componentRef = useRef();
 
