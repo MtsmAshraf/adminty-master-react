@@ -3,12 +3,19 @@ import SidebarLink from './SidebarLink/SidebarLink';
 import styles from './sidebar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useSelector } from 'react-redux';
+import logo from "../../assets/imgs/logoipsum.svg"
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const shown = useSelector((state) => state.sideBar.shown);
 
   return (
     <div className={shown ? styles.sidebar + " " + styles.shown : styles.sidebar}>
+      <div className={styles.logo} >
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
+      </div>
       <ul>
         <SidebarLink icon={faHouse} linkText={"الرئيسية"} to={"/"}/>
         <SidebarLink icon={faFileInvoice} linkText={"التكيتات"} to={"/invoice-list"}/>

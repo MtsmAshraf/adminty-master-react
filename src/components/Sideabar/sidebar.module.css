@@ -6,9 +6,15 @@
     width: 200px;
     height: 100%;
     z-index: 1;
-    padding: 100px 20px 20px;
+    padding: 20px;
     color: var(--side-text-color);
     transition: var(--main-transition);
+}
+.sidebar .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 .sidebar ul{
     display: flex;
