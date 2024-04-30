@@ -1,9 +1,11 @@
 .componentToPrint{
     padding: 20px;
     width: 100vw;
+    height: 100vh;
 }
 .componentToPrint .container{
     width: 100%;
+    height: 100%;
     margin-right: auto;
     text-align: center;
     margin-left: auto;
@@ -20,6 +22,7 @@
 .componentToPrint table td{
     border: 1px solid #666;
     font-size: 14px;
+    padding: 5px 4px;
     margin: 0;
 }
 .componentToPrint table thead{
@@ -27,13 +30,12 @@
     background-color: #ccc;
 }
 .componentToPrint table th{
-    padding: 8px 4px;
+    padding: 4px 4px;
 }
 .componentToPrint table tr{
     width: 100% !important;
 }
 .componentToPrint table .headRow td{
     background-color: #eee;
-    padding: 10px 4px;
 
 }
