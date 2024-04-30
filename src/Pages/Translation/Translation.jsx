@@ -26,88 +26,88 @@ const Translation = () => {
                 </thead>
                 <tr>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             312-31212412
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             20 - 03 -2024
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             اسم العميل
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             تم
                         </Link>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             312-31212412
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             20 - 03 -2024
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             اسم العميل
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             تم
                         </Link>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             312-31212412
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             20 - 03 -2024
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             اسم العميل
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             تم
                         </Link>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             312-31212412
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             20 - 03 -2024
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             اسم العميل
                         </Link>
                     </td>
                     <td>
-                        <Link>
+                        <Link to="/translation-page">
                             تم
                         </Link>
                     </td>
