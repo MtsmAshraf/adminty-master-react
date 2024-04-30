@@ -3,7 +3,7 @@ import styles from "./component-to-print.module.css"
 class ComponentToPrint extends React.Component {
     render() {
       return (
-        <div className={styles.componentToPrint} style={{position: "absolute", zIndex: "1"}}>
+        <div className={styles.componentToPrint} style={{position: "absolute", zIndex: "-1"}}>
           <div className={styles.container}>
             <table cellSpacing={0}>
               <thead>

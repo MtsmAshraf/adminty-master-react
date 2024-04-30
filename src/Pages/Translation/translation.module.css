@@ -1,0 +1,22 @@
+.translation{
+    direction: rtl;
+}
+.translation table{
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--main-border-radius);
+    overflow: hidden;
+    direction: rtl;
+}
+.translation table thead{
+    background-color: #ccc;
+}
+.translation table th,
+.translation table td{
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+.translation table tr:hover{
+    background-color: #eee;
+}

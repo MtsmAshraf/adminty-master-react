@@ -1,4 +1,4 @@
-import { faBoxesStacked, faFileInvoice, faFileLines, faHouse, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBoxesStacked, faFileInvoice, faFileLines, faHouse, faLanguage, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import SidebarLink from './SidebarLink/SidebarLink';
 import styles from './sidebar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -27,6 +27,7 @@ const Sidebar = () => {
         <SidebarLink icon={faBoxesStacked} linkText={"تحميل البضاعة"} to={"/add-goods"}/>
         <SidebarLink icon={faFileInvoice} linkText={"تفاصيل الفاتورة"} to={"/bill-details"}/>
         <SidebarLink icon={faPlusCircle} linkText={"فاتورة شراء"} to={"/add-new-bill"}/>
+        <SidebarLink icon={faLanguage} linkText={"الترجمة"} to={"/translation"}/>
       </ul>
     </div>
   )
