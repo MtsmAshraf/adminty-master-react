@@ -2,6 +2,57 @@
     direction: rtl;
     padding-bottom: 100px;
 }
+.translation > div:has(.translationList){
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    border-radius: var(--main-border-radius) 0px 0px var(--main-border-radius);
+    transform: translateX(100%);
+    transition: var(--main-transition);
+    border: 1px solid var(--main-color);
+}
+.translation > div:has(.translationList.opened){
+    transform: translateX(0%);
+}
+.translation > div:has(.translationList) .opener{
+    position: absolute;
+    width: 140px;
+    height: 30px;
+    background-color: var(--main-color);
+    top: 10px;
+    transform: translate(-100%,0%);
+    left: 0;
+    border-radius: var(--main-border-radius) 0px 0px var(--main-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: var(--header-shadow);
+    transition: var(--main-transition);
+}
+.translation > div:has(.translationList.opened) .opener{
+    width: 30px;
+}
+@media (max-width: 767px) {
+    .translation > div:has(.translationList){
+        max-width: 98vw;
+    }
+    .translation > div:has(.translationList.opened) .opener{
+        transform: translate(-0%,0%);
+    }
+    .translation table{
+        font-size: 14px;
+    }
+}
+.translation > div:has(.translationList) .opener svg{
+    transition: var(--main-transition);
+}
 .translation > div:not(:first-child){
     margin-top: 20px;
 }

@@ -2,9 +2,12 @@ import { Link } from "react-router-dom"
 import Card from "../../components/Card/Card"
 import styles from "./translation.module.css"
 import billPdf from "../../assets/files/235-53428896.pdf"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Translation = () => {
+    const [openList, setOpenList] = useState(false) 
     useEffect(() => {
         const assetsToggleListLis = document.querySelectorAll("#assets-toggle-list li");
         const assets = document.querySelectorAll("#assets > div")
@@ -24,7 +27,13 @@ const Translation = () => {
   return (
     <div className={styles.translation}>
         <Card>
-            <div className={styles.translationList}>
+            <div className={styles.opener} onClick={() => {setOpenList(!openList)}}>
+                <span style={{ display: openList ? "none" : "block" }}>
+                    قائمة البوالص
+                </span>
+                <FontAwesomeIcon icon={faChevronLeft} style={{ transform: `rotate(${openList ? "180deg" : "0deg"})` }}/>
+            </div>
+            <div className={openList ? styles.translationList + " " + styles.opened : styles.translationList}>
                 <h3>
                     قائمة البوالص
                 </h3>
@@ -51,6 +60,7 @@ const Translation = () => {
                             20 - 03 -2024
                         </td>
                         <td>
+                            اسم العميل
                             اسم العميل
                         </td>
                         <td>
