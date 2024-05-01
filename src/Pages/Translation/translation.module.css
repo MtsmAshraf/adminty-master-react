@@ -58,9 +58,9 @@
     display: flex;
 }
 .translation .translationProcess .processContent > div h3{
-    background-color: var(--card-bg);
     border: 1px solid #eee;
     border-radius: 0px 0px var(--main-border-radius) var(--main-border-radius);
+    background-color: #efefef;
 }
 .translation .translationProcess .processContent .translatedSide{
     width: 50%;
@@ -104,4 +104,7 @@
 }
 .translation .translationProcess .processContent .assetsSide .assets::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
+}
+.translation .translationProcess .processContent .assetsSide .assets .asset:not(:first-child){
+    display: none;
 }

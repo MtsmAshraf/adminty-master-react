@@ -2,17 +2,25 @@ import { Link } from "react-router-dom"
 import Card from "../../components/Card/Card"
 import styles from "./translation.module.css"
 import billPdf from "../../assets/files/235-53428896.pdf"
+import { useEffect } from "react"
 
 const Translation = () => {
-    const assetsToggleListLis = document.querySelectorAll("#assets-toggle-list li");
-    assetsToggleListLis.forEach((li, index) => {
-        li.onclick = () => {
-            assetsToggleListLis.forEach((li) => {
-                li.setAttribute("status","")
-            })
-            li.setAttribute("status","active")
-        }
-    }) 
+    useEffect(() => {
+        const assetsToggleListLis = document.querySelectorAll("#assets-toggle-list li");
+        const assets = document.querySelectorAll("#assets > div")
+        assetsToggleListLis.forEach((li, index) => {
+            li.onclick = () => {
+                assetsToggleListLis.forEach((li) => {
+                    li.setAttribute("status","")
+                })
+                li.setAttribute("status","active")
+                assets.forEach(asset => {
+                    asset.style.display = "none"
+                })
+                assets[index].style.display = "block"
+            }
+        }) 
+    })
   return (
     <div className={styles.translation}>
         <Card>
@@ -117,9 +125,16 @@ const Translation = () => {
                                 الفاتورة
                             </li>
                         </ul>
-                        <div className={styles.assets}>
-                            <iframe src={billPdf}></iframe>
-                            
+                        <div className={styles.assets} id="assets">
+                            <div className={styles.asset}>
+                                <iframe src={billPdf}></iframe>
+                            </div>                           
+                            <div className={styles.asset}>
+                                <iframe src={billPdf}></iframe>
+                            </div>                           
+                            <div className={styles.asset}>
+                                <iframe src={billPdf}></iframe>
+                            </div>                            
                         </div>
                     </div>
                 </div>
