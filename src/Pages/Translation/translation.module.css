@@ -2,13 +2,28 @@
     direction: rtl;
     padding-bottom: 100px;
 }
+.translation .translationStaticInfo{
+    display: flex;
+    flex-direction: row-reverse;
+}
 .translation .translationStaticInfo table{
     width: 60%;
     margin-right: auto;
     margin-left: auto;
-    border-radius: var(--main-border-radius);
     overflow: hidden;
     border: 1px solid #ccc;
+}
+@media (max-width: 992px) {
+    .translation .translationStaticInfo{
+        flex-direction: column;
+    }
+    .translation .translationStaticInfo table:last-of-type{
+        border-radius: 0px 0px var(--main-border-radius) var(--main-border-radius);
+        border-left: 1px solid #ccc;
+    }
+    .translation .translationStaticInfo table:first-of-type{
+        border-radius: var(--main-border-radius) var(--main-border-radius) 0px 0px;
+    }
 }
 @media (max-width: 1200px) {
     .translation .translationStaticInfo table{

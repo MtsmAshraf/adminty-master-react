@@ -117,26 +117,18 @@ const Translation = () => {
                 <table cellSpacing={0}>
                     <thead>
                         <th colSpan={5}>
-                            اسم العميل
-                        </th>
-                    </thead>
-                    <tr>
-                        <td colSpan={5}>
-                            اسم العميل
-                        </td>
-                    </tr>
-                    <thead>
-                        <th colSpan={5}>
                             معلومات البوليصة
                         </th>
                     </thead>
                     <tr className={styles.impRow}>
-                        <td colSpan={3}>رقم البوليصة</td>
-                        <td colSpan={2}>تاريخها</td>
+                        <td colSpan={1}>اسم العميل</td>
+                        <td colSpan={2}>رقم البوليصة</td>
+                        <td colSpan={1}>تاريخها</td>
                     </tr>
                     <tr>
-                        <td colSpan={3}>123-897654</td>
-                        <td colSpan={2}>12 - 2 - 2024</td>
+                        <td colSpan={1}>اسم العميل</td>
+                        <td colSpan={2}>123-897654</td>
+                        <td colSpan={1}>12 - 2 - 2024</td>
                     </tr>
                     <thead>
                         <th colSpan={5}>
@@ -155,6 +147,8 @@ const Translation = () => {
                         <td>PHILIPS</td>
                         <td>أمريكا</td>
                     </tr>
+                </table>
+                <table cellSpacing={0}>
                     <thead>
                         <th colSpan={5}>
                             معلومات الفاتورة
