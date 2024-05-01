@@ -55,16 +55,53 @@
     width: 100%;
 }
 .translation .translationProcess .processContent{
-    height: 70vh;
+    display: flex;
+}
+.translation .translationProcess .processContent > div h3{
+    background-color: var(--card-bg);
+    border: 1px solid #eee;
+    border-radius: 0px 0px var(--main-border-radius) var(--main-border-radius);
+}
+.translation .translationProcess .processContent .translatedSide{
+    width: 50%;
+}
+.translation .translationProcess .processContent .assetsSide{
+    width: 50%;
+}
+.translation .translationProcess .processContent .assetsSide ul{
+    display: flex;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    align-items: center;
+}
+.translation .translationProcess .processContent .assetsSide ul li{
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    font-weight: bold;
+}
+.translation .translationProcess .processContent .assetsSide ul li[status="active"]{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.translation .translationProcess .processContent .assetsSide ul li:not([status="active"]):hover{
+    background-color: #efefef;
+}
+.translation .translationProcess .processContent .assetsSide ul li:not(:last-child){
+    border-left: 1px solid #ccc;
+}
+.translation .translationProcess .processContent .assetsSide .assets{
+    height: 125vh;
     overflow-y: scroll;
-    padding: 20px;
-    box-shadow: 0px 0px 20px 5px #eee inset;
+    box-shadow: 0px 0px 20px 5px #efefef inset;
     border-radius: var(--main-border-radius);
 }
-.translation .translationProcess .processContent::-webkit-scrollbar{
+.translation .translationProcess .processContent .assetsSide .assets::-webkit-scrollbar{
     width: 10px;
     background-color: #eee;
 }
-.translation .translationProcess .processContent::-webkit-scrollbar-thumb{
+.translation .translationProcess .processContent .assetsSide .assets::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }

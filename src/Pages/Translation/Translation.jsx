@@ -1,14 +1,24 @@
 import { Link } from "react-router-dom"
 import Card from "../../components/Card/Card"
 import styles from "./translation.module.css"
+import billPdf from "../../assets/files/235-53428896.pdf"
 
 const Translation = () => {
+    const assetsToggleListLis = document.querySelectorAll("#assets-toggle-list li");
+    assetsToggleListLis.forEach((li, index) => {
+        li.onclick = () => {
+            assetsToggleListLis.forEach((li) => {
+                li.setAttribute("status","")
+            })
+            li.setAttribute("status","active")
+        }
+    }) 
   return (
     <div className={styles.translation}>
         <Card>
             <div className={styles.translationList}>
                 <h3>
-                    الترجمة
+                    قائمة البوالص
                 </h3>
                 <table cellSpacing={0}>
                     <thead>
@@ -91,59 +101,27 @@ const Translation = () => {
                     <span>312-41212412</span>
                 </div>
                 <div className={styles.processContent}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quidem corrupti odio deleniti inventore aperiam, repellendus id quod quisquam earum reiciendis porro hic explicabo modi corporis? Incidunt, inventore autem!
+                    <div className={styles.translatedSide}>
+                        <h3>الترجمة</h3>
+                    </div>
+                    <div className={styles.assetsSide}>
+                        <h3>المرفقات</h3>
+                        <ul id="assets-toggle-list">
+                            <li status="active">
+                                البوليصة
+                            </li>
+                            <li>
+                                البيان الجمركي
+                            </li>
+                            <li>
+                                الفاتورة
+                            </li>
+                        </ul>
+                        <div className={styles.assets}>
+                            <iframe src={billPdf}></iframe>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </Card>
