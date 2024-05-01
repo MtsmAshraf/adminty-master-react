@@ -141,6 +141,18 @@
 .translation .translationProcess .processContent{
     display: flex;
 }
+@media (max-width: 1200px) {
+    .translation .translationProcess{
+        height: 250vh;
+    }
+    .translation .translationProcess .processContent{
+        flex-direction: column;
+    }
+    .translation .translationProcess .processContent > div{
+        width: 100% !important;
+        height: 100vh;
+    }
+}
 .translation .translationProcess .processContent > div h3{
     border: 1px solid #eee;
     border-radius: 0px 0px var(--main-border-radius) var(--main-border-radius);
