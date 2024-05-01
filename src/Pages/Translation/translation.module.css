@@ -4,7 +4,7 @@
 }
 .translation .translationStaticInfo{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 .translation .translationStaticInfo table{
     width: 60%;
@@ -12,6 +12,13 @@
     margin-left: auto;
     overflow: hidden;
     border: 1px solid #ccc;
+}
+.translation .translationStaticInfo table:last-of-type{
+    border-radius: var(--main-border-radius) 0px 0px var(--main-border-radius);
+}
+.translation .translationStaticInfo table:first-of-type{
+    border-left: 1px solid #aaa;
+    border-radius: 0px var(--main-border-radius) var(--main-border-radius) 0px;
 }
 @media (max-width: 992px) {
     .translation .translationStaticInfo{
