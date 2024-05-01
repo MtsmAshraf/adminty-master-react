@@ -2,6 +2,39 @@
     direction: rtl;
     padding-bottom: 100px;
 }
+.translation .translationStaticInfo table{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: var(--main-border-radius);
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+@media (max-width: 1200px) {
+    .translation .translationStaticInfo table{
+        width: 80%;
+    }
+}
+@media (max-width: 767px) {
+    .translation .translationStaticInfo table{
+        width: 100%;
+        font-size: 14px;
+    }
+}
+.translation .translationStaticInfo table *{
+    text-align: center;
+    direction: rtl;
+    padding: 5px;
+}
+.translation .translationStaticInfo table thead{
+    background-color: #ccc;
+}
+.translation .translationStaticInfo table .impRow{
+    background-color: #eee;
+}
+.translation .translationStaticInfo table td:not(:last-child){
+    border-left: 1px solid #ccc;
+}
 .translation > div:has(.translationList){
     width: fit-content;
     margin-right: auto;
@@ -46,20 +79,20 @@
     .translation > div:has(.translationList.opened) .opener{
         transform: translate(-0%,0%);
     }
-    .translation table{
+    .translation .translationList table{
         font-size: 14px;
     }
 }
 .translation > div:has(.translationList) .opener svg{
     transition: var(--main-transition);
 }
-.translation > div:not(:first-child){
-    margin-top: 20px;
+.translation > div:not(:last-child){
+    margin-bottom: 20px;
 }
 .translation h3{
     text-align: center;
 }
-.translation table{
+.translation .translationList table{
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: var(--main-border-radius);
@@ -69,19 +102,19 @@
     margin-right: auto;
     max-width: 100%;
 }
-.translation table thead{
+.translation .translationList table thead{
     background-color: #ccc;
 }
-.translation table th,
-.translation table td{
+.translation .translationList table th,
+.translation .translationList table td{
     padding: 5px 10px;
     border-bottom: 1px solid #ccc;
     text-align: center;
 }
-.translation table td{
+.translation .translationList table td{
     cursor: pointer;
 }
-.translation table tr:hover{
+.translation .translationList table tr:hover{
     background-color: #eee;
 }
 .translation .translationProcess .processHeading{

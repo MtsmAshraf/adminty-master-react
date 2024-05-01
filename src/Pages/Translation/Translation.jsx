@@ -113,6 +113,91 @@ const Translation = () => {
             </div>
         </Card>
         <Card>
+            <div className={styles.translationStaticInfo}>
+                <table cellSpacing={0}>
+                    <thead>
+                        <th colSpan={5}>
+                            اسم العميل
+                        </th>
+                    </thead>
+                    <tr>
+                        <td colSpan={5}>
+                            اسم العميل
+                        </td>
+                    </tr>
+                    <thead>
+                        <th colSpan={5}>
+                            معلومات البوليصة
+                        </th>
+                    </thead>
+                    <tr className={styles.impRow}>
+                        <td colSpan={3}>رقم البوليصة</td>
+                        <td colSpan={2}>تاريخها</td>
+                    </tr>
+                    <tr>
+                        <td colSpan={3}>123-897654</td>
+                        <td colSpan={2}>12 - 2 - 2024</td>
+                    </tr>
+                    <thead>
+                        <th colSpan={5}>
+                            معلومات الشركة المصدرة
+                        </th>
+                    </thead>
+                    <tr className={styles.impRow}>
+                        <td>شهادة مواصفات رقم</td>
+                        <td>تاريخها</td>
+                        <td>اسم الشركة</td>
+                        <td>عنوانها</td>
+                    </tr>
+                    <tr>
+                        <td>123-897654</td>
+                        <td>12 - 2 - 2024</td>
+                        <td>PHILIPS</td>
+                        <td>أمريكا</td>
+                    </tr>
+                    <thead>
+                        <th colSpan={5}>
+                            معلومات الفاتورة
+                        </th>
+                    </thead>
+                    <tr className={styles.impRow}>
+                        <td colSpan={2}>نوع الفاتورة</td>
+                        <td>عدد الطرود</td>
+                        <td>الوزن</td>
+                    </tr>
+                    <tr>
+                        <td colSpan={2}>سى اند اف	</td>
+                        <td>122</td>
+                        <td>214</td>
+                    </tr>
+                    <tr className={styles.impRow}>
+                        <td>الشحن بالفاتورة</td>
+                        <td>تأمين</td>
+                        <td>رمز العملة</td>
+                        <td>مصاريف أخرى</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr className={styles.impRow}>
+                        <td>الشحن بالبوليصة</td>
+                        <td>رمز العملة</td>
+                        <td>إجمالي الفاتورة</td>
+                        <td>رمز العملة</td>
+                    </tr>
+                    <tr>
+                        <td>12354</td>
+                        <td>-</td>
+                        <td>12354</td>
+                        <td>410</td>
+                    </tr>
+                </table>
+            </div>
+        </Card>
+        <Card>
             <div className={styles.translationProcess}>
                 <div className={styles.processHeading}>
                     <h4>رقم البوليصة</h4>
