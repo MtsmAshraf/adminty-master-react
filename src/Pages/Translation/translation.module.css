@@ -237,6 +237,21 @@
     overflow-y: scroll;
     box-shadow: 0px 0px 20px 5px #efefef inset;
 }
+.translation .translationProcess .translatedSide .tableWrapper .addRemoveRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.translation .translationProcess .translatedSide .tableWrapper button{
+    width: 30px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .translation .translationProcess .translatedSide .tableWrapper::-webkit-scrollbar{
     width: 5px;
     height: 5px;
@@ -271,13 +286,13 @@
 .translation .translationProcess .translatedSide table thead th.count{
     /* font-size: 14px; */
 }
-.translation .translationProcess .translatedSide table .impRow{
+.translation .translationProcess .translatedSide table thead + tr{
     background-color: #eee;
 }
 .translation .translationProcess .translatedSide table td:not(:last-child){
     border-left: 1px solid #ccc;
 }
-.translation .translationProcess .translatedSide table .impRow td{
+.translation .translationProcess .translatedSide table thead + tr td{
     border-bottom: 1px solid #ccc;
     text-wrap: nowrap;
 }

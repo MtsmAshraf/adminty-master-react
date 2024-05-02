@@ -2,11 +2,76 @@ import { Link } from "react-router-dom"
 import Card from "../../components/Card/Card"
 import styles from "./translation.module.css"
 import billPdf from "../../assets/files/235-53428896.pdf"
-import { useEffect, useState } from "react"
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import { createElement, useEffect, useState } from "react"
+import { faChevronLeft, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import MainBtn from "../../components/MainBtn/MainBtn"
 
 const Translation = () => {
+    const addRow = (e) => {
+        e.preventDefault();
+        let table = document.querySelector("#translation-table")
+        let lastTr = document.querySelectorAll("#translation-table tr")[document.querySelectorAll("#translation-table tr").length - 1]
+        console.log(document.querySelectorAll("#translation-table tr"))
+        let thead = document.createElement("thead")
+        thead.innerHTML = `
+            <th rowSpan="2" colSpan="1" className={styles.count}>${document.querySelectorAll("#translation-table thead").length}</th>
+            <td colSpan="1">نوع البضاعة</td>
+            <td colSpan="8">
+                <input type="text" placeholder="نوع البضاعة"/>
+            </td>
+        `
+        let impTr = document.createElement("tr")
+        impTr.innerHTML = `
+            <td>الكمية</td>
+            <td>رمز الدولة</td>
+            <td>البند الجمركي</td>
+            <td>فئة الرسم</td>
+            <td>الوزن القائم</td>
+            <td>الوزن الصافي</td>
+            <td>السعر الإنفرادي</td>
+            <td>القيمة بالعملة الأجنبية</td>
+            <td>الرسوم التقديرية</td>
+        `
+        let tr = document.createElement("tr")
+        tr.innerHTML = `
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="number" />
+            </td>
+        `
+        // lastTr.parentElement.insertBefore(thead, lastTr);
+        table.appendChild(thead);
+        table.appendChild(impTr);
+        table.appendChild(tr);
+    }
+    const removeRow = (e) => {
+        e.preventDefault();
+    }
+
     const [openList, setOpenList] = useState(false) 
     useEffect(() => {
         const assetsToggleListLis = document.querySelectorAll("#assets-toggle-list li");
@@ -202,7 +267,7 @@ const Translation = () => {
                         <h3>الترجمة</h3>
                         <form action="">
                             <div className={styles.tableWrapper}>
-                                <table cellSpacing={0}>
+                                <table id="translation-table" cellSpacing={0}>
                                     <thead>
                                         <th colSpan={10}>معلومات صنف البضاعة</th>
                                     </thead>
@@ -253,7 +318,66 @@ const Translation = () => {
                                             <input type="number" />
                                         </td>
                                     </tr>
+                                    <thead>
+                                        <th rowSpan={2} colSpan={1} className={styles.count}>2</th>
+                                        <td colSpan={1}>نوع البضاعة</td>
+                                        <td colSpan={8}>
+                                            <input type="text" placeholder="نوع البضاعة"/>
+                                        </td>
+                                    </thead>
+                                    <tr className={styles.impRow}>
+                                        <td>الكمية</td>
+                                        <td>رمز الدولة</td>
+                                        <td>البند الجمركي</td>
+                                        <td>فئة الرسم</td>
+                                        <td>الوزن القائم</td>
+                                        <td>الوزن الصافي</td>
+                                        <td>السعر الإنفرادي</td>
+                                        <td>القيمة بالعملة الأجنبية</td>
+                                        <td>الرسوم التقديرية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                        <td>
+                                            <input type="number" />
+                                        </td>
+                                    </tr>
                                 </table>
+                                <div className={styles.addRemoveRow}>
+                                    <div onClick={(e) => {addRow(e)}}>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faPlus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faMinus} />
+                                        </MainBtn>
+                                    </div>
+                                </div>
                             </div>
                             <div className={styles.formBtns}>
                                 <input type="submit" value={"حفظ"}/>
