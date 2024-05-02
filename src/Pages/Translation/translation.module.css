@@ -182,6 +182,7 @@
 }
 .translation .translationProcess .processContent .translatedSide{
     width: 50%;
+   
 }
 .translation .translationProcess .processContent .assetsSide{
     width: 50%;
@@ -225,4 +226,56 @@
 }
 .translation .translationProcess .processContent .assetsSide .assets .asset:not(:first-child){
     display: none;
+}
+.translation .translationProcess .translatedSide .tableWrapper{
+    max-height: 125vh;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 20px 5px #efefef inset;
+}
+.translation .translationProcess .translatedSide table{
+    width: 100%;
+    font-size: 12px;
+}
+.translation .translationProcess .translatedSide table *{
+    text-align: center;
+    padding: 5px;
+}
+.translation .translationProcess .translatedSide table td:has(input){
+    padding: 0;
+}
+.translation .translationProcess .translatedSide table input{
+    width: 100%;
+    border-radius: 0px;
+}
+.translation .translationProcess .translatedSide table thead{
+    background-color: #ccc;
+}
+.translation .translationProcess .translatedSide table thead th{
+    border-bottom: 1px solid #aaa;
+}
+.translation .translationProcess .translatedSide table thead th.count{
+    font-size: 14px;
+}
+.translation .translationProcess .translatedSide table .impRow{
+    background-color: #eee;
+}
+.translation .translationProcess .translatedSide table td:not(:last-child){
+    border-left: 1px solid #ccc;
+}
+.translation .translationProcess .translatedSide table .impRow td{
+    border-bottom: 1px solid #ccc;
+}
+.translation .translationProcess .translatedSide form .formBtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.translation .translationProcess .translatedSide form .formBtns input{
+    cursor: pointer;
+}
+.translation .translationProcess .translatedSide form .formBtns input[type="submit"]{
+    background-color: var(--main-color);
+    color: #fff;
 }
