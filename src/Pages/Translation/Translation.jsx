@@ -415,7 +415,7 @@ const Translation = () => {
                                     </tr>
                                     
                                     <thead>
-                                        <th colSpan={10} className={styles.count}>3</th>
+                                        <th colSpan={10} className={styles.count}>5</th>
                                     </thead>
                                     <tr className={styles.impRow}>
                                         <td>نوع البضاعة</td>
@@ -466,58 +466,7 @@ const Translation = () => {
                                         </td>
                                     </tr>
                                     <thead>
-                                        <th colSpan={10} className={styles.count}>3</th>
-                                    </thead>
-                                    <tr className={styles.impRow}>
-                                        <td>نوع البضاعة</td>
-                                        <td>الكمية</td>
-                                        <td>رمز الدولة</td>
-                                        <td>البند الجمركي</td>
-                                        <td>فئة الرسم</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                    </tr>
-                                    <tr className={styles.impRow}>
-                                        <td>الوزن القائم</td>
-                                        <td>الوزن الصافي</td>
-                                        <td>السعر الإنفرادي</td>
-                                        <td>القيمة بالعملة الأجنبية</td>
-                                        <td>الرسوم التقديرية</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                    </tr>
-                                    <thead>
-                                        <th colSpan={10} className={styles.count}>3</th>
+                                        <th colSpan={10} className={styles.count}>6</th>
                                     </thead>
                                     <tr className={styles.impRow}>
                                         <td>نوع البضاعة</td>
