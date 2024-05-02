@@ -162,6 +162,11 @@
 }
 .translation .translationProcess .processContent{
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.translation .translationProcess .processContent > div{
+    width: 100% !important;
 }
 @media (max-width: 1200px) {
     .translation .translationProcess{
@@ -232,6 +237,14 @@
     overflow-y: scroll;
     box-shadow: 0px 0px 20px 5px #efefef inset;
 }
+.translation .translationProcess .translatedSide .tableWrapper::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background-color: #ccc;
+}
+.translation .translationProcess .translatedSide .tableWrapper::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
 .translation .translationProcess .translatedSide table{
     width: 100%;
     font-size: 12px;
@@ -245,6 +258,7 @@
 }
 .translation .translationProcess .translatedSide table input{
     width: 100%;
+    font-size: 12px;
     border-radius: 0px;
 }
 .translation .translationProcess .translatedSide table thead{
@@ -252,9 +266,10 @@
 }
 .translation .translationProcess .translatedSide table thead th{
     border-bottom: 1px solid #aaa;
+    border-left: 1px solid #aaa;
 }
 .translation .translationProcess .translatedSide table thead th.count{
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 .translation .translationProcess .translatedSide table .impRow{
     background-color: #eee;
@@ -264,6 +279,7 @@
 }
 .translation .translationProcess .translatedSide table .impRow td{
     border-bottom: 1px solid #ccc;
+    text-wrap: nowrap;
 }
 .translation .translationProcess .translatedSide form .formBtns{
     display: flex;
