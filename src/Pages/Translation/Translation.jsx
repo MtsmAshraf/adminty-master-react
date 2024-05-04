@@ -8,10 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import MainBtn from "../../components/MainBtn/MainBtn"
 
 const Translation = () => {
+    let [showRemoveBtn,setShowRemoveBtn] = useState(false) 
+    useEffect(() => {
+        document.querySelectorAll("#translation-table tr:not(:has(input))").length > 1 ? setShowRemoveBtn(true) : setShowRemoveBtn(false) 
+    })
     const addRow = (e) => {
         e.preventDefault();
+        document.querySelectorAll("#translation-table tr:not(:has(input))").length > 0 ? setShowRemoveBtn(true) : setShowRemoveBtn(false) 
         let table = document.querySelector("#translation-table")
-        let lastTr = document.querySelectorAll("#translation-table tr")[document.querySelectorAll("#translation-table tr").length - 1]
         console.log(document.querySelectorAll("#translation-table tr"))
         let thead = document.createElement("thead")
         thead.innerHTML = `
@@ -70,6 +74,14 @@ const Translation = () => {
     }
     const removeRow = (e) => {
         e.preventDefault();
+        document.querySelectorAll("#translation-table tr:not(:has(input))").length > 2 ? setShowRemoveBtn(true) : setShowRemoveBtn(false) 
+        let lastTHead = document.querySelector("#translation-table thead:last-of-type")
+        let lastImpTr = document.querySelectorAll("#translation-table tr:not(:has(input))")[document.querySelectorAll("#translation-table tr:not(:has(input))").length - 1]
+        let lastTr = document.querySelectorAll("#translation-table tr:has(input)")[document.querySelectorAll("#translation-table tr:has(input)").length - 1]
+        let table = document.querySelector("#translation-table")
+        table.removeChild(lastTr);
+        table.removeChild(lastImpTr);
+        table.removeChild(lastTHead);
     }
 
     const [openList, setOpenList] = useState(false) 
@@ -318,53 +330,6 @@ const Translation = () => {
                                             <input type="number" />
                                         </td>
                                     </tr>
-                                    <thead>
-                                        <th rowSpan={2} colSpan={1} className={styles.count}>2</th>
-                                        <td colSpan={1}>نوع البضاعة</td>
-                                        <td colSpan={8}>
-                                            <input type="text" placeholder="نوع البضاعة"/>
-                                        </td>
-                                    </thead>
-                                    <tr className={styles.impRow}>
-                                        <td>الكمية</td>
-                                        <td>رمز الدولة</td>
-                                        <td>البند الجمركي</td>
-                                        <td>فئة الرسم</td>
-                                        <td>الوزن القائم</td>
-                                        <td>الوزن الصافي</td>
-                                        <td>السعر الإنفرادي</td>
-                                        <td>القيمة بالعملة الأجنبية</td>
-                                        <td>الرسوم التقديرية</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                        <td>
-                                            <input type="number" />
-                                        </td>
-                                    </tr>
                                 </table>
                                 <div className={styles.addRemoveRow}>
                                     <div onClick={(e) => {addRow(e)}}>
@@ -372,7 +337,7 @@ const Translation = () => {
                                             <FontAwesomeIcon icon={faPlus} />
                                         </MainBtn>
                                     </div>
-                                    <div>
+                                    <div onClick={(e) => removeRow(e)} style={{ display: showRemoveBtn ? "block" : "none" }}>
                                         <MainBtn>
                                             <FontAwesomeIcon icon={faMinus} />
                                         </MainBtn>
