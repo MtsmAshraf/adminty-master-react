@@ -1,0 +1,9 @@
+.contract{
+    padding-bottom: 100px;
+}
+.contract > div:last-child{
+    height: fit-content;
+}
+.contract iframe{
+    height: 125vh;
+}
