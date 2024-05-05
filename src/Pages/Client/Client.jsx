@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 import Card from "../../components/Card/Card"
 import styles from "./client.module.css"
-import { faCity, faMapLocation, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faCity, faEye, faFileContract, faMapLocation, faUser } from "@fortawesome/free-solid-svg-icons"
+import { Link } from "react-router-dom"
 
 const Client = () => {
   return (
@@ -101,71 +102,6 @@ const Client = () => {
                 <div className={styles.infoTable}>
                     <table cellSpacing={0}>
                         <thead>
-                            <th colSpan={4}>
-                                السجل التجاري
-                            </th>
-                        </thead>
-                        <tr>
-                            <td>
-                                رقم السجل التجاري
-                            </td>
-                            <td>
-                                تاريخ الانتهاء
-                            </td>
-                            <td>
-                                حالة السجل
-                            </td>
-                            <td>
-                                مرفق
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                90816422
-                            </td>
-                            <td>
-                                31 - 12 -2024
-                            </td>
-                            <td>
-                                حالة السجل
-                            </td>
-                            <td>
-                                مرفق
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                90816422
-                            </td>
-                            <td>
-                                31 - 12 -2024
-                            </td>
-                            <td>
-                                حالة السجل
-                            </td>
-                            <td>
-                                مرفق
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div className={styles.infoTable}>
-                    <table cellSpacing={0}>
-                        <thead>
                             <th colSpan={3}>
                                 التفويض
                             </th>
@@ -201,6 +137,72 @@ const Client = () => {
                             </td>
                             <td>
                                 حالة التفويض
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                -
+                            </td>
+                            <td>
+                                -
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div className={styles.infoTable}>
+                    <table cellSpacing={0}>
+                        <thead>
+                            <th colSpan={4}>
+                                السجل التجاري
+                            </th>
+                        </thead>
+                        <tr>
+                            <td>
+                                رقم السجل التجاري
+                            </td>
+                            <td>
+                                تاريخ الانتهاء
+                            </td>
+                            <td>
+                                حالة السجل
+                            </td>
+                            <td>
+                                مرفق
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                90816422
+                            </td>
+                            <td>
+                                31 - 12 -2024
+                            </td>
+                            <td>
+                                حالة السجل
+                            </td>
+                            <td>
+                                <Link to="/">
+                                    <FontAwesomeIcon icon={faEye} />
+                                </Link>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                90816422
+                            </td>
+                            <td>
+                                31 - 12 -2024
+                            </td>
+                            <td>
+                                حالة السجل
+                            </td>
+                            <td>
+                                <Link to="/">
+                                    <FontAwesomeIcon icon={faEye} />
+                                </Link>
                             </td>
                         </tr>
                     </table>
@@ -240,10 +242,14 @@ const Client = () => {
                                 31 - 12 - 2024
                             </td>
                             <td>
-                                تفاصيل العقد
+                                <Link to="/contract">
+                                    <FontAwesomeIcon icon={faFileContract} />
+                                </Link>
                             </td>
                             <td>
-                                مرفق
+                                <Link to="/">
+                                    <FontAwesomeIcon icon={faEye} />
+                                </Link>
                             </td>
                         </tr>
                         <tr>
@@ -257,10 +263,14 @@ const Client = () => {
                                 31 - 12 - 2024
                             </td>
                             <td>
-                                تفاصيل العقد
+                                <Link to="/contract">
+                                    <FontAwesomeIcon icon={faFileContract} />
+                                </Link>
                             </td>
                             <td>
-                                مرفق
+                                <Link to="/">
+                                    <FontAwesomeIcon icon={faEye} />
+                                </Link>
                             </td>
                         </tr>
                     </table>

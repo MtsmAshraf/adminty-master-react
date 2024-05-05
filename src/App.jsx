@@ -19,6 +19,7 @@ import AddBuyingBill from './Pages/AddBuyingBill/AddBuyingBill.jsx';
 import AddGoods from './Pages/AddGoods/AddGoods.jsx';
 import Translation from './Pages/Translation/Translation.jsx';
 import Client from './Pages/Client/Client.jsx';
+import Contract from './Pages/Contract/Contract.jsx';
 
 library.add(fas)
 const router = createBrowserRouter(
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
         <Route path='/add-new-bill' element={<AddBuyingBill />}/>
         <Route path='/translation' element={<Translation />}/>
         <Route path='/client' element={<Client />}/>
+        <Route path='/contract' element={<Contract />}/>
     </Route>
   )
 )
