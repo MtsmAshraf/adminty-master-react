@@ -6,6 +6,7 @@ import { createElement, useEffect, useState } from "react"
 import { faChevronLeft, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import MainBtn from "../../components/MainBtn/MainBtn"
+import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 
 const Translation = () => {
     let [showRemoveBtn,setShowRemoveBtn] = useState(false) 
@@ -103,6 +104,7 @@ const Translation = () => {
     })
   return (
     <div className={styles.translation}>
+        <Breadcumbs pageName={"الترجمة"}></Breadcumbs>
         <Card>
             <div className={styles.opener} onClick={() => {setOpenList(!openList)}}>
                 <span style={{ display: openList ? "none" : "block" }}>
