@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 import Card from "../../components/Card/Card"
 import styles from "./client.module.css"
+import { faCity, faMapLocation, faUser } from "@fortawesome/free-solid-svg-icons"
 
 const Client = () => {
   return (
@@ -10,14 +12,23 @@ const Client = () => {
             <Card>
                 <div className={styles.pairs}>
                     <div className={styles.infoPair}>
+                        <span>
+                            <FontAwesomeIcon icon={faUser} />
+                        </span>
                         <h4>اسم العميل</h4>
                         <p>اسم العميل</p>
                     </div>
                     <div className={styles.infoPair}>
+                        <span>
+                            <FontAwesomeIcon icon={faCity} />
+                        </span>
                         <h4>المدينة</h4>
                         <p>الرياض</p>
                     </div>
                     <div className={styles.infoPair}>
+                        <span>
+                            <FontAwesomeIcon icon={faMapLocation} />
+                        </span>
                         <h4>العنوان</h4>
                         <p>شارع الفردوس، حي الزهور، مدينة السلام، الدولة</p>
                     </div>
