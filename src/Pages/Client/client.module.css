@@ -1,1 +1,92 @@
-.client {}
+.client .content{
+    direction: rtl;
+}
+.client .content > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.client .content > div > div{
+    /* width: calc((100% - 40px) / 3); */
+}
+.client .pairs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.client .infoPair{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #efefef;
+    padding: 5px 10px;
+    border-radius: 0px var(--main-border-radius) var(--main-border-radius) 0px;
+    width: calc((100% - 20px) / 3);
+    border-left: 3px solid #ccc;
+}
+@media (max-width: 1400px) {
+    .client .pairs{
+        justify-content: center;
+    }
+    .client .infoPair{
+        width: calc((100% - 10px) / 2) !important;
+    }
+    .client .infoPair:last-child{
+        width: 80% !important;
+        text-wrap: nowrap;
+    }
+}
+@media (max-width: 767px) {
+    .client .infoPair{
+        font-size: 14px;
+    }
+    .client .infoPair{
+        justify-content: flex-start;
+        width: 100% !important;
+    }
+    .client .infoPair h4{
+        width: 25%;
+    }
+    .client .infoPair p{
+        flex: 1;
+        text-align: center;
+    }
+    .client .infoPair:last-child{
+        width: 100% !important;
+        text-wrap: wrap;
+        line-height: 1.4;
+    }
+}
+.client .infoTable{
+    width: calc((100% - 20px) / 2) !important;
+}
+.client .infoTable table{
+    border: 1px solid #ccc;
+    border-radius: var(--main-border-radius);
+    width: 100%;
+}
+.client .infoTable table *{
+    text-align: center;
+    padding: 5px;
+}
+.client .infoTable table thead{
+    background-color: #ccc;
+}
+.client .infoTable table td{
+    padding: 8px;
+}
+.client .infoTable table tr:hover{
+    background-color: #efefef;
+}
+.client .infoTable table tr:not(:last-child) td{
+    border-bottom: 1px solid #ccc;
+}
+.client .infoTable table thead + tr{
+    background-color: #efefef;
+}
