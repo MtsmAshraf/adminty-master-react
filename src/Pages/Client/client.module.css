@@ -1,3 +1,6 @@
+.client{
+    padding-bottom: 100px;
+}
 .client .content{
     direction: rtl;
 }
@@ -30,39 +33,6 @@
     width: calc((100% - 20px) / 3);
     border-left: 3px solid #ccc;
 }
-@media (max-width: 1400px) {
-    .client .pairs{
-        justify-content: center;
-    }
-    .client .infoPair{
-        width: calc((100% - 10px) / 2) !important;
-    }
-    .client .infoPair:last-child{
-        width: 80% !important;
-        text-wrap: nowrap;
-    }
-}
-@media (max-width: 767px) {
-    .client .infoPair{
-        font-size: 14px;
-    }
-    .client .infoPair{
-        justify-content: flex-start;
-        width: 100% !important;
-    }
-    .client .infoPair h4{
-        width: 25%;
-    }
-    .client .infoPair p{
-        flex: 1;
-        text-align: center;
-    }
-    .client .infoPair:last-child{
-        width: 100% !important;
-        text-wrap: wrap;
-        line-height: 1.4;
-    }
-}
 .client .infoTable{
     width: calc((100% - 20px) / 2) !important;
 }
@@ -89,4 +59,53 @@
 }
 .client .infoTable table thead + tr{
     background-color: #efefef;
+}
+@media (max-width: 1400px) {
+    .client .pairs{
+        justify-content: center;
+    }
+    .client .infoPair{
+        width: calc((100% - 10px) / 2) !important;
+    }
+    .client .infoPair:last-child{
+        width: 80% !important;
+        text-wrap: nowrap;
+    }
+    .client .infoTable{
+        width: 100% !important;
+    }
+}
+@media (max-width: 767px) {
+    .client .infoPair{
+        font-size: 14px;
+    }
+    .client .infoPair{
+        justify-content: flex-start;
+        width: 100% !important;
+    }
+    .client .infoPair h4{
+        width: 25%;
+    }
+    .client .infoPair p{
+        flex: 1;
+        text-align: center;
+    }
+    .client .infoPair:last-child{
+        width: 100% !important;
+        text-wrap: wrap;
+        line-height: 1.4;
+    }
+    .client .infoTable{
+        overflow-x: scroll;
+    }
+    .client .infoTable::-webkit-scrollbar{
+        height: 8px;
+        background-color: #eee;
+    }
+    .client .infoTable::-webkit-scrollbar-thumb{
+        background-color: #ccc;
+    }
+    .client .infoTable table{
+        text-wrap: nowrap;
+    }
 }

@@ -73,30 +73,16 @@ const Client = () => {
                         </tr>
                         <tr>
                             <td>
-                                اسم العميل
+                                -
                             </td>
                             <td>
-                                منصب العميل
+                                -
                             </td>
                             <td>
-                                9662432412
+                                -
                             </td>
                             <td>
-                                client123@example.com
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                اسم العميل
-                            </td>
-                            <td>
-                                منصب العميل
-                            </td>
-                            <td>
-                                9662432412
-                            </td>
-                            <td>
-                                client123@example.com
+                                -
                             </td>
                         </tr>
                     </table>
@@ -148,6 +134,20 @@ const Client = () => {
                             </td>
                             <td>
                                 مرفق
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                -
+                            </td>
+                            <td>
+                                -
+                            </td>
+                            <td>
+                                -
+                            </td>
+                            <td>
+                                -
                             </td>
                         </tr>
                     </table>
