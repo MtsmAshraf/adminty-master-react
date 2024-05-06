@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 import Card from "../../components/Card/Card"
 import styles from "./client.module.css"
-import { faCity, faEye, faFileContract, faMapLocation, faPlus, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faCheck, faCity, faEye, faFileContract, faMapLocation, faMinus, faPlus, faUser } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 import MainBtn from "../../components/MainBtn/MainBtn.jsx"
 import { useEffect } from "react"
@@ -36,10 +36,14 @@ const Client = () => {
             //     `
             table.appendChild(tr)
         }
-        const addRowBtns = document.querySelectorAll(".info-table thead span");
+        const removeRowBtns = document.querySelectorAll(".info-table thead span > div:nth-child(1)");
+        const addRowBtns = document.querySelectorAll(".info-table thead span > div:nth-child(2)");
+        const doneRowBtns = document.querySelectorAll(".info-table thead span > div:nth-child(3)");
         const infoTables = document.querySelectorAll(".info-table table");
         addRowBtns.forEach((btn, index) => {
             btn.onclick = (e) => {
+                removeRowBtns[index].style.display = "flex";
+                doneRowBtns[index].style.display = "flex";
                 addRow(e,infoTables[index])
             }
         })
@@ -78,9 +82,21 @@ const Client = () => {
                         <thead>
                             <th colSpan={4}>
                                 <span>
-                                    <MainBtn>
-                                        <FontAwesomeIcon icon={faPlus} />
-                                    </MainBtn>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faMinus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faPlus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </MainBtn>
+                                    </div>
                                 </span>
                                 وسائل التواصل
                             </th>
@@ -134,9 +150,21 @@ const Client = () => {
                         <thead>
                             <th colSpan={3}>
                                 <span>
-                                    <MainBtn>
-                                        <FontAwesomeIcon icon={faPlus} />
-                                    </MainBtn>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faMinus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faPlus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </MainBtn>
+                                    </div>
                                 </span>
                                 التفويض
                             </th>
@@ -181,9 +209,21 @@ const Client = () => {
                         <thead>
                             <th colSpan={4}>
                                 <span>
-                                    <MainBtn>
-                                        <FontAwesomeIcon icon={faPlus} />
-                                    </MainBtn>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faMinus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faPlus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </MainBtn>
+                                    </div>
                                 </span>
                                 السجل التجاري
                             </th>
@@ -241,9 +281,21 @@ const Client = () => {
                         <thead>
                             <th colSpan={5}>
                                 <span>
-                                    <MainBtn>
-                                        <FontAwesomeIcon icon={faPlus} />
-                                    </MainBtn>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faMinus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faPlus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </MainBtn>
+                                    </div>
                                 </span>
                                 العقد
                             </th>
@@ -314,9 +366,21 @@ const Client = () => {
                         <thead>
                             <th colSpan={5}>
                                 <span>
-                                    <MainBtn>
-                                        <FontAwesomeIcon icon={faPlus} />
-                                    </MainBtn>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faMinus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faPlus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </MainBtn>
+                                    </div>
                                 </span>
                                 قائمة الشحنات
                             </th>
@@ -361,9 +425,21 @@ const Client = () => {
                         <thead>
                             <th colSpan={5}>
                                 <span>
-                                    <MainBtn>
-                                        <FontAwesomeIcon icon={faPlus} />
-                                    </MainBtn>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faMinus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faPlus} />
+                                        </MainBtn>
+                                    </div>
+                                    <div>
+                                        <MainBtn>
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </MainBtn>
+                                    </div>
                                 </span>
                                 قائمة الفواتير
                             </th>

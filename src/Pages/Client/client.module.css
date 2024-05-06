@@ -67,15 +67,28 @@
 }
 .client .infoTable table th span{
     position: absolute;
-    left: 20px;
+    left: 10px;
     top: 50%;
     padding: 0;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 }
-.client .infoTable table thead span > *{
+.client .infoTable table thead span > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.client .infoTable table thead span > div:not(:nth-child(2)){
+    display: none;
+}
+.client .infoTable table thead span > div:last-child > *{
+    background-color: rgb(4, 191, 4);
+}
+.client .infoTable table thead span > div > *{
     width: 30px;
     /* font-size: 20px; */
     padding: 0;
