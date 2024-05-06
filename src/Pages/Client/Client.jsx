@@ -17,24 +17,16 @@ const Client = () => {
                 let tdInput = document.createElement("input")
                 tdInput.setAttribute("type", "text")
                 tdInput.style.width = "100%"
+                tdInput.addEventListener("change", () => {
+                    tdInput.parentElement.querySelector("p").innerText = tdInput.value
+                })
+                let tdP = document.createElement("p")
+                tdP.setAttribute("added-status", "added-p")
                 td.appendChild(tdInput)
-                tr.setAttribute("added-status","added")
+                td.appendChild(tdP)
+                tr.setAttribute("added-status","added-tr")
                 tr.appendChild(td)
             }
-            // tr.innerHTML = `
-            //     <td>
-            //         اسم العميل
-            //     </td>
-            //     <td>
-            //         منصب العميل
-            //     </td>
-            //     <td>
-            //         9662432412
-            //     </td>
-            //     <td>
-            //         client123@example.com
-            //     </td>
-            //     `
             table.appendChild(tr)
         }
         const removeRow = (e, table) => {
@@ -55,10 +47,18 @@ const Client = () => {
         removeRowBtns.forEach((btn,index) => {
             btn.onclick = (e,) => {
                 removeRow(e, infoTables[index])
-            if(infoTables[index].querySelectorAll("tr[added-status='added']").length === 0){
+            if(infoTables[index].querySelectorAll("tr[added-status='added-tr']").length === 0){
                 doneRowBtns[index].style.display = "none"
                 btn.style.display = "none"
             }
+            }
+        })
+        doneRowBtns.forEach((btn,index) => {
+            btn.onclick = () => {
+                infoTables[index].querySelectorAll("input").forEach((input) => {
+                    input.style.display = "none"
+                })
+                btn.style.display = "none"
             }
         })
     })
