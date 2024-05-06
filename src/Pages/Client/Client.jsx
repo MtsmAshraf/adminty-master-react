@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 import Card from "../../components/Card/Card"
 import styles from "./client.module.css"
-import { faCity, faEye, faFileContract, faMapLocation, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faCity, faEye, faFileContract, faMapLocation, faPlus, faUser } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
-
+import MainBtn from "../../components/MainBtn/MainBtn.jsx"
 const Client = () => {
   return (
     <div className={styles.client}>
@@ -38,6 +38,11 @@ const Client = () => {
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={4}>
+                                <span>
+                                    <MainBtn>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </MainBtn>
+                                </span>
                                 وسائل التواصل
                             </th>
                         </thead>
@@ -103,6 +108,11 @@ const Client = () => {
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={3}>
+                                <span>
+                                    <MainBtn>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </MainBtn>
+                                </span>
                                 التفويض
                             </th>
                         </thead>
@@ -156,6 +166,11 @@ const Client = () => {
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={4}>
+                                <span>
+                                    <MainBtn>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </MainBtn>
+                                </span>
                                 السجل التجاري
                             </th>
                         </thead>
@@ -211,6 +226,11 @@ const Client = () => {
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={5}>
+                                <span>
+                                    <MainBtn>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </MainBtn>
+                                </span>
                                 العقد
                             </th>
                         </thead>
@@ -271,6 +291,100 @@ const Client = () => {
                                 <Link to="/">
                                     <FontAwesomeIcon icon={faEye} />
                                 </Link>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div className={styles.infoTable}>
+                    <table cellSpacing={0}>
+                        <thead>
+                            <th colSpan={5}>
+                                <span>
+                                    <MainBtn>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </MainBtn>
+                                </span>
+                                قائمة الشحنات
+                            </th>
+                        </thead>
+                        <tr>
+                            <td>
+                                رقم البوليصة
+                            </td>
+                            <td>
+                                تاريخ البوليصة
+                            </td>
+                            <td>
+                                الحالة
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12085712
+                            </td>
+                            <td>
+                                01 - 01 - 2024
+                            </td>
+                            <td>
+                                حالة البوليصة
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12085712
+                            </td>
+                            <td>
+                                01 - 01 - 2024
+                            </td>
+                            <td>
+                                حالة البوليصة
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div className={styles.infoTable}>
+                    <table cellSpacing={0}>
+                        <thead>
+                            <th colSpan={5}>
+                                <span>
+                                    <MainBtn>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </MainBtn>
+                                </span>
+                                قائمة الفواتير
+                            </th>
+                        </thead>
+                        <tr>
+                            <td>
+                                رقم الفاتورة
+                            </td>
+                            <td>
+                                تاريخ الفاتورة
+                            </td>
+                            <td>
+                                الحالة
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12085712
+                            </td>
+                            <td>
+                                01 - 01 - 2024
+                            </td>
+                            <td>
+                                حالة الفاتورة
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12085712
+                            </td>
+                            <td>
+                                01 - 01 - 2024
+                            </td>
+                            <td>
+                                حالة الفاتورة
                             </td>
                         </tr>
                     </table>

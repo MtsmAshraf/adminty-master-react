@@ -62,6 +62,25 @@
 .client .infoTable table thead{
     background-color: #ccc;
 }
+.client .infoTable table th{
+    position: relative;
+}
+.client .infoTable table th span{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    padding: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.client .infoTable table thead span > *{
+    width: 30px;
+    /* font-size: 20px; */
+    padding: 0;
+    margin: 0;
+}
 .client .infoTable table td{
     padding: 8px;
 }
@@ -99,7 +118,8 @@
     }
     .client .infoPair h4{
         width: 25%;
-        text-wrap: nowrap;
+        text-wrap: nowrap
+        ;
     }
     .client .infoPair p{
         flex: 1;
