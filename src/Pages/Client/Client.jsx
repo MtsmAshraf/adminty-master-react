@@ -5,8 +5,47 @@ import styles from "./client.module.css"
 import { faCity, faEye, faFileContract, faMapLocation, faPlus, faUser } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 import MainBtn from "../../components/MainBtn/MainBtn.jsx"
+import { useEffect } from "react"
 const Client = () => {
-  return (
+    useEffect(() => {
+        const addRow = (e, table) => {
+            e.preventDefault();
+            let tr = document.createElement("tr");
+            console.log(table.lastElementChild.children.length)
+            for(let i = 0; i < table.lastElementChild.children.length; i++){
+                let td = document.createElement("td")
+                let tdInput = document.createElement("input")
+                tdInput.setAttribute("type", "text")
+                tdInput.style.width = "100%"
+                td.appendChild(tdInput)
+                tr.appendChild(td)
+            }
+            // tr.innerHTML = `
+            //     <td>
+            //         اسم العميل
+            //     </td>
+            //     <td>
+            //         منصب العميل
+            //     </td>
+            //     <td>
+            //         9662432412
+            //     </td>
+            //     <td>
+            //         client123@example.com
+            //     </td>
+            //     `
+            table.appendChild(tr)
+        }
+        const addRowBtns = document.querySelectorAll(".info-table thead span");
+        const infoTables = document.querySelectorAll(".info-table table");
+        addRowBtns.forEach((btn, index) => {
+            btn.onclick = (e) => {
+                addRow(e,infoTables[index])
+            }
+        })
+
+    })
+    return (
     <div className={styles.client}>
         <Breadcumbs pageName={"بيانات العميل"}></Breadcumbs>
         <div className={styles.content}>
@@ -34,7 +73,7 @@ const Client = () => {
                         <p>شارع الفردوس، حي الزهور، مدينة السلام، الدولة</p>
                     </div>
                 </div>
-                <div className={styles.infoTable}>
+                <div className={styles.infoTable + " " + "info-table"}>
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={4}>
@@ -88,23 +127,9 @@ const Client = () => {
                                 client123@example.com
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                        </tr>
                     </table>
                 </div>
-                <div className={styles.infoTable}>
+                <div className={styles.infoTable + " " + "info-table"}>
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={3}>
@@ -149,20 +174,9 @@ const Client = () => {
                                 حالة التفويض
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                        </tr>
                     </table>
                 </div>
-                <div className={styles.infoTable}>
+                <div className={styles.infoTable + " " + "info-table"}>
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={4}>
@@ -222,7 +236,7 @@ const Client = () => {
                         </tr>
                     </table>
                 </div>
-                <div className={styles.infoTable}>
+                <div className={styles.infoTable + " " + "info-table"}>
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={5}>
@@ -295,7 +309,7 @@ const Client = () => {
                         </tr>
                     </table>
                 </div>
-                <div className={styles.infoTable}>
+                <div className={styles.infoTable + " " + "info-table"}>
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={5}>
@@ -342,7 +356,7 @@ const Client = () => {
                         </tr>
                     </table>
                 </div>
-                <div className={styles.infoTable}>
+                <div className={styles.infoTable + " " + "info-table"}>
                     <table cellSpacing={0}>
                         <thead>
                             <th colSpan={5}>
