@@ -18,6 +18,7 @@ const Client = () => {
                 tdInput.setAttribute("type", "text")
                 tdInput.style.width = "100%"
                 td.appendChild(tdInput)
+                tr.setAttribute("added-status","added")
                 tr.appendChild(td)
             }
             // tr.innerHTML = `
@@ -36,6 +37,10 @@ const Client = () => {
             //     `
             table.appendChild(tr)
         }
+        const removeRow = (e, table) => {
+            e.preventDefault();
+            table.removeChild(table.lastElementChild)
+        }
         const removeRowBtns = document.querySelectorAll(".info-table thead span > div:nth-child(1)");
         const addRowBtns = document.querySelectorAll(".info-table thead span > div:nth-child(2)");
         const doneRowBtns = document.querySelectorAll(".info-table thead span > div:nth-child(3)");
@@ -47,7 +52,14 @@ const Client = () => {
                 addRow(e,infoTables[index])
             }
         })
-
+        removeRowBtns.forEach((btn,index) => {
+            btn.onclick = (e,) => {
+                removeRow(e, infoTables[index])
+            if(infoTables[index].querySelectorAll("tr[added-status='added']").length === 0){
+                btn.style.display = "none"
+            }
+            }
+        })
     })
     return (
     <div className={styles.client}>
