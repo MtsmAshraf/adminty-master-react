@@ -56,6 +56,7 @@ const Client = () => {
             btn.onclick = (e,) => {
                 removeRow(e, infoTables[index])
             if(infoTables[index].querySelectorAll("tr[added-status='added']").length === 0){
+                doneRowBtns[index].style.display = "none"
                 btn.style.display = "none"
             }
             }
