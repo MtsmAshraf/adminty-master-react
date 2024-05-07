@@ -6,7 +6,7 @@
 }
 .client .content > div{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
@@ -85,7 +85,13 @@
 .client .infoTable table thead span > div:not(:nth-child(2)){
     display: none;
 }
-.client .infoTable table thead span > div:last-child > *{
+.client .infoTable table thead span > div:nth-child(1) > *{
+    background-image: var(--danger-gradient);
+}
+.client .infoTable table thead span > div:nth-child(2) > *{
+    background-image: var(--primary-gradient);
+}
+.client .infoTable table thead span > div:nth-child(3) > *{
     background-color: rgb(4, 191, 4);
 }
 .client .infoTable table thead span > div > *{

@@ -11,7 +11,7 @@ const Client = () => {
         const addRow = (e, table) => {
             e.preventDefault();
             let tr = document.createElement("tr");
-            console.log(table.lastElementChild.children.length)
+            console.log(table.children[2].children[table.children[2].children.length - 1].children.length > 0 ? "yes" : "no")
             for(let i = 0; i < table.lastElementChild.children.length; i++){
                 let td = document.createElement("td")
                 let tdInput = document.createElement("input")
