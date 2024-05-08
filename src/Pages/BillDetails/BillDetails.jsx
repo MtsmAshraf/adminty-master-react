@@ -11,6 +11,7 @@ const BillDetails = () => {
     let [billName, setBillName] = useState()
     let [billPrice, setBillPrice] = useState()
     let [billDetails, setBillDetails] = useState()
+    let [disableInputs, setDisableInputs] = useState(false)
     const fetchData = async () => {
         const request = await fetch("https://jsonplaceholder.typicode.com/users")
         const data = await request.json()
@@ -27,6 +28,14 @@ const BillDetails = () => {
         setBillName(data.name)
         setBillPrice(data.name)
         setBillDetails(data.name)
+        setDisableInputs(true)
+    }
+    const addAdditionalBill = () => {
+        setDisableInputs(false)
+        setBillId("")
+        setBillName("")
+        setBillPrice("")
+        setBillDetails("")
     }
     useEffect(() => {
         fetchData()
@@ -48,15 +57,15 @@ const BillDetails = () => {
                     <form action="">
                         <div>
                             <label htmlFor="">رقم الفاتورة</label>
-                            <input value={billId} type="number" />
+                            <input value={billId} type="number" disabled={disableInputs}/>
                         </div>
                         <div>
                             <label htmlFor="">اسم الفاتورة</label>
-                            <input value={billName} type="text" />
+                            <input value={billName} type="text" disabled={disableInputs}/>
                         </div>
                         <div>
                             <label htmlFor="">المبلغ</label>
-                            <input value={billPrice} type="number" />
+                            <input value={billPrice} type="number" disabled={disableInputs}/>
                         </div>
                         <div>
                             <label htmlFor="">تفاصيل الفاتورة</label>
@@ -71,7 +80,7 @@ const BillDetails = () => {
                     </form>    
                 </Card>
                 <Card>
-                    <div className={styles.header}>
+                    <div className={styles.header} id="add-additional-bill" onClick={addAdditionalBill}>
                         <span>
                             <FontAwesomeIcon icon={faPlus} />
                         </span>
