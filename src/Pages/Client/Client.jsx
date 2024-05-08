@@ -12,32 +12,67 @@ const Client = () => {
             e.preventDefault();
             let tr = document.createElement("tr");
             if(table.children[2].children[table.children[2].children.length - 1].children.length > 0){
-                console.log("LAST",table.children[2].children[table.children[2].children.length - 1].children[0].children[0])
-                for(let i = 0; i < table.lastElementChild.children.length; i++){
-                    let td = document.createElement("td")
-                    if(i === table.lastElementChild.children.length - 1){
-                        let link = document.createElement("a")
-                        link.setAttribute("href","#")
-                        let oldSvg = table.children[2].children[table.children[2].children.length - 1].children[0].children[0];
-                        let newSvg = oldSvg.cloneNode(true)
-                        link.appendChild(newSvg)
-                        tr.appendChild(link)
-                    }else{
-                        let tdInput = document.createElement("input")
-                        tdInput.setAttribute("type", "text")
-                        tdInput.style.width = "100%"
-                        tdInput.addEventListener("change", () => {
-                            tdInput.parentElement.querySelector("p").innerText = tdInput.value
-                        })
-                        let tdP = document.createElement("p")
-                        tdP.setAttribute("added-status", "added-p")
-                        td.appendChild(tdInput)
-                        td.appendChild(tdP)
-                        tr.setAttribute("added-status","added-tr")
-                        tr.appendChild(td)
+                if(table.children[2].children[table.children[2].children.length - 2].children.length > 0){
+                    for(let i = 0; i < table.lastElementChild.children.length; i++){
+                        let td = document.createElement("td")
+                        if(i === table.lastElementChild.children.length - 2){
+                            let link = document.createElement("a")
+                            link.setAttribute("href","#")
+                            let oldSvg = table.children[2].children[table.children[2].children.length - 2].children[0].children[0];
+                            let newSvg = oldSvg.cloneNode(true)
+                            link.appendChild(newSvg)
+                            td.appendChild(link)
+                            tr.appendChild(td)
+                        }else if(i === table.lastElementChild.children.length - 1){
+                            let link = document.createElement("a")
+                            link.setAttribute("href","#")
+                            let oldSvg = table.children[2].children[table.children[2].children.length - 1].children[0].children[0];
+                            let newSvg = oldSvg.cloneNode(true)
+                            link.appendChild(newSvg)
+                            td.appendChild(link)
+                            tr.appendChild(td)
+                        }else{
+                            let tdInput = document.createElement("input")
+                            tdInput.setAttribute("type", "text")
+                            tdInput.style.width = "100%"
+                            tdInput.addEventListener("change", () => {
+                                tdInput.parentElement.querySelector("p").innerText = tdInput.value
+                            })
+                            let tdP = document.createElement("p")
+                            tdP.setAttribute("added-status", "added-p")
+                            td.appendChild(tdInput)
+                            td.appendChild(tdP)
+                            tr.setAttribute("added-status","added-tr")
+                            tr.appendChild(td)
+                        }
+                    }
+                }else{
+                    for(let i = 0; i < table.lastElementChild.children.length; i++){
+                        let td = document.createElement("td")
+                        
+                        if(i === table.lastElementChild.children.length - 1){
+                            let link = document.createElement("a")
+                            link.setAttribute("href","#")
+                            let oldSvg = table.children[2].children[table.children[2].children.length - 1].children[0].children[0];
+                            let newSvg = oldSvg.cloneNode(true)
+                            link.appendChild(newSvg)
+                            tr.appendChild(link)
+                        }else{
+                            let tdInput = document.createElement("input")
+                            tdInput.setAttribute("type", "text")
+                            tdInput.style.width = "100%"
+                            tdInput.addEventListener("change", () => {
+                                tdInput.parentElement.querySelector("p").innerText = tdInput.value
+                            })
+                            let tdP = document.createElement("p")
+                            tdP.setAttribute("added-status", "added-p")
+                            td.appendChild(tdInput)
+                            td.appendChild(tdP)
+                            tr.setAttribute("added-status","added-tr")
+                            tr.appendChild(td)
+                        }
                     }
                 }
-                console.log("BEFORE LAST",table.children[2].children[table.children[2].children.length - 2])
             }else{
                 for(let i = 0; i < table.lastElementChild.children.length; i++){
                     let td = document.createElement("td")
