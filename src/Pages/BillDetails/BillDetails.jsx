@@ -29,7 +29,28 @@ const BillDetails = () => {
         <div className={styles.billDetails}>
             <div className={styles.additionalBills}>
                 <Card>
+                    <h3>تفاصيل الفاتورة</h3>
                     <form action="">
+                        <div>
+                            <label htmlFor="">رقم الفاتورة</label>
+                            <input type="number" />
+                        </div>
+                        <div>
+                            <label htmlFor="">اسم الفاتورة</label>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="">المبلغ</label>
+                            <input type="number" />
+                        </div>
+                        <div>
+                            <label htmlFor="">تفاصيل الفاتورة</label>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div className={styles.btns}>
+                            <input type="submit" value="حفظ"/>
+                            <input type="reset" value="إلغاء"/>
+                        </div>
                     </form>    
                 </Card>
                 <Card>

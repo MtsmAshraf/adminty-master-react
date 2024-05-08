@@ -14,6 +14,37 @@
 }
 .billDetails .additionalBills > div:first-child{
     flex: 1;
+    direction: rtl;
+}
+.billDetails .additionalBills > div:first-child form{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.billDetails .additionalBills > div:first-child form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.billDetails .additionalBills > div:first-child form > div:has(textarea){
+    width: 55%;
+}
+.billDetails .additionalBills > div:first-child form > div textarea{
+    resize: none;
+    height: 100px;
+}
+.billDetails .additionalBills > div:first-child form > div.btns{
+    width: 100%;
+    flex-direction: row;
+}
+.billDetails .additionalBills > div:first-child form > div.btns input{
+    width: fit-content;
+    cursor: pointer;
+}
+.billDetails .additionalBills > div:first-child form > div.btns input[type="submit"]{
+    background-color: var(--main-color);
+    color: #fff;
 }
 .billDetails .additionalBills > div:last-child{
     width: 300px;
@@ -44,6 +75,17 @@
 }
 .billDetails .additionalBills > div:last-child h3{
     /* text-align: right; */
+}
+.billDetails .additionalBills ul{
+    height: 300px;
+    overflow-y: scroll;
+}
+.billDetails .additionalBills ul::-webkit-scrollbar{
+    width: 5px;
+    background-color: #eee;
+}
+.billDetails .additionalBills ul::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
 }
 .billDetails .additionalBills ul li{
     display: flex;
