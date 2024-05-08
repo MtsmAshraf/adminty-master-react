@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom'
 import { faMoneyBills, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const BillDetails = () => {
-    var bills = []
+    let [bills, setBills] = useState()
     useEffect(() => {
         const fetchData = async () => {
             const request = await fetch("https://jsonplaceholder.typicode.com/users")
             const data = await request.json()
-            bills = data
+            setBills(data)
             console.log(bills)
         }
         fetchData()
@@ -24,7 +24,7 @@ const BillDetails = () => {
                 li.setAttribute("status", "active")
             }
         })
-    })
+    }, [])
     return (
         <div className={styles.billDetails}>
             <div className={styles.additionalBills}>
@@ -40,9 +40,8 @@ const BillDetails = () => {
                         <h3>مصاريف إضافية</h3>
                     </div>
                     <ul id="additional-bills">
-                        {bills}
                         {
-                            bills.map((bill) => {
+                            bills && bills.map((bill) => {
                                 return(
                                     <li key={bill.id}>
                                         <span>
