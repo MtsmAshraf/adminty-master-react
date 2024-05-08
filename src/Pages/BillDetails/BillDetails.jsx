@@ -26,7 +26,7 @@ const BillDetails = () => {
         const data = await request.json()
         setBillId(data.id)
         setBillName(data.name)
-        setBillPrice(data.name)
+        setBillPrice(data.id)
         setBillDetails(data.name)
         setDisableInputs(true)
     }
@@ -35,7 +35,11 @@ const BillDetails = () => {
         setBillId("")
         setBillName("")
         setBillPrice("")
-        setBillDetails("")
+        setBillDetails("") 
+        let additionalBills = document.querySelectorAll("#additional-bills li")
+        additionalBills.forEach(li => {
+            li.setAttribute("status", "")
+        })
     }
     useEffect(() => {
         fetchData()
@@ -56,22 +60,16 @@ const BillDetails = () => {
                     <h3>تفاصيل الفاتورة</h3>
                     <form action="">
                         <div>
-                            <label htmlFor="">رقم الفاتورة</label>
-                            <input value={billId} type="number" disabled={disableInputs}/>
-                        </div>
-                        <div>
-                            <label htmlFor="">اسم الفاتورة</label>
+                            <label htmlFor="">حالة السداد</label>
                             <input value={billName} type="text" disabled={disableInputs}/>
                         </div>
                         <div>
-                            <label htmlFor="">المبلغ</label>
+                            <label htmlFor="">المبلغ الإجمالي</label>
                             <input value={billPrice} type="number" disabled={disableInputs}/>
                         </div>
                         <div>
-                            <label htmlFor="">تفاصيل الفاتورة</label>
-                            <textarea name="" id="">
-                                {billName}
-                            </textarea>
+                            <label htmlFor="">عدد فواتير سال</label>
+                            <input value={billId} type="number" disabled={disableInputs}/>
                         </div>
                         <div className={styles.btns}>
                             <input type="submit" value="حفظ"/>
@@ -90,7 +88,7 @@ const BillDetails = () => {
                         {
                             bills && bills.map((bill) => {
                                 return(
-                                    <li key={bill.id} onClick={() => {fetchSingleData(bill.id)}}>
+                                    <li status={bill.id === 1 ? "active" : ""} key={bill.id} onClick={() => {fetchSingleData(bill.id)}}>
                                         <span>
                                             <FontAwesomeIcon icon={faMoneyBills} />
                                         </span>
