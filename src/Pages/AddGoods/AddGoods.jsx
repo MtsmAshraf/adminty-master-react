@@ -27,8 +27,8 @@ const AddGoods = () => {
                 // })
                 setAreFiles(true)
                 let imgLink = URL.createObjectURL(uploadBillInput.files[0]);
-                imgView.style.backgroundImage = `url(${imgLink})`;
-                imgView.textContent = ""
+                // imgView.style.backgroundImage = `url(${imgLink})`;
+                // imgView.textContent = ""
             }else if(uploadBillInput.files[0] && uploadBillInput.files[0].type === "application/pdf"){
                 setAreFiles(true)
                 // files = uploadBillInput.files;
@@ -141,9 +141,12 @@ const AddGoods = () => {
                         <div className="imgs">
                                 {
                                     files ? Object.keys(files).map((key) => {
+                                        let imgLink = URL.createObjectURL(files[key]);
                                         return(
                                             <div className="img">
-                                                <img src={pic} alt="" />
+                                                <div className="img-wrapper">
+                                                    <img src={imgLink} alt="" />
+                                                </div>
                                                 <h4>
                                                     {files[key].name}
                                                 </h4>
