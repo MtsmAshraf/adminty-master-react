@@ -71,7 +71,7 @@ const BillDetails = () => {
                             <label htmlFor="">عدد فواتير سال</label>
                             <input value={billId} type="number" disabled={disableInputs}/>
                         </div>
-                        <div className={styles.btns}>
+                        <div className={styles.btns} style={{display: disableInputs ? "none" : "flex"}}>
                             <input type="submit" value="حفظ"/>
                             <input type="reset" value="إلغاء"/>
                         </div>

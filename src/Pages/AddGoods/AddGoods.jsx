@@ -19,6 +19,10 @@ const AddGoods = () => {
         let viewImg = () => {
             if(uploadBillInput.files[0] && uploadBillInput.files[0].type !== "application/pdf"){
                 files = uploadBillInput.files;
+                console.log(files[1].name)
+                Object.keys(files).map((key) => {
+                    console.log(files[key])
+                })
                 setAreFiles(true)
                 let imgLink = URL.createObjectURL(uploadBillInput.files[0]);
                 imgView.style.backgroundImage = `url(${imgLink})`;
@@ -26,6 +30,10 @@ const AddGoods = () => {
             }else if(uploadBillInput.files[0] && uploadBillInput.files[0].type === "application/pdf"){
                 setAreFiles(true)
                 files = uploadBillInput.files;
+                console.log(files[1].name)
+                Object.keys(files).map((key) => {
+                    console.log(files[key])
+                })
                 imgView.style.backgroundImage = "";
                 imgView.textContent = uploadBillInput.file
             }else if(uploadBillInput.files.length === 0 ){
@@ -46,7 +54,7 @@ const AddGoods = () => {
             uploadBillInput.files = e.dataTransfer.files;
             viewImg();
         })
-    })
+    },[])
     return (
     <div className='add-goods'>
         <Breadcumbs pageName={"تحميل البضاعة"}/>
@@ -119,21 +127,21 @@ const AddGoods = () => {
                                 <h5>اضغط لرفع المرفقات</h5>
                             </label>    
                         }
-                        {/* {
+                        {
                             areFiles && 
                             <div className="goods-imgs">
                             <h1>aoisfjoia</h1>
                                 {    
-                                    Object.keys(files).map((key) => {
-                                        return (
-                                            <h3>
-                                                {files[key].name}
-                                            </h3>
-                                        )
-                                    })
+                                    // Object.keys(files).map((key) => {
+                                    //     return (
+                                    //         <h3>
+                                    //             {files[key].name}
+                                    //         </h3>
+                                    //     )
+                                    // })
                                 }
                             </div>
-                        } */}
+                        }
                         <input type="file" id="upload-bill" className="form-control" multiple hidden/>
                     </div>
                 </div>
@@ -143,18 +151,15 @@ const AddGoods = () => {
                         <h4>صور الطرود</h4>
                         <div className="imgs">
                             <div className="img">
-                                <h1>
+                                <ul>
                                     {
-                                        files
-                                        // Object.keys(files).map((key) => {
-                                        //     // let imgLink = URL.createObjectURL(files[parseInt(key)]);
-                                        //     console.log(files[parseInt(key)].name)
-                                        //     return(
-                                        //             <h2>{files[parseInt(key)].name}</h2>
-                                        //     )
-                                        // })
+                                        Object.keys(files).map((key) => {
+                                            return(
+                                                <li>{key}</li>
+                                            )
+                                        })
                                     }
-                                </h1>
+                                </ul>
                             </div>
                         </div>
                     </div>

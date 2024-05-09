@@ -17,16 +17,23 @@
     direction: rtl;
 }
 .billDetails .additionalBills > div:first-child form{
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 .billDetails .additionalBills > div:first-child form > div{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 5px;
-    width: calc((100% - 40px) / 3);
+    align-items: center;
+    width: calc((100% - 20px) / 2);
+    width: 100%;
+}
+.billDetails .additionalBills > div:first-child form > div label{
+}
+.billDetails .additionalBills > div:first-child form > div input{
+    /* width: 160px; */
 }
 .billDetails .additionalBills > div:first-child form > div:has(textarea){
     width: 55%;
