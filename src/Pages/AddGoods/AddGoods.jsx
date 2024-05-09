@@ -39,7 +39,7 @@ const AddGoods = () => {
                 //     console.log(files[key])
                 // })
                 imgView.style.backgroundImage = "";
-                imgView.textContent = uploadBillInput.file
+                // imgView.textContent = uploadBillInput.file
             }else if(uploadBillInput.files.length === 0 ){
                 imgView.style.backgroundImage = "";
                 imgView.innerHTML = `
