@@ -144,9 +144,14 @@ const AddGoods = () => {
                                         let imgLink = URL.createObjectURL(files[key]);
                                         return(
                                             <div className="img">
-                                                <div className="img-wrapper">
-                                                    <img src={imgLink} alt="" />
-                                                </div>
+                                                    <div className="img-wrapper">
+                                                        {
+                                                        files[key].type !== "image/jpeg" && files[key].type !== "image/png" ? 
+                                                        <h3>{files[key].type}</h3>
+                                                        :
+                                                        <img src={imgLink} alt="" />
+                                                        }
+                                                        </div>
                                                 <h4>
                                                     {files[key].name}
                                                 </h4>

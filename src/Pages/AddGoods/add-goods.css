@@ -51,8 +51,15 @@
 }
 .add-goods .goods-imgs .img-wrapper{
     height: 200px;
-    background-color: red;
     overflow: hidden;
+    background-color: #ccc;
+    border-bottom: 1px solid var(--main-color);
+}
+.add-goods .goods-imgs .img-wrapper:has(h3){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 .add-goods .goods-imgs .img img{
     height: 100%;
