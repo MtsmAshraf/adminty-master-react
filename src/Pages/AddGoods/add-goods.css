@@ -40,10 +40,20 @@
 .add-goods .goods-imgs .imgs{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 20px;
 }
 .add-goods .goods-imgs .img{
-    width: 100px;
     overflow: hidden;
     border-radius: var(--main-border-radius);
+    background-color: #eee;
+}
+.add-goods .goods-imgs .img img{
+    /* width: 150px; */
+}
+.add-goods .goods-imgs .img h4{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
