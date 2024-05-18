@@ -1,6 +1,44 @@
 .billsList .content{
     direction: rtl;
 }
+.billsList .content .tableWrapper .tableHeader .hideShowColsWrapper{
+    position: relative;
+}
+.billsList .content .tableWrapper .tableHeader .hideShowColsOpener{
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    width: 100px;
+    border-radius: var(--main-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.billsList .content .tableWrapper .tableHeader .hideShowCols{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: var(--main-border-radius);
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: var(--card-bg);
+    left: 0;
+    width: 130px;
+}
+.billsList .content .tableWrapper .tableHeader .hideShowCols div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.billsList .content .tableWrapper .tableHeader .hideShowCols div label{
+    flex: 1;
+    cursor: pointer;
+}
+.billsList .content .tableWrapper .tableHeader .hideShowCols input{
+    accent-color: var(--main-color);
+}
 .billsList .content .tableWrapper .tableHeader{
     display: flex;
     align-items: center;
