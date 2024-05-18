@@ -103,7 +103,7 @@ const BillsList = () => {
                             </thead>
                             <tbody>
                                 {
-                                    shownData ? shownData.map((item) => {
+                                    shownData.length > 0 ? shownData.map((item) => {
                                         return(
                                             <tr key={item.id}>
                                                 <td style={{ display:  billId ? "table-cell" : "none"}}>
