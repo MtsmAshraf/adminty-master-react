@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 import Card from "../../components/Card/Card"
 import styles from "./bills-list.module.css"
@@ -19,6 +19,24 @@ const BillsList = () => {
         { id: 3, billId: "546-456432", name: 'Sam Green', email: "client312402@example.com" },
         { id: 4, billId: "301-456432", name: 'Emily Brown', email: "client312402@example.com" }
     ])
+
+    const [shownData, setShownData] = useState([])
+
+    useEffect(() => {
+        setShownData(tableData)
+    }, [])
+
+    const handleSearch = (e) => {
+        let searchItem = e.target.value;
+        if(searchItem !== ""){
+            let filteredData = tableData.filter((item) => {
+                return item.name.toLowerCase().includes(searchItem.toLowerCase());
+            })
+            setShownData(filteredData)
+        }else if(searchItem === ""){
+            setShownData(tableData)
+        }
+    }
 
     return (
         <div className={styles.billsList}>
@@ -64,7 +82,7 @@ const BillsList = () => {
                                     </div>
                                 </div>
                                 <div className={styles.tableSearch}>
-                                    <input type="search" placeholder="Search"/>
+                                    <input type="search" placeholder="Search" onChange={(e) => {handleSearch(e)}}/>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +103,7 @@ const BillsList = () => {
                             </thead>
                             <tbody>
                                 {
-                                    tableData.map((item) => {
+                                    shownData ? shownData.map((item) => {
                                         return(
                                             <tr key={item.id}>
                                                 <td style={{ display:  billId ? "table-cell" : "none"}}>
@@ -102,7 +120,7 @@ const BillsList = () => {
                                                 </td>
                                             </tr>
                                         )
-                                    })
+                                    }) : <tr><td colSpan={4}>No Matches</td></tr>
                                 }
                             </tbody>
                         </table>
