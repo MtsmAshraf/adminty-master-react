@@ -1,6 +1,12 @@
 .billsList .content{
     direction: rtl;
 }
+.billsList .content .tableWrapper .tableHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 .billsList .content .tableWrapper table{
     width: 100%;
     border-radius: var(--main-border-radius);

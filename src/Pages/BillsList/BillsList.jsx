@@ -8,10 +8,30 @@ const BillsList = () => {
             <Breadcumbs pageName={"قائمة الشحنات"}></Breadcumbs>
             <div className={styles.content}>
                 <Card>
-                    <h3>
-                        قائمة الشحنات
-                    </h3>
                     <div className={styles.tableWrapper}>
+                        <div className={styles.tableHeader}>
+                            <h3>
+                                قائمة الشحنات
+                            </h3>
+                            <div>
+                                <input type="checkbox" name="hide-show-cols" id="bill-id" />
+                                <label htmlFor="">
+                                    رقم البوليصة
+                                </label>
+                                <input type="checkbox" name="hide-show-cols" id="client-name" />
+                                <label htmlFor="">
+                                    اسم العميل
+                                </label>
+                                <input type="checkbox" name="hide-show-cols" id="client-last-name" />
+                                <label htmlFor="">
+                                    last name
+                                </label>
+                                <input type="checkbox" name="hide-show-cols" id="email" />
+                                <label htmlFor="">
+                                    الإيميل
+                                </label>
+                            </div>
+                        </div>
                         <table cellSpacing={0}>
                             <thead>
                                 <th>
