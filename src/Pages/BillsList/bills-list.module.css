@@ -1,6 +1,12 @@
 .billsList .content{
     direction: rtl;
 }
+.billsList .content .tableWrapper .tableHeader .tableSettings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 .billsList .content .tableWrapper .tableHeader .hideShowColsWrapper{
     position: relative;
 }
@@ -52,7 +58,7 @@
 }
 .billsList .content .tableWrapper table * {
     text-align: center;
-    padding: 5px;
+    padding: 8px;
 }
 .billsList .content .tableWrapper table thead{
     background-color: #ccc;

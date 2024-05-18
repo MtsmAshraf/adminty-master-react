@@ -13,6 +13,13 @@ const BillsList = () => {
 
     const [openHideShowCols, setOpenHideShowCols] = useState(false)
 
+    const [tableData, setTableData] = useState([
+        { id: 1, billId: "789-456432", name: 'John Doe', email: "client312402@example.com" },
+        { id: 2, billId: "123-456432", name: 'Jane Smith', email: "client312402@example.com" },
+        { id: 3, billId: "546-456432", name: 'Sam Green', email: "client312402@example.com" },
+        { id: 4, billId: "301-456432", name: 'Emily Brown', email: "client312402@example.com" }
+    ])
+
     return (
         <div className={styles.billsList}>
             <Breadcumbs pageName={"قائمة الشحنات"}></Breadcumbs>
@@ -23,36 +30,41 @@ const BillsList = () => {
                             <h3>
                                 قائمة الشحنات
                             </h3>
-                            <div className={styles.hideShowColsWrapper}>
-                                <div className={styles.hideShowColsOpener} onClick={() => {setOpenHideShowCols(!openHideShowCols)}}>
-                                    <span>الأعمدة</span>
-                                    <FontAwesomeIcon icon={faChevronDown} />
+                            <div className={styles.tableSettings}>
+                                <div className={styles.hideShowColsWrapper}>
+                                    <div className={styles.hideShowColsOpener} onClick={() => {setOpenHideShowCols(!openHideShowCols)}}>
+                                        <span>الأعمدة</span>
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    </div>
+                                    <div className={styles.hideShowCols} style={{ display: openHideShowCols ? "flex" : "none"}}>
+                                        <div>
+                                            <input type="checkbox" onChange={(e) => {console.log(setBillId(e.target.checked))}} checked={billId} name="hide-show-cols" id="bill-id" />
+                                            <label htmlFor="bill-id">
+                                                رقم البوليصة
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onChange={(e) => {console.log(setClientName(e.target.checked))}} checked={clientName} name="hide-show-cols" id="client-name" />
+                                            <label htmlFor="client-name">
+                                                اسم العميل
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onChange={(e) => {console.log(setClientLastName(e.target.checked))}} checked={clienLasttName} name="hide-show-cols" id="client-last-name" />
+                                            <label htmlFor="client-last-name">
+                                                last name
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onChange={(e) => {console.log(setEmail(e.target.checked))}} checked={email} name="hide-show-cols" id="email" />
+                                            <label htmlFor="email">
+                                                الإيميل
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className={styles.hideShowCols} style={{ display: openHideShowCols ? "flex" : "none"}}>
-                                    <div>
-                                        <input type="checkbox" onChange={(e) => {console.log(setBillId(e.target.checked))}} checked={billId} name="hide-show-cols" id="bill-id" />
-                                        <label htmlFor="bill-id">
-                                            رقم البوليصة
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" onChange={(e) => {console.log(setClientName(e.target.checked))}} checked={clientName} name="hide-show-cols" id="client-name" />
-                                        <label htmlFor="client-name">
-                                            اسم العميل
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" onChange={(e) => {console.log(setClientLastName(e.target.checked))}} checked={clienLasttName} name="hide-show-cols" id="client-last-name" />
-                                        <label htmlFor="client-last-name">
-                                            last name
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" onChange={(e) => {console.log(setEmail(e.target.checked))}} checked={email} name="hide-show-cols" id="email" />
-                                        <label htmlFor="email">
-                                            الإيميل
-                                        </label>
-                                    </div>
+                                <div className={styles.tableSearch}>
+                                    <input type="search" placeholder="Search"/>
                                 </div>
                             </div>
                         </div>
@@ -72,62 +84,26 @@ const BillsList = () => {
                                 </th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td style={{ display:  billId ? "table-cell" : "none"}}>
-                                        789-654987
-                                    </td>
-                                    <td style={{ display: clientName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: clienLasttName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: email ? "table-cell" : "none"}}>
-                                        client312402@example.com
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style={{ display:  billId ? "table-cell" : "none"}}>
-                                        789-654987
-                                    </td>
-                                    <td style={{ display: clientName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: clienLasttName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: email ? "table-cell" : "none"}}>
-                                        client312402@example.com
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style={{ display:  billId ? "table-cell" : "none"}}>
-                                        789-654987
-                                    </td>
-                                    <td style={{ display: clientName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: clienLasttName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: email ? "table-cell" : "none"}}>
-                                        client312402@example.com
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style={{ display:  billId ? "table-cell" : "none"}}>
-                                        789-654987
-                                    </td>
-                                    <td style={{ display: clientName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: clienLasttName ? "table-cell" : "none"}}>
-                                        اسم العميل
-                                    </td>
-                                    <td style={{ display: email ? "table-cell" : "none"}}>
-                                        client312402@example.com
-                                    </td>
-                                </tr>
+                                {
+                                    tableData.map((item) => {
+                                        return(
+                                            <tr key={item.id}>
+                                                <td style={{ display:  billId ? "table-cell" : "none"}}>
+                                                    {item.billId}
+                                                </td>
+                                                <td style={{ display: clientName ? "table-cell" : "none"}}>
+                                                    {item.name.split(" ")[0]}
+                                                </td>
+                                                <td style={{ display: clienLasttName ? "table-cell" : "none"}}>
+                                                    {item.name.split(" ")[1]}
+                                                </td>
+                                                <td style={{ display: email ? "table-cell" : "none"}}>
+                                                    {item.email}
+                                                </td>
+                                            </tr>
+                                        )
+                                    })
+                                }
                             </tbody>
                         </table>
                     </div>
