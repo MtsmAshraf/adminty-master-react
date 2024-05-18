@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 const BillsList = () => {
-    const [billId, setBillId] = useState(true)
-    const [clientName, setClientName] = useState(true)
-    const [clienLasttName, setClientLastName] = useState(true)
-    const [email, setEmail] = useState(true)
+    // const [billId, setBillId] = useState(true)
+    // const [clientName, setClientName] = useState(true)
+    // const [clienLasttName, setClientLastName] = useState(true)
+    // const [email, setEmail] = useState(true)
 
     const [openHideShowCols, setOpenHideShowCols] = useState(false)
 
@@ -55,6 +55,21 @@ const BillsList = () => {
     const [shownData, setShownData] = useState([])
 
     useEffect(() => {
+        const checkboxInputs = document.querySelectorAll("input[type='checkbox']")
+        checkboxInputs.forEach((input, index) => {
+            input.checked = true;
+            input.onchange = (e) => {
+                console.log(e.target.checked)
+                console.log(document.querySelectorAll(`table tr td:nth-child(${index + 1})`))
+                document.querySelectorAll(`table thead th:nth-child(${index + 1})`).forEach((th) => {
+                    th.style.display = e.target.checked ? "table-cell" : "none"
+                })
+                document.querySelectorAll(`table tr td:nth-child(${index + 1})`).forEach((td) => {
+                    td.style.display = e.target.checked ? "table-cell" : "none"
+                })
+            }
+        })
+
         setShownData(tableData)
     }, [])
 
@@ -88,27 +103,39 @@ const BillsList = () => {
                                     </div>
                                     <div className={styles.hideShowCols} style={{ display: openHideShowCols ? "flex" : "none"}}>
                                         <div>
-                                            <input type="checkbox" onChange={(e) => {console.log(setBillId(e.target.checked))}} checked={billId} name="hide-show-cols" id="bill-id" />
+                                            <input type="checkbox" name="hide-show-cols" id="bill-id" />
                                             <label htmlFor="bill-id">
                                                 رقم البوليصة
                                             </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" onChange={(e) => {console.log(setClientName(e.target.checked))}} checked={clientName} name="hide-show-cols" id="client-name" />
+                                            <input type="checkbox" name="hide-show-cols" id="client-last-name" />
+                                            <label htmlFor="client-last-name">
+                                                التاريخ
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="hide-show-cols" id="client-name" />
                                             <label htmlFor="client-name">
                                                 اسم العميل
                                             </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" onChange={(e) => {console.log(setClientLastName(e.target.checked))}} checked={clienLasttName} name="hide-show-cols" id="client-last-name" />
-                                            <label htmlFor="client-last-name">
-                                                last name
+                                            <input type="checkbox" name="hide-show-cols" id="email" />
+                                            <label htmlFor="email">
+                                                المنفذ
                                             </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" onChange={(e) => {console.log(setEmail(e.target.checked))}} checked={email} name="hide-show-cols" id="email" />
+                                            <input type="checkbox" name="hide-show-cols" id="email" />
                                             <label htmlFor="email">
-                                                الإيميل
+                                                حالة الشحنة
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="hide-show-cols" id="email" />
+                                            <label htmlFor="email">
+                                                حالة التتبع
                                             </label>
                                         </div>
                                     </div>
@@ -120,22 +147,28 @@ const BillsList = () => {
                         </div>
                         <table cellSpacing={0}>
                             <thead>
-                                <th style={{ display:  billId ? "table-cell" : "none"}}>
+                                {/* <th style={{ display:  billId ? "table-cell" : "none"}}> */}
+                                <th>
                                     رقم البوليصة
                                 </th>
-                                <th style={{ display: clienLasttName ? "table-cell" : "none"}}>
+                                {/* <th style={{ display: clienLasttName ? "table-cell" : "none"}}> */}
+                                <th>
                                     التاريخ
                                 </th>
-                                <th style={{ display: clientName ? "table-cell" : "none"}}>
+                                {/* <th style={{ display: clientName ? "table-cell" : "none"}}> */}
+                                <th>
                                     اسم العميل
                                 </th>
-                                <th style={{ display: email ? "table-cell" : "none"}}>
+                                {/* <th style={{ display: email ? "table-cell" : "none"}}> */}
+                                <th>
                                     المنفذ
                                 </th>
-                                <th style={{ display: email ? "table-cell" : "none"}}>
+                                {/* <th style={{ display: email ? "table-cell" : "none"}}> */}
+                                <th>
                                     حالة الشحنة
                                 </th>
-                                <th style={{ display: email ? "table-cell" : "none"}}>
+                                {/* <th style={{ display: email ? "table-cell" : "none"}}> */}
+                                <th>
                                     حالة التتبع
                                 </th>
                             </thead>
@@ -144,22 +177,28 @@ const BillsList = () => {
                                     shownData.length > 0 ? shownData.map((item) => {
                                         return(
                                             <tr key={item.id}>
-                                                <td style={{ display:  billId ? "table-cell" : "none"}}>
+                                                {/* <td style={{ display:  billId ? "table-cell" : "none"}}> */}
+                                                <td>
                                                     {item.billId}
                                                 </td>
-                                                <td style={{ display: clienLasttName ? "table-cell" : "none"}}>
+                                                {/* <td style={{ display: clienLasttName ? "table-cell" : "none"}}> */}
+                                                <td>
                                                     {item.date}
                                                 </td>
-                                                <td style={{ display: clientName ? "table-cell" : "none"}}>
+                                                {/* <td style={{ display: clientName ? "table-cell" : "none"}}> */}
+                                                <td>
                                                     {item.name}
                                                 </td>
-                                                <td style={{ display: email ? "table-cell" : "none"}}>
+                                                {/* <td style={{ display: email ? "table-cell" : "none"}}> */}
+                                                <td>
                                                     {item.outlet}
                                                 </td>
-                                                <td style={{ display: email ? "table-cell" : "none"}}>
+                                                {/* <td style={{ display: email ? "table-cell" : "none"}}> */}
+                                                <td>
                                                     {item.status}
                                                 </td>
-                                                <td style={{ display: email ? "table-cell" : "none"}}>
+                                                {/* <td style={{ display: email ? "table-cell" : "none"}}> */}
+                                                <td>
                                                     {item.trackingStatus}
                                                 </td>
                                             </tr>

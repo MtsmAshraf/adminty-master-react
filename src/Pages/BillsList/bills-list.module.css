@@ -41,6 +41,7 @@
 .billsList .content .tableWrapper .tableHeader .hideShowCols div label{
     flex: 1;
     cursor: pointer;
+    font-size: 14px;
 }
 .billsList .content .tableWrapper .tableHeader .hideShowCols input{
     accent-color: var(--main-color);
