@@ -147,27 +147,21 @@ const BillsList = () => {
                         </div>
                         <table cellSpacing={0}>
                             <thead>
-                                {/* <th style={{ display:  billId ? "table-cell" : "none"}}> */}
                                 <th>
                                     رقم البوليصة
                                 </th>
-                                {/* <th style={{ display: clienLasttName ? "table-cell" : "none"}}> */}
                                 <th>
                                     التاريخ
                                 </th>
-                                {/* <th style={{ display: clientName ? "table-cell" : "none"}}> */}
                                 <th>
                                     اسم العميل
                                 </th>
-                                {/* <th style={{ display: email ? "table-cell" : "none"}}> */}
                                 <th>
                                     المنفذ
                                 </th>
-                                {/* <th style={{ display: email ? "table-cell" : "none"}}> */}
                                 <th>
                                     حالة الشحنة
                                 </th>
-                                {/* <th style={{ display: email ? "table-cell" : "none"}}> */}
                                 <th>
                                     حالة التتبع
                                 </th>
@@ -177,27 +171,21 @@ const BillsList = () => {
                                     shownData.length > 0 ? shownData.map((item) => {
                                         return(
                                             <tr key={item.id}>
-                                                {/* <td style={{ display:  billId ? "table-cell" : "none"}}> */}
                                                 <td>
                                                     {item.billId}
                                                 </td>
-                                                {/* <td style={{ display: clienLasttName ? "table-cell" : "none"}}> */}
                                                 <td>
                                                     {item.date}
                                                 </td>
-                                                {/* <td style={{ display: clientName ? "table-cell" : "none"}}> */}
                                                 <td>
                                                     {item.name}
                                                 </td>
-                                                {/* <td style={{ display: email ? "table-cell" : "none"}}> */}
                                                 <td>
                                                     {item.outlet}
                                                 </td>
-                                                {/* <td style={{ display: email ? "table-cell" : "none"}}> */}
                                                 <td>
                                                     {item.status}
                                                 </td>
-                                                {/* <td style={{ display: email ? "table-cell" : "none"}}> */}
                                                 <td>
                                                     {item.trackingStatus}
                                                 </td>
