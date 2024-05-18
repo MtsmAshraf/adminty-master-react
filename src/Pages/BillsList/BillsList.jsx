@@ -14,10 +14,42 @@ const BillsList = () => {
     const [openHideShowCols, setOpenHideShowCols] = useState(false)
 
     const [tableData, setTableData] = useState([
-        { id: 1, billId: "789-456432", name: 'John Doe', email: "client312402@example.com" },
-        { id: 2, billId: "123-456432", name: 'Jane Smith', email: "client312402@example.com" },
-        { id: 3, billId: "546-456432", name: 'Sam Green', email: "client312402@example.com" },
-        { id: 4, billId: "301-456432", name: 'Emily Brown', email: "client312402@example.com" }
+        { 
+            id: 1,
+            billId: "789-456432",
+            date: "20-03-2024",
+            name: 'John Doe',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 2,
+            billId: "123-456432",
+            date: "20-03-2024",
+            name: 'Jane Smith',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 3,
+            billId: "546-456432",
+            date: "20-03-2024",
+            name: 'Sam Green',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 4,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        }
     ])
 
     const [shownData, setShownData] = useState([])
@@ -91,14 +123,20 @@ const BillsList = () => {
                                 <th style={{ display:  billId ? "table-cell" : "none"}}>
                                     رقم البوليصة
                                 </th>
+                                <th style={{ display: clienLasttName ? "table-cell" : "none"}}>
+                                    التاريخ
+                                </th>
                                 <th style={{ display: clientName ? "table-cell" : "none"}}>
                                     اسم العميل
                                 </th>
-                                <th style={{ display: clienLasttName ? "table-cell" : "none"}}>
-                                    last name
+                                <th style={{ display: email ? "table-cell" : "none"}}>
+                                    المنفذ
                                 </th>
                                 <th style={{ display: email ? "table-cell" : "none"}}>
-                                    الإيميل
+                                    حالة الشحنة
+                                </th>
+                                <th style={{ display: email ? "table-cell" : "none"}}>
+                                    حالة التتبع
                                 </th>
                             </thead>
                             <tbody>
@@ -109,14 +147,20 @@ const BillsList = () => {
                                                 <td style={{ display:  billId ? "table-cell" : "none"}}>
                                                     {item.billId}
                                                 </td>
-                                                <td style={{ display: clientName ? "table-cell" : "none"}}>
-                                                    {item.name.split(" ")[0]}
-                                                </td>
                                                 <td style={{ display: clienLasttName ? "table-cell" : "none"}}>
-                                                    {item.name.split(" ")[1]}
+                                                    {item.date}
+                                                </td>
+                                                <td style={{ display: clientName ? "table-cell" : "none"}}>
+                                                    {item.name}
                                                 </td>
                                                 <td style={{ display: email ? "table-cell" : "none"}}>
-                                                    {item.email}
+                                                    {item.outlet}
+                                                </td>
+                                                <td style={{ display: email ? "table-cell" : "none"}}>
+                                                    {item.status}
+                                                </td>
+                                                <td style={{ display: email ? "table-cell" : "none"}}>
+                                                    {item.trackingStatus}
                                                 </td>
                                             </tr>
                                         )
