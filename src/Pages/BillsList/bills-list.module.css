@@ -1,0 +1,21 @@
+.billsList .content{
+    direction: rtl;
+}
+.billsList .content .tableWrapper table{
+    width: 100%;
+    border-radius: var(--main-border-radius);
+    border: 1px solid #ccc;
+}
+.billsList .content .tableWrapper table * {
+    text-align: center;
+    padding: 5px;
+}
+.billsList .content .tableWrapper table thead{
+    background-color: #ccc;
+}
+.billsList .content .tableWrapper table tr:hover{
+    background-color: #eee;
+}
+.billsList .content .tableWrapper table tr td{
+    border-top: 1px solid #ccc;
+}

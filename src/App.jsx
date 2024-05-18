@@ -20,6 +20,7 @@ import AddGoods from './Pages/AddGoods/AddGoods.jsx';
 import Translation from './Pages/Translation/Translation.jsx';
 import Client from './Pages/Client/Client.jsx';
 import Contract from './Pages/Contract/Contract.jsx';
+import BillsList from './Pages/BillsList/BillsList.jsx';
 
 library.add(fas)
 const router = createBrowserRouter(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
         <Route path='/invoice-list' element={<InvoiceList />}/>
         <Route path='/invoice' element={<Invoice />}/>
         <Route path='/add-bill' element={<Addbill />}/>
+        <Route path='/bills-list' element={<BillsList />}/>
         <Route path='/add-custom' element={<AddCustom />}/>
         <Route path='/add-sal' element={<AddSal />}/>
         <Route path='/add-goods' element={<AddGoods />}/>

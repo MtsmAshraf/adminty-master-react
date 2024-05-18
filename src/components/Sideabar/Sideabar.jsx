@@ -21,6 +21,7 @@ const Sidebar = () => {
         <SidebarLink icon={faFileInvoice} linkText={"التكيتات"} to={"/invoice-list"}/>
         <SidebarLink icon={faFileLines} linkText={"الصفحة الداخلية"} to={"/invoice"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة شحنة"} to={"/add-bill"}/>
+        <SidebarLink icon={faPlusCircle} linkText={"قائمة الشحنات"} to={"/bills-list"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة بيان جمركي"} to={"/add-custom"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة سال"} to={"/add-sal"}/>
         <SidebarLink icon={faPlusCircle} linkText={"إضافة نقل"} to={"/add-trans"}/>
