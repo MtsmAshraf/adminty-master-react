@@ -19,7 +19,7 @@ const BillsList = () => {
             billId: "789-456432",
             date: "20-03-2024",
             name: 'John Doe',
-            outlet: "اسم المنفذ",
+            outlet: "المنفذ الأول",
             status: "حالة الشحنة",
             trackingStatus: "حالة التتبع"
         },
@@ -77,7 +77,7 @@ const BillsList = () => {
         let searchItem = e.target.value;
         if(searchItem !== ""){
             let filteredData = tableData.filter((item) => {
-                return item.name.toLowerCase().includes(searchItem.toLowerCase());
+                return item.name.toLowerCase().includes(searchItem.toLowerCase()) || item.outlet.toLowerCase().includes(searchItem.toLowerCase()) || item.billId.includes(searchItem.toString());
             })
             setShownData(filteredData)
         }else if(searchItem === ""){
@@ -191,7 +191,7 @@ const BillsList = () => {
                                                 </td>
                                             </tr>
                                         )
-                                    }) : <tr><td colSpan={4}>No Matches</td></tr>
+                                    }) : <tr><td colSpan={6}>No Matches</td></tr>
                                 }
                             </tbody>
                         </table>
