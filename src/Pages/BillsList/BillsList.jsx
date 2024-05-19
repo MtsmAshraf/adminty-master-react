@@ -6,13 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faChevronDown, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 const BillsList = () => {
-    // const [billId, setBillId] = useState(true)
-    // const [clientName, setClientName] = useState(true)
-    // const [clienLasttName, setClientLastName] = useState(true)
-    // const [email, setEmail] = useState(true)
 
     const [openHideShowCols, setOpenHideShowCols] = useState(false)
-
     const [tableData, setTableData] = useState([
         { 
             id: 1,
@@ -49,18 +44,39 @@ const BillsList = () => {
             outlet: "اسم المنفذ",
             status: "حالة الشحنة",
             trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 5,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
         }
     ])
 
     const [shownData, setShownData] = useState([])
+
+    const [fromRow, setFromRow] = useState(1)
+    const [toRow, setToRow] = useState(1)
+    const [totalNoOfRows, setTotalNoOfRows] = useState(1)
+    const [shownNoOfRows, setShownNoOfRows] = useState(1)
 
     useEffect(() => {
         const checkboxInputs = document.querySelectorAll("input[type='checkbox']")
         checkboxInputs.forEach((input, index) => {
             input.checked = true;
             input.onchange = (e) => {
-                console.log(e.target.checked)
-                console.log(document.querySelectorAll(`table tr td:nth-child(${index + 1})`))
                 document.querySelectorAll(`table thead th:nth-child(${index + 1})`).forEach((th) => {
                     th.style.display = e.target.checked ? "table-cell" : "none"
                 })
@@ -71,7 +87,14 @@ const BillsList = () => {
         })
 
         setShownData(tableData)
+
     }, [])
+    
+    useEffect(() => {
+        setToRow(document.querySelectorAll("table tr").length)
+        setTotalNoOfRows(document.querySelectorAll("table tr").length)
+        setShownNoOfRows(document.querySelectorAll("table tr").length)
+    })
 
     const handleSearch = (e) => {
         let searchItem = e.target.value;
@@ -85,6 +108,10 @@ const BillsList = () => {
         }
     }
 
+    const handleNoOfRows = (e) => {
+        setToRow(e.target.value)
+        setShownNoOfRows(e.target.value)
+    }
     return (
         <div className={styles.billsList}>
             <Breadcumbs pageName={"قائمة الشحنات"}></Breadcumbs>
@@ -198,10 +225,19 @@ const BillsList = () => {
                         <div className={styles.tableFooter}>
                             <div>
                                 <p>
-                                    Showing <span>1</span> of <span>10</span> of <span>25</span> entries
+                                    Showing 
+                                    <span> {fromRow} </span> 
+                                    to 
+                                    <span> {parseInt(fromRow) + parseInt(shownNoOfRows)  - 1} </span> 
+                                    of 
+                                    <span> {totalNoOfRows} </span> 
+                                    entries
                                 </p>
-                                <select name="" id="">
-                                    <option value="5">5</option>
+                                <select onChange={(e) => {handleNoOfRows(e)}} name="" id="">
+                                    <option 
+                                        value={totalNoOfRows >= 5 ? 5 : totalNoOfRows}>
+                                        {totalNoOfRows >= 5 ? 5 : totalNoOfRows}
+                                    </option>
                                     <option value="15">15</option>
                                     <option value="25">25</option>
                                 </select>
