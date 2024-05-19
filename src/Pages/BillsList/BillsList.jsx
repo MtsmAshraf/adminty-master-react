@@ -3,7 +3,7 @@ import Breadcumbs from "../../components/Breadcumbs/Breadcumbs"
 import Card from "../../components/Card/Card"
 import styles from "./bills-list.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRight, faChevronDown, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 const BillsList = () => {
     // const [billId, setBillId] = useState(true)
@@ -168,9 +168,9 @@ const BillsList = () => {
                             </thead>
                             <tbody>
                                 {
-                                    shownData.length > 0 ? shownData.map((item) => {
+                                    shownData.length > 0 ? shownData.map((item,index) => {
                                         return(
-                                            <tr key={item.id}>
+                                            <tr key={index}>
                                                 <td>
                                                     {item.billId}
                                                 </td>
@@ -195,6 +195,35 @@ const BillsList = () => {
                                 }
                             </tbody>
                         </table>
+                        <div className={styles.tableFooter}>
+                            <div>
+                                <p>
+                                    Showing <span>1</span> of <span>10</span> of <span>25</span> entries
+                                </p>
+                                <select name="" id="">
+                                    <option value="5">5</option>
+                                    <option value="15">15</option>
+                                    <option value="25">25</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button id="right-arrow-btn">
+                                    <FontAwesomeIcon icon={faChevronRight} />
+                                </button>
+                                <button className={styles.active}>
+                                    1
+                                </button>
+                                <button>
+                                    2
+                                </button>
+                                <button>
+                                    3
+                                </button>
+                                <button id="left-arrow-btn">
+                                    <FontAwesomeIcon icon={faChevronLeft} />
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </Card>
             </div>

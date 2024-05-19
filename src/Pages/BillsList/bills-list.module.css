@@ -70,3 +70,38 @@
 .billsList .content .tableWrapper table tr td{
     border-top: 1px solid #ccc;
 }
+.billsList .content .tableWrapper .tableFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.billsList .content .tableWrapper .tableFooter > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.billsList .content .tableWrapper .tableFooter > div:first-child select{
+    padding: 4px;
+}
+.billsList .content .tableWrapper .tableFooter > div:first-child p{
+    font-size: 14px;
+}
+.billsList .content .tableWrapper .tableFooter > div:first-child p span{
+    font-weight: bold;
+}
+.billsList .content .tableWrapper .tableFooter > div button{
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid #888;
+    font-size: 14px;
+    cursor: pointer;
+}
+.billsList .content .tableWrapper .tableFooter > div button.active{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.billsList .content .tableWrapper .tableFooter > div button[id]{
+    background-color: #ccc;
+}
