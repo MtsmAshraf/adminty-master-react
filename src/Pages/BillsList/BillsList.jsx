@@ -288,7 +288,17 @@ const BillsList = () => {
     const [totalNoOfRows, setTotalNoOfRows] = useState(1)
     const [shownNoOfRows, setShownNoOfRows] = useState(1)
     var buttonIndex = 0;
-
+    const changeActiveStatus = () => {
+        const paginationBtns = document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")
+        paginationBtns.forEach((btn) => {
+            btn.onclick = () => {
+                paginationBtns.forEach((btn) => {
+                    btn.setAttribute("status","")
+                })
+                btn.setAttribute("status","active")
+            }
+        })
+    }
     useEffect(() => {
         const checkboxInputs = document.querySelectorAll("input[type='checkbox']")
         checkboxInputs.forEach((input, index) => {
@@ -304,15 +314,7 @@ const BillsList = () => {
         })
         setShownData(tableData)
 
-        const paginationBtns = document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")
-        paginationBtns.forEach((btn) => {
-            btn.onclick = () => {
-                paginationBtns.forEach((btn) => {
-                    btn.setAttribute("status","")
-                })
-                btn.setAttribute("status","active")
-            }
-        })
+        
     }, [])
     
     useEffect(() => {
@@ -458,7 +460,7 @@ const BillsList = () => {
                                     <span> {totalNoOfRows} </span> 
                                     entries
                                 </p>
-                                <select onChange={(e) => {handleNoOfRows(e)}} name="" id="">
+                                <select onChange={(e) => {handleNoOfRows(e)}} name="" id="select-no-of-rows">
                                     <option 
                                         value={totalNoOfRows >= 5 ? 5 : totalNoOfRows}>
                                         {totalNoOfRows >= 5 ? 5 : totalNoOfRows}
@@ -478,12 +480,19 @@ const BillsList = () => {
                                 </button>
                                 {
                                     shownData.map((item, index) => {
-                                        if(totalNoOfRows % index === 0){
+                                        // if((totalNoOfRows / document.querySelector("#select-no-of-rows").value) % index === 0){
                                             buttonIndex++;
                                             return(
-                                                <button status={buttonIndex === 1 ? "active" : ""}>{buttonIndex}</button>
+                                                <button 
+                                                    key={index}
+                                                    status={buttonIndex === 1 ? "active" : ""}
+                                                    onClick={() => {changeActiveStatus()}}
+                                                    style={{ display: index >= totalNoOfRows / document.querySelector("#select-no-of-rows").value ? "none" : "inline"}}
+                                                    >
+                                                        {buttonIndex}
+                                                </button>
                                             )
-                                        }
+                                        // }
                                     })
                                 }
                                 <button id="left-arrow-btn">
