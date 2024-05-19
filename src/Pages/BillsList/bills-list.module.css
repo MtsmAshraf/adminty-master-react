@@ -1,4 +1,7 @@
 .billsList .content{
+    padding-bottom: 100px;
+}
+.billsList .content{
     direction: rtl;
 }
 .billsList .content .tableWrapper .tableHeader .tableSettings{
@@ -98,7 +101,7 @@
     font-size: 14px;
     cursor: pointer;
 }
-.billsList .content .tableWrapper .tableFooter > div button.active{
+.billsList .content .tableWrapper .tableFooter > div button[status="active"]{
     background-color: var(--main-color);
     color: #fff;
 }

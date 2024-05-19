@@ -62,6 +62,213 @@ const BillsList = () => {
             outlet: "اسم المنفذ",
             status: "حالة الشحنة",
             trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
         }
     ])
 
@@ -85,9 +292,17 @@ const BillsList = () => {
                 })
             }
         })
-
         setShownData(tableData)
 
+        const paginationBtns = document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")
+        paginationBtns.forEach((btn) => {
+            btn.onclick = () => {
+                paginationBtns.forEach((btn) => {
+                    btn.setAttribute("status","")
+                })
+                btn.setAttribute("status","active")
+            }
+        })
     }, [])
     
     useEffect(() => {
@@ -197,7 +412,7 @@ const BillsList = () => {
                                 {
                                     shownData.length > 0 ? shownData.map((item,index) => {
                                         return(
-                                            <tr key={index}>
+                                            <tr key={index} style={{ display: index >= (parseInt(fromRow) + parseInt(shownNoOfRows)  - 1) ? "none" : "table-row"}}>
                                                 <td>
                                                     {item.billId}
                                                 </td>
@@ -222,7 +437,7 @@ const BillsList = () => {
                                 }
                             </tbody>
                         </table>
-                        <div className={styles.tableFooter}>
+                        <div id="table-footer" className={styles.tableFooter}>
                             <div>
                                 <p>
                                     Showing 
@@ -240,13 +455,18 @@ const BillsList = () => {
                                     </option>
                                     <option value="15">15</option>
                                     <option value="25">25</option>
+                                    <option 
+                                        style={{ display: totalNoOfRows > 25 ? "inline" : "none" }}
+                                        value={totalNoOfRows}>
+                                        {totalNoOfRows}
+                                    </option>
                                 </select>
                             </div>
                             <div>
                                 <button id="right-arrow-btn">
                                     <FontAwesomeIcon icon={faChevronRight} />
                                 </button>
-                                <button className={styles.active}>
+                                <button status="active">
                                     1
                                 </button>
                                 <button>
