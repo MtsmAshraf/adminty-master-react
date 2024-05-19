@@ -269,6 +269,15 @@ const BillsList = () => {
             outlet: "اسم المنفذ",
             status: "حالة الشحنة",
             trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
         }
     ])
 
@@ -278,6 +287,7 @@ const BillsList = () => {
     const [toRow, setToRow] = useState(1)
     const [totalNoOfRows, setTotalNoOfRows] = useState(1)
     const [shownNoOfRows, setShownNoOfRows] = useState(1)
+    var buttonIndex = 0;
 
     useEffect(() => {
         const checkboxInputs = document.querySelectorAll("input[type='checkbox']")
@@ -466,15 +476,16 @@ const BillsList = () => {
                                 <button id="right-arrow-btn">
                                     <FontAwesomeIcon icon={faChevronRight} />
                                 </button>
-                                <button status="active">
-                                    1
-                                </button>
-                                <button>
-                                    2
-                                </button>
-                                <button>
-                                    3
-                                </button>
+                                {
+                                    shownData.map((item, index) => {
+                                        if(totalNoOfRows % index === 0){
+                                            buttonIndex++;
+                                            return(
+                                                <button status={buttonIndex === 1 ? "active" : ""}>{buttonIndex}</button>
+                                            )
+                                        }
+                                    })
+                                }
                                 <button id="left-arrow-btn">
                                     <FontAwesomeIcon icon={faChevronLeft} />
                                 </button>
