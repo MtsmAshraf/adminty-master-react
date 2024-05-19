@@ -93,7 +93,7 @@ const BillsList = () => {
     useEffect(() => {
         setToRow(document.querySelectorAll("table tr").length)
         setTotalNoOfRows(document.querySelectorAll("table tr").length)
-        setShownNoOfRows(document.querySelectorAll("table tr").length)
+        setShownNoOfRows(document.querySelector("select").value)
     })
 
     const handleSearch = (e) => {
