@@ -545,8 +545,8 @@ const BillsList = () => {
                                                 style={{ display: index >= (parseInt(fromRow) + parseInt(shownNoOfRows)  - 1) || index < (fromRow - 1) ? "none" : "table-row"}}
                                                 >
                                                     <td>
-                                                        {item.id}
-                                                        {/* {item.billId} */}
+                                                        {/* {item.id} */}
+                                                        {item.billId}
                                                     </td>
                                                     <td>
                                                         {item.date}
@@ -571,8 +571,8 @@ const BillsList = () => {
                                                     key={index} 
                                                     >
                                                         <td>
-                                                            {item.id}
-                                                            {/* {item.billId} */}
+                                                            {/* {item.id} */}
+                                                            {item.billId}
                                                         </td>
                                                         <td>
                                                             {item.date}
