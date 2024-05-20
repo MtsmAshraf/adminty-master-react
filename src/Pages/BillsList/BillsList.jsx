@@ -278,6 +278,96 @@ const BillsList = () => {
             outlet: "اسم المنفذ",
             status: "حالة الشحنة",
             trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
+        },
+        { 
+            id: 6,
+            billId: "301-456432",
+            date: "20-03-2024",
+            name: 'Emily Brown',
+            outlet: "اسم المنفذ",
+            status: "حالة الشحنة",
+            trackingStatus: "حالة التتبع"
         }
     ])
 
@@ -288,10 +378,12 @@ const BillsList = () => {
     const [totalNoOfRows, setTotalNoOfRows] = useState(1)
     const [shownNoOfRows, setShownNoOfRows] = useState(1)
     var buttonIndex = 0;
-    const changeActiveStatus = () => {
+    const changeActiveStatus = (buttonIndex) => {
         const paginationBtns = document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")
-        paginationBtns.forEach((btn) => {
+        paginationBtns.forEach((btn, index) => {
             btn.onclick = () => {
+                console.log(index)
+                setFromRow((index) * (parseInt(document.querySelector("select").value)) + 1)
                 paginationBtns.forEach((btn) => {
                     btn.setAttribute("status","")
                 })
