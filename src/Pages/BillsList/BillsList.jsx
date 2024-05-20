@@ -429,6 +429,7 @@ const BillsList = () => {
     const handleNoOfRows = (e) => {
         setToRow(e.target.value)
         setShownNoOfRows(e.target.value)
+        document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")[0].click();
     }
 
     const clickSiblingBtn = (type) => {
