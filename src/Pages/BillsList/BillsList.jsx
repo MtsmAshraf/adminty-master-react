@@ -382,7 +382,6 @@ const BillsList = () => {
         const paginationBtns = document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")
         paginationBtns.forEach((btn, index) => {
             btn.onclick = () => {
-                console.log(index)
                 setFromRow((index) * (parseInt(document.querySelector("select").value)) + 1)
                 paginationBtns.forEach((btn) => {
                     btn.setAttribute("status","")
@@ -430,6 +429,24 @@ const BillsList = () => {
     const handleNoOfRows = (e) => {
         setToRow(e.target.value)
         setShownNoOfRows(e.target.value)
+    }
+
+    const clickSiblingBtn = (type) => {
+        let currentBtn = document.querySelector("#table-footer div:nth-child(2) button[status='active']")
+        if(type === "next"){
+            document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])").forEach((btn, index) => {
+                if(parseInt(btn.textContent) === (parseInt(currentBtn.textContent) + 1) && document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")[index + 1]){
+                    btn.click();
+                }
+            })
+        }else if(type === "prev"){
+            document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])").forEach((btn, index) => {
+                if(parseInt(btn.textContent) === (parseInt(currentBtn.textContent) - 1) && document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")[index]){
+                    console.log("prev",document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")[index])
+                    btn.click();
+                }
+            })
+        }
     }
     return (
         <div className={styles.billsList}>
@@ -568,7 +585,7 @@ const BillsList = () => {
                                 </select>
                             </div>
                             <div>
-                                <button id="right-arrow-btn">
+                                <button id="right-arrow-btn" onClick={() => {clickSiblingBtn("prev")}}>
                                     <FontAwesomeIcon icon={faChevronRight} />
                                 </button>
                                 {
@@ -588,7 +605,7 @@ const BillsList = () => {
                                         // }
                                     })
                                 }
-                                <button id="left-arrow-btn">
+                                <button id="left-arrow-btn" onClick={() => {clickSiblingBtn("next")}}>
                                     <FontAwesomeIcon icon={faChevronLeft} />
                                 </button>
                             </div>
