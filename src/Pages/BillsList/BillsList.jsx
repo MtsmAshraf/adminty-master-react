@@ -377,6 +377,9 @@ const BillsList = () => {
     const [toRow, setToRow] = useState(1)
     const [totalNoOfRows, setTotalNoOfRows] = useState(1)
     const [shownNoOfRows, setShownNoOfRows] = useState(1)
+
+    const [isSearching, setIsSearching] = useState(false)
+
     var buttonIndex = 0;
     const changeActiveStatus = (buttonIndex) => {
         const paginationBtns = document.querySelectorAll("#table-footer div:nth-child(2) button:not([id])")
@@ -417,11 +420,13 @@ const BillsList = () => {
     const handleSearch = (e) => {
         let searchItem = e.target.value;
         if(searchItem !== ""){
+            setIsSearching(true)
             let filteredData = tableData.filter((item) => {
                 return item.name.toLowerCase().includes(searchItem.toLowerCase()) || item.outlet.toLowerCase().includes(searchItem.toLowerCase()) || item.billId.includes(searchItem.toString());
             })
             setShownData(filteredData)
         }else if(searchItem === ""){
+            setIsSearching(false)
             setShownData(tableData)
         }
     }
@@ -505,7 +510,7 @@ const BillsList = () => {
                                     </div>
                                 </div>
                                 <div className={styles.tableSearch}>
-                                    <input type="search" placeholder="Search" onChange={(e) => {handleSearch(e)}}/>
+                                    <input type="search" id="search-table" placeholder="Search" onChange={(e) => {handleSearch(e)}}/>
                                 </div>
                             </div>
                         </div>
@@ -533,29 +538,60 @@ const BillsList = () => {
                             <tbody>
                                 {
                                     shownData.length > 0 ? shownData.map((item,index) => {
-                                        return(
-                                            <tr key={index} style={{ display: index >= (parseInt(fromRow) + parseInt(shownNoOfRows)  - 1) || index < (fromRow - 1)  ? "none" : "table-row"}}>
-                                                <td>
-                                                    {item.id}
-                                                    {/* {item.billId} */}
-                                                </td>
-                                                <td>
-                                                    {item.date}
-                                                </td>
-                                                <td>
-                                                    {item.name}
-                                                </td>
-                                                <td>
-                                                    {item.outlet}
-                                                </td>
-                                                <td>
-                                                    {item.status}
-                                                </td>
-                                                <td>
-                                                    {item.trackingStatus}
-                                                </td>
-                                            </tr>
-                                        )
+                                        if(!isSearching){
+                                            return(
+                                                <tr 
+                                                key={index} 
+                                                style={{ display: index >= (parseInt(fromRow) + parseInt(shownNoOfRows)  - 1) || index < (fromRow - 1) ? "none" : "table-row"}}
+                                                >
+                                                    <td>
+                                                        {item.id}
+                                                        {/* {item.billId} */}
+                                                    </td>
+                                                    <td>
+                                                        {item.date}
+                                                    </td>
+                                                    <td>
+                                                        {item.name}
+                                                    </td>
+                                                    <td>
+                                                        {item.outlet}
+                                                    </td>
+                                                    <td>
+                                                        {item.status}
+                                                    </td>
+                                                    <td>
+                                                        {item.trackingStatus}
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }else{
+                                            return(
+                                                    <tr 
+                                                    key={index} 
+                                                    >
+                                                        <td>
+                                                            {item.id}
+                                                            {/* {item.billId} */}
+                                                        </td>
+                                                        <td>
+                                                            {item.date}
+                                                        </td>
+                                                        <td>
+                                                            {item.name}
+                                                        </td>
+                                                        <td>
+                                                            {item.outlet}
+                                                        </td>
+                                                        <td>
+                                                            {item.status}
+                                                        </td>
+                                                        <td>
+                                                            {item.trackingStatus}
+                                                        </td>
+                                                    </tr>
+                                                )
+                                        }
                                     }) : <tr><td colSpan={6}>No Matches</td></tr>
                                 }
                             </tbody>
