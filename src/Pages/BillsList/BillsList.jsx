@@ -64,7 +64,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 7,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -73,7 +73,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 8,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -82,7 +82,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 9,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -91,7 +91,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 10,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -100,7 +100,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 11,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -109,7 +109,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 12,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -118,7 +118,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 13,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -127,7 +127,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 14,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -136,7 +136,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 15,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -145,7 +145,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 16,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -154,7 +154,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 17,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -163,7 +163,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 18,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -172,7 +172,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 19,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -181,7 +181,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 20,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -190,7 +190,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 21,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -199,7 +199,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 22,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -208,7 +208,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 23,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -217,7 +217,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 24,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -226,7 +226,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 25,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -235,7 +235,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 26,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -244,7 +244,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 27,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -253,7 +253,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 28,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -262,7 +262,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 29,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -271,7 +271,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 30,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -280,7 +280,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 31,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -289,7 +289,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 32,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -298,7 +298,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 33,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -307,7 +307,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 34,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -316,7 +316,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 35,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -325,7 +325,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 36,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -334,7 +334,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 37,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -343,7 +343,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 38,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -352,7 +352,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 39,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -361,7 +361,7 @@ const BillsList = () => {
             trackingStatus: "حالة التتبع"
         },
         { 
-            id: 6,
+            id: 40,
             billId: "301-456432",
             date: "20-03-2024",
             name: 'Emily Brown',
@@ -369,7 +369,7 @@ const BillsList = () => {
             status: "حالة الشحنة",
             trackingStatus: "حالة التتبع"
         }
-    ])
+    ]);
 
     const [shownData, setShownData] = useState([])
 
@@ -516,9 +516,10 @@ const BillsList = () => {
                                 {
                                     shownData.length > 0 ? shownData.map((item,index) => {
                                         return(
-                                            <tr key={index} style={{ display: index >= (parseInt(fromRow) + parseInt(shownNoOfRows)  - 1) ? "none" : "table-row"}}>
+                                            <tr key={index} style={{ display: index >= (parseInt(fromRow) + parseInt(shownNoOfRows)  - 1) || index < (fromRow - 1)  ? "none" : "table-row"}}>
                                                 <td>
-                                                    {item.billId}
+                                                    {item.id}
+                                                    {/* {item.billId} */}
                                                 </td>
                                                 <td>
                                                     {item.date}
